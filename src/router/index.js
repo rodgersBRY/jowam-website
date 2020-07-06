@@ -1,0 +1,68 @@
+/* eslint-disable no-unused-vars */
+import Vue from 'vue'
+import Router from 'vue-router'
+
+import Home from '../views/Home.vue'
+import About from '../views/about.vue'
+import Contact from '../views/contact.vue'
+import Network from '../views/network.vue'
+import Gallery from '../views/gallery.vue'
+
+Vue.use(Router)
+
+const router = new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: Home,
+      meta: {
+        title: 'Home | Jowam Coffee Traders'
+      }
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: About,
+      meta: {
+        title: 'About Us | Jowam Coffee Traders'
+      }
+    },
+    {
+      path: '/network',
+      name: 'network',
+      component: Network,
+      meta: {
+        title: 'Partnerships | Jowam Coffee Traders'
+      }
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact,
+      meta: {
+        title: 'Contact Us | Jowam Coffee Traders'
+      }
+    },
+    {
+      path: '/gallery',
+      name: 'gallery',
+      component: Gallery,
+      meta: {
+        title: 'Photo Gallery | Jowam Coffee Traders'
+      }
+    }
+  ]
+})
+
+//change bar title
+const DEFAULT_TITLE = 'Jowam Coffee Traders Ltd'
+router.afterEach((to, from) => {
+  Vue.nextTick(() => {
+    document.title = to.meta.title || DEFAULT_TITLE
+  })
+})
+
+export default router
