@@ -8,7 +8,7 @@
             <div class="exports mb-7 d-flex justify-center align-center">
                 <div class="export-content ">
                     <div class="text-center inner-div">
-                        <h3 class="mb-6">REGULATORS, FARM MANAGEMENT AGENTS, AUCTONEERS, MILLERS AND MARKETERS</h3>
+                        <h3 class="top-title mb-6">OUR CONTACTS</h3>
                         <v-list color="transparent">
                             <div
                             v-for="cn in contacts"
@@ -100,5 +100,9 @@ export default {
 
 .name {
     font-family: 'Lato', sans-serif;
+}
+
+.top-title {
+    font-size: 40px;
 }
 </style>

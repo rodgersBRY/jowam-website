@@ -8,7 +8,7 @@
             <div class="exports mb-7 d-flex justify-center align-center">
                 <div class="export-content ">
                     <div class="text-center inner-div">
-                        <p>OUR CONTACTS</p>
+                        <p class="top-title">REGULATORS, FARM MANAGEMENT AGENTS, AUCTONEERS, MILLERS AND MARKETERS</p>
                         <v-list color="transparent">
                             <div
                             v-for="(ag, i) in agents"
@@ -80,6 +80,10 @@ export default {
   background-image: url(../assets/bg.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.top-title {
+    font-size: 30px;
 }
 
 .parent {
