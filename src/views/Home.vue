@@ -5,8 +5,8 @@
         <nav-bar />
       </div>
 
-    <div class="main-content">
-      <div class="imageDiv d-flex justify-center align-center pa-10"
+    <div class="main-content hidden-sm-and-down">
+      <div class="imageDiv d-flex justify-center  align-center pa-10"
       v-for="cs in contents" 
       :key="cs.id">
         <div class="content">
@@ -21,6 +21,29 @@
       <div class="exports mb-7 d-flex justify-center align-center">
         <div class="export-content ">
           <div class="text-center inner-div">
+            <h3 class="mb-6">GREEN COFFEE EXPORTS</h3>
+            <p>Jowam Trading Coffee exports approximately 6,000 bags of green coffee from Kenya yearly. The trading operation is run from the Nairobi head office where all the pre-auction and post- auction quality control is carried out. In the search of the right qualities around 500 samples of coffee are roasted and cupped weekly and their quality merits assessed. The team then takes the individual auction lots and carefully blends them to match the requirements of each customer. Jowam Trading Coffee has its warehouse and processing equipment in Nairobi in order to maintain control over quality and security right up to export.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8 hidden-md-and-up">
+      <div class="mobile-image-div pa-10"
+      v-for="cs in contents" 
+      :key="cs.id">
+        <div class="mobile-content">
+          <h3 class="mb-3">{{ cs.title }}</h3>
+          <p>{{ cs.info }}</p>
+        </div>
+        <div class="mobile-image">
+          <img width="100%" :src="cs.img">
+        </div>
+      </div>
+
+      <div class="mobile-exports mb-7 d-flex justify-center align-center">
+        <div class="mobile-export-content">
+          <div class="text-center mobile-inner-div">
             <h3 class="mb-6">GREEN COFFEE EXPORTS</h3>
             <p>Jowam Trading Coffee exports approximately 6,000 bags of green coffee from Kenya yearly. The trading operation is run from the Nairobi head office where all the pre-auction and post- auction quality control is carried out. In the search of the right qualities around 500 samples of coffee are roasted and cupped weekly and their quality merits assessed. The team then takes the individual auction lots and carefully blends them to match the requirements of each customer. Jowam Trading Coffee has its warehouse and processing equipment in Nairobi in order to maintain control over quality and security right up to export.</p>
           </div>
@@ -64,6 +87,11 @@ export default {
   background-attachment: fixed;
 }
 
+.header {
+  position: relative;
+  z-index: 10;
+}
+
 .parent {
   background-color: rgba(46, 22, 14, 0.5);
 }
@@ -88,9 +116,11 @@ export default {
   border-radius: 5px;
 }
 
-.exports {
+.exports,
+.mobile-exports {
   background-color: #ba8445;
 }
+
 
 .export-content {
   background-color: rgba(255, 255, 255, 0.9);
@@ -100,9 +130,34 @@ export default {
   padding: 5px;
 }
 
+.mobile-export-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 90%;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
 .inner-div {
   border: 4px solid #ba8445;
   border-radius: 5px;
   padding: 3rem;
+}
+
+.mobile-inner-div {
+  border: 2px solid #ba8445;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.mobile-content {
+  width: 100%;
+  background-color: rgba(255,255,255,0.6);
+  padding: 2rem;
+  border-radius: 5px 5px 0 0;
+}
+
+.mobile-image-div .image {
+  width: ;
 }
 </style>

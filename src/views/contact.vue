@@ -5,7 +5,8 @@
                 <nav-bar />
             </div>
 
-            <div class="exports mb-7 d-flex justify-center align-center">
+            <div class="main pt-10">
+                <div class="exports mb-7 d-flex justify-center align-center">
                 <div class="export-content ">
                     <div class="text-center inner-div">
                         <h3 class="top-title mb-6">OUR CONTACTS</h3>
@@ -31,6 +32,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
 
             <div class="footer">
@@ -69,6 +71,11 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Marck+Script&display=swap');
 
+.header {
+  position: relative;
+  z-index: 10;
+}
+
 .contact {
   background-image: url(../assets/bg.jpg);
   background-repeat: no-repeat;
@@ -81,7 +88,6 @@ export default {
 
 .exports {
   background-color: #ba8445;
-  margin-top: 5rem;
 }
 
 .export-content {
@@ -96,6 +102,26 @@ export default {
   border: 4px solid #ba8445;
   border-radius: 5px;
   padding: 8rem;
+}
+
+@media screen and (max-width: 700px) {
+    .exports {
+        background-color: #ba8445;
+    }
+
+    .export-content {
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 90%;
+        border-radius: 5px;
+        margin: 4rem 0;
+        padding: 5px;
+    }
+
+    .inner-div {
+        border: 4px solid #ba8445;
+        border-radius: 5px;
+        padding: 1rem;
+    }
 }
 
 .name {

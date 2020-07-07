@@ -1,12 +1,41 @@
 <template>
     <div class="header text-center">
-        <p class="firmName white--text">JOWAM COFFEE TRADERS LTD</p>
-        <div class="nav-bar">
-            <router-link tag="li" active-class="active" to="/" exact>Home</router-link>
-            <router-link tag="li" active-class="active" to="/about">About Us</router-link>
-            <router-link tag="li" active-class="active" to="/gallery">Photo Gallery</router-link>
-            <router-link tag="li" active-class="active" to="/network">Network & Partnerships</router-link>
-            <router-link tag="li" active-class="active" to="/contact">Contact Us</router-link>
+        <div class="hidden-sm-and-down">
+            <p class="firmName white--text">JOWAM COFFEE TRADERS LTD</p>
+            <div class="nav-bar">
+                <!-- use the exact attribute to prevent root route from being always active -->
+                <router-link role="button" tag="li" active-class="active" to="/" exact>Home</router-link>
+                <router-link tag="li" active-class="active" to="/about">About Us</router-link>
+                <router-link tag="li" active-class="active" to="/gallery">Photo Gallery</router-link>
+                <router-link tag="li" active-class="active" to="/network">Network & Partnerships</router-link>
+                <router-link tag="li" active-class="active" to="/contact">Contact Us</router-link>
+            </div>
+        </div>
+
+        <div class="mobile-nav d-flex justify-space-between">
+            <div class="logo hidden-md-and-up" role="button" @click="$router.push('/')" style="cursor: pointer;">
+                <img width="40" :src="require('../assets/logo.png')">
+            </div>
+            <!-- hamburger menu -->
+            <v-app-bar-nav-icon
+            large
+            class="grey--text hidden-md-and-up nav"
+            @click="drawer =!drawer"></v-app-bar-nav-icon>
+
+            <v-navigation-drawer dark v-model="drawer" app right class="drawer hidden-md-and-up" color="#2e160e">
+                <div class="mobile-logo" role="button" @click="$router.push('/')" style="cursor: pointer;">
+                    <img width="40" :src="require('../assets/logo.png')">
+                </div>
+                <router-link tag="li" to="/">Home</router-link>
+                <router-link tag="li" to="/about">About Us</router-link>
+                <router-link tag="li" to="/gallery">Photo Gallery</router-link>
+                <router-link tag="li" to="/network">Network & Partnerships</router-link>
+                <router-link tag="li" to="/contact">Contact Us</router-link>
+
+                <div class="copyright white--text">
+                    <p>copyright &copy; {{ date }}</p>
+                </div>
+            </v-navigation-drawer>
         </div>
     </div>
 </template>
@@ -15,7 +44,9 @@
 export default {
     data() {
         return {
-            activeClass: 'active'
+            activeClass: 'active',
+            drawer: false,
+            date: new Date().getFullYear()
         }
     },
 
@@ -38,6 +69,38 @@ export default {
     justify-content: center;
 }
 
+.mobile-nav {
+    background-color: #2e160e;
+    position: fixed;
+    width: 100%;
+}
+
+.mobile-logo {
+    margin: 4rem 0;
+}
+
+.drawer li {
+    display: block;
+    text-align: right;
+    list-style: none;
+    margin: 1rem 6px;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.drawer li:hover {
+    background: rgba(160, 157, 157, 0.5);
+    color: #ba8445;
+}
+
+.copyright {
+    position: absolute;
+    width: 100%;
+    bottom: 2px;
+}
+
 .firmName {
     padding: 6rem 0;
     font-size: 70px;
@@ -46,6 +109,7 @@ export default {
 .nav-bar li {
     display: inline-block;
     margin: 1rem 2rem;
+    cursor: pointer;
 }
 
 .nav-bar li {

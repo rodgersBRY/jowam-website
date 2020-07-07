@@ -53,6 +53,12 @@ export default {
 </script>
 
 <style scoped>
+
+.header {
+  position: relative;
+  z-index: 10;
+}
+
 .gallery {
   background-image: url(../assets/bg.jpg);
   background-repeat: no-repeat;
@@ -67,7 +73,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4rem;
-    margin: 4rem 0;
+    /* margin: 4rem 0; */
 }
 
 /* Create two equal columns that sits next to each other */

@@ -17,17 +17,14 @@ const router = new Router({
     {
       path: '/',
       name: 'home',
-      component: Home,
-      meta: {
-        title: 'Home | Jowam Coffee Traders'
-      }
+      component: Home
     },
     {
       path: '/about',
       name: 'about',
       component: About,
       meta: {
-        title: 'About Us | Jowam Coffee Traders'
+        title: 'About Us || Jowam Coffee Traders'
       }
     },
     {
@@ -35,7 +32,7 @@ const router = new Router({
       name: 'network',
       component: Network,
       meta: {
-        title: 'Partnerships | Jowam Coffee Traders'
+        title: 'Partnerships || Jowam Coffee Traders'
       }
     },
     {
@@ -43,7 +40,7 @@ const router = new Router({
       name: 'contact',
       component: Contact,
       meta: {
-        title: 'Contact Us | Jowam Coffee Traders'
+        title: 'Contact Us || Jowam Coffee Traders'
       }
     },
     {
@@ -51,7 +48,7 @@ const router = new Router({
       name: 'gallery',
       component: Gallery,
       meta: {
-        title: 'Photo Gallery | Jowam Coffee Traders'
+        title: 'Photo Gallery || Jowam Coffee Traders'
       }
     }
   ]

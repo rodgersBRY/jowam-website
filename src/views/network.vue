@@ -76,6 +76,12 @@ export default {
 </script>
 
 <style scoped>
+.header {
+  position: relative;
+  z-index: 10;
+  padding-bottom: 3rem;
+}
+
 .network {
   background-image: url(../assets/bg.jpg);
   background-repeat: no-repeat;
@@ -92,7 +98,6 @@ export default {
 
 .exports {
   background-color: #ba8445;
-  margin-top: 5rem;
 }
 
 .export-content {
@@ -109,5 +114,20 @@ export default {
   padding: 8rem;
 }
 
+@media screen and (max-width: 700px) {
+    .export-content {
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 90%;
+        border-radius: 5px;
+        margin: 2rem 0;
+        padding: 5px;
+    }
+
+    .inner-div {
+        border: 4px solid #ba8445;
+        border-radius: 5px;
+        padding: 1rem;
+    }
+}
 
 </style>
