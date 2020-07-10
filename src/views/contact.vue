@@ -59,7 +59,7 @@ export default {
                 {title: 'City/Town', text: 'Nairobi'},
                 {title: 'Country', text: 'Kenya'},
                 {title: 'County', text: 'Nairobi'},
-                {title: 'Mobile', text: ''},
+                {title: 'Mobile', text: '+254-722762945, +254-28919092'},
                 {title: 'Email Address', text: 'trading@jowamcoffee.com'},
                 {title: '', text: 'bundi.jowamcoffee@gmail.com'}
             ]
