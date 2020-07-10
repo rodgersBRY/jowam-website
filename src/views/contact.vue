@@ -23,8 +23,8 @@
                         </v-list>
 
                         <div class="hse my-12">
-                            <h3 class="name">Wakulima Hse, 4th Floor</h3>
-                            <p>Haile Selassie Ave</p>
+                            <h3 class="name">Caxton Hse, 3rd Floor</h3>
+                            <p>Standard Street</p>
                         </div>
                         <div class="call">
                             <p class="name">Call Anytime</p>
@@ -56,8 +56,8 @@ export default {
         return {
             contacts: [
                 {title: 'Address', text: 'P.O Box: 58513-0200 City Square'},
-                {title: 'City/Town', text: 'Nairobi'},
                 {title: 'Country', text: 'Kenya'},
+                {title: 'City/Town', text: 'Nairobi'},
                 {title: 'County', text: 'Nairobi'},
                 {title: 'Mobile', text: '+254-722762945, +254-28919092'},
                 {title: 'Email Address', text: 'trading@jowamcoffee.com'},
