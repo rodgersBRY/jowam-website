@@ -6,7 +6,7 @@
             </div>
 
             <div class="exports mb-7 d-flex justify-center align-center">
-                <div class="export-content ">
+                <div class="export-content">
                     <div class="text-center inner-div">
                         <p class="top-title">REGULATORS, FARM MANAGEMENT AGENTS, AUCTONEERS, MILLERS AND MARKETERS</p>
                         <v-list color="transparent">

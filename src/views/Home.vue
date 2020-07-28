@@ -71,9 +71,9 @@ export default {
   data() {
     return {
       contents: [
-        {title: 'INTRODUCTION', info: 'Jowam Coffee Trading Company limited is registered and incorporated under the Company’s Act in the Laws of Kenya. We are licensed under the Coffee Directorate Crops Act, 2013 and the Coffee (Forms) Rules, 2002 as a licensed coffee dealer and exporter in Kenya. With well over thirty years of experience in the Coffee industry coupled with quality control, passion and commitment to service, Jowam Coffee Trading Company founders empower clients by providing coffees that ensure their product sales remain high.', img: require('../assets/img/intro.jpeg')},
-        {title: '', info: 'Jowam Coffee Trading Company Limited was founded in June 2016 as an exporting company for coffees. We also promote farmers by providing advanced farming technologies to ensure production of high-quality coffee that is of great value.', img: require('../assets/bags.jpg')},
-        {title: 'BUSINESS CONCEPTS', info: 'Through a business model that is geared towards easy access and convenience for our customers, Jowam Coffee Trading Company has evolved to become a trusted coffee dealer and exporter of Kenyan green Arabica coffee. Our business model has continued to earn global recognition in terms of coffee quality assurance, friendly sales contracts, and timely delivery of shipments. Since the incorporation of Jowam Coffee Trading Company Ltd, we have shipped large volumes of green coffee beans from Kenya to many countries around the world.', img: require('../assets/img/intro2.jpg')}
+        {title: 'INTRODUCTION', info: 'Jowam Coffee Trading Company limited is registered and incorporated under the Company’s Act in the Laws of Kenya. We are licensed under the Coffee Directorate Crops Act, 2013 and the Coffee (Forms) Rules, 2002 as a licensed coffee dealer and exporter in Kenya. With well over thirty years of experience in the Coffee industry coupled with quality control, passion and commitment to service, Jowam Coffee Trading Company founders empower clients by providing coffees that ensure their product sales remain high.', img: 'https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/intro_GDTiXHIH5N.jpeg'},
+        {title: '', info: 'Jowam Coffee Trading Company Limited was founded in June 2016 as an exporting company for coffees. We also promote farmers by providing advanced farming technologies to ensure production of high-quality coffee that is of great value.', img: 'https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/products-03_Q0Kcl9MpnD.jpg'},
+        {title: 'BUSINESS CONCEPTS', info: 'Through a business model that is geared towards easy access and convenience for our customers, Jowam Coffee Trading Company has evolved to become a trusted coffee dealer and exporter of Kenyan green Arabica coffee. Our business model has continued to earn global recognition in terms of coffee quality assurance, friendly sales contracts, and timely delivery of shipments. Since the incorporation of Jowam Coffee Trading Company Ltd, we have shipped large volumes of green coffee beans from Kenya to many countries around the world.', img: 'https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/intro2_p4HHOt3Ed.jpg'}
       ]
     }
   }
@@ -82,7 +82,7 @@ export default {
 
 <style scoped>
 .home {
-  background-image: url(../assets/bg.jpg);
+  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/bg_nCjNP9Jtf.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -157,7 +157,4 @@ export default {
   border-radius: 5px 5px 0 0;
 }
 
-.mobile-image-div .image {
-  width: ;
-}
 </style>

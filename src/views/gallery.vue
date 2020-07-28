@@ -8,27 +8,27 @@
             <div class="main-content">
                 <div class="row hidden-sm-and-down">
                     <div class="col">
-                        <img :src="require('../assets/img/director.jpg')">
-                        <img :src="require('../assets/img/jowam.jpg')">
-                        <img :src="require('../assets/img/jowam0.jpg')">
-                        <img :src="require('../assets/img/jowam1.jpg')">
-                        <img :src="require('../assets/img/jowam2.jpg')">
-                        <img :src="require('../assets/img/jowam3.jpg')">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/director_Y-QbK_-NV.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/results_jh6D2XOPp.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/packing_a3ZM3Ul9Z.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam3_VO-DO5-j5.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam5_hl4IUeRCu.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam4_6KnsQfhmg.jpg">
                     </div>
                     <div class="col">
-                        <img :src="require('../assets/img/jowam4.jpg')">
-                        <img :src="require('../assets/img/jowam5.jpg')">
-                        <img :src="require('../assets/img/jowam6.jpg')">
-                        <img :src="require('../assets/img/jowam7.jpg')">
-                        <img :src="require('../assets/img/packing.jpg')">
-                        <img :src="require('../assets/img/plantation.jpg')">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/plant_rDAzqrkhT.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam2_p4qS3D639.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/plantation_rDU5jeH3-8.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam7_8SQPrawos.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam2_p4qS3D639.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/plantation_rDU5jeH3-8.jpg">
                     </div>
                     <div class="col">
-                        <img :src="require('../assets/img/tasting1.jpg')">
-                        <img :src="require('../assets/img/roasting1.jpg')">
-                        <img :src="require('../assets/img/tasting3.jpg')">
-                        <img :src="require('../assets/img/tasting5.jpg')">
-                        <img :src="require('../assets/img/tasting6.jpg')">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam7_8SQPrawos.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam0_I0sbjpbM2t.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam_zy8E31tbzs.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam6_rZf5Xy5-b.jpg">
+                        <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam1_EZSJ9qSBOS.jpg">
                     </div>
                 </div>
 
@@ -97,7 +97,7 @@ export default {
 }
 
 .gallery {
-  background-image: url(../assets/bg.jpg);
+  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/bg_nCjNP9Jtf.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

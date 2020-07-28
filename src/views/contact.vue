@@ -7,7 +7,7 @@
 
             <div class="main pt-10">
                 <div class="exports mb-7 d-flex justify-center align-center">
-                <div class="export-content ">
+                <div class="export-content">
                     <div class="text-center inner-div">
                         <h3 class="top-title mb-6">OUR CONTACTS</h3>
                         <v-list color="transparent">
@@ -74,10 +74,11 @@ export default {
 .header {
   position: relative;
   z-index: 10;
+  padding-bottom: 1.7rem;
 }
 
 .contact {
-  background-image: url(../assets/bg.jpg);
+  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/bg_nCjNP9Jtf.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

@@ -9,7 +9,7 @@
                 <div class="d-flex justify-center pa-10">
                     <div class="pa-10 hidden-sm-and-down">
                         <div class="image-div">
-                            <img width="100%" :src="require('../assets/img/berries.jpg')">
+                            <img width="100%" src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/berries__qOduLnzi.jpg">
                         </div>
                         <div class="details hidden-sm-and-down">
                             <h3>STRONG COFFEE, STRONG ROOTS</h3>
@@ -25,7 +25,7 @@
                     <!-- mobile layout -->
                     <div class="pt-6 hidden-md-and-up">
                         <div class="mobile-image">
-                            <img width="100%" :src="require('../assets/img/berries.jpg')">
+                            <img width="100%" src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/berries__qOduLnzi.jpg">
                         </div>
                         <div class="mobile-details">
                             <h3>STRONG COFFEE, STRONG ROOTS</h3>
@@ -42,7 +42,7 @@
                 <div class="d-flex justify-center pa-10">
                     <div class="bottom-div pa-10 hidden-sm-and-down">
                         <div>
-                            <img width="100%" height="400px" :src="require('../assets/about1.jpg')">
+                            <img width="100%" height="400px" src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/about1_GnNhLSF8B.jpg">
                         </div>
                         <div class="details">
                             <p class="mission">QUALITY ASSURANCE <br> & COMMITMENT</p>
@@ -68,7 +68,7 @@
                 <div class="mobile-bottom hidden-md-and-up pa-10">
                     <div class="mobile-image">
                         <div>
-                            <img width="100%" :src="require('../assets/about1.jpg')">
+                            <img width="100%" src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/about1_GnNhLSF8B.jpg">
                         </div>
                         <div class="mobile-details">
                             <p class="mission">QUALITY ASSURANCE <br> & COMMITMENT</p>
@@ -123,7 +123,7 @@ export default {
 
 <style scoped>
 .about {
-  background-image: url(../assets/bg.jpg);
+  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/bg_nCjNP9Jtf.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
