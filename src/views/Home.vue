@@ -82,7 +82,8 @@ export default {
 
 <style scoped>
 .home {
-  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/bg_nCjNP9Jtf.jpg);
+  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/coffee1_zXbvcAYrD.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

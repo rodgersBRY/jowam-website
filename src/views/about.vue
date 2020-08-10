@@ -42,7 +42,7 @@
                 <div class="d-flex justify-center pa-10">
                     <div class="bottom-div pa-10 hidden-sm-and-down">
                         <div>
-                            <img width="100%" height="400px" src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/about1_GnNhLSF8B.jpg">
+                            <img width="100%" height="300px" src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/chalo-garcia-kfj6GRCBCFQ-unsplash_feZtjz9X0.jpg">
                         </div>
                         <div class="details">
                             <p class="mission">QUALITY ASSURANCE <br> & COMMITMENT</p>
@@ -68,7 +68,7 @@
                 <div class="mobile-bottom hidden-md-and-up pa-10">
                     <div class="mobile-image">
                         <div>
-                            <img width="100%" src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/about1_GnNhLSF8B.jpg">
+                            <img width="100%" height="250" src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/chalo-garcia-kfj6GRCBCFQ-unsplash_feZtjz9X0.jpg">
                         </div>
                         <div class="mobile-details">
                             <p class="mission">QUALITY ASSURANCE <br> & COMMITMENT</p>
@@ -123,8 +123,9 @@ export default {
 
 <style scoped>
 .about {
-  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/bg_nCjNP9Jtf.jpg);
+  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/coffee1_zXbvcAYrD.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 }
 

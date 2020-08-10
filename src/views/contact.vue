@@ -8,7 +8,8 @@
             <div class="main pt-10">
                 <div class="exports mb-7 d-flex justify-center align-center">
                 <div class="export-content">
-                    <div class="text-center inner-div">
+                    <!-- desktop layout -->
+                    <div class="text-center inner-div hidden-sm-and-down">
                         <h3 class="top-title mb-6">OUR CONTACTS</h3>
                         <v-list color="transparent">
                             <div
@@ -16,7 +17,34 @@
                             :key="cn.id">
                                 <v-list-item class="contact-details mt-2 d-flex justify-space-between">
                                     <v-list-content class="name">{{ cn.title }}</v-list-content>
-                                    <v-list-content class="name blue--text">{{ cn.text }}</v-list-content>
+                                    <v-list-content>-</v-list-content>
+                                    <v-list-content class="name blue--text" v-html="cn.text"></v-list-content>
+                                </v-list-item>
+                                <v-divider></v-divider>
+                            </div>
+                        </v-list>
+
+                        <div class="hse my-12">
+                            <h3 class="name">Caxton Hse, 3rd Floor</h3>
+                            <p>Standard Street</p>
+                        </div>
+                        <div class="call">
+                            <p class="name">Call Anytime</p>
+                            <p>+254-722762945</p>
+                        </div>
+                    </div>
+
+                    <!-- mobile layout -->
+                    <div class="text-center pa-7 hidden-md-and-up">
+                        <h3 class="top-title mb-6">OUR CONTACTS</h3>
+                        <v-list color="transparent">
+                            <div
+                            v-for="cn in contacts"
+                            :key="cn.id">
+                                <v-list-item class="contact-details mt-2 d-flex justify-space-between">
+                                    <v-list-content class="name">{{ cn.title }}</v-list-content>
+                                    <v-list-content>-</v-list-content>
+                                    <v-list-content class="name blue--text" v-html="cn.text"></v-list-content>
                                 </v-list-item>
                                 <v-divider></v-divider>
                             </div>
@@ -55,13 +83,13 @@ export default {
     data() {
         return {
             contacts: [
-                {title: 'Address', text: 'P.O Box: 58513-0200 City Square'},
+                {title: 'Address', text: 'P.O Box: <i>58513-0200 City Square</i>'},
                 {title: 'Country', text: 'Kenya'},
                 {title: 'City/Town', text: 'Nairobi'},
                 {title: 'County', text: 'Nairobi'},
                 {title: 'Mobile', text: '+254-722762945, +254-28919092'},
-                {title: 'Email Address', text: 'trading@jowamcoffee.com'},
-                {title: '', text: 'bundi.jowamcoffee@gmail.com'}
+                {title: 'Email Address', text: '<i>trading@jowamcoffee.com</i>'},
+                {title: '', text: '<i>bundi.jowamcoffee@gmail.com</i>'}
             ]
         }
     }
@@ -78,7 +106,8 @@ export default {
 }
 
 .contact {
-  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/bg_nCjNP9Jtf.jpg);
+  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/coffee1_zXbvcAYrD.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

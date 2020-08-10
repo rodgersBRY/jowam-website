@@ -5,7 +5,7 @@
                 <nav-bar />
             </div>
 
-            <div class="main-content">
+            <div class="main-content mb-6 mt-4">
                 <div class="row hidden-sm-and-down">
                     <div class="col">
                         <img src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/director_Y-QbK_-NV.jpg">
@@ -32,17 +32,14 @@
                     </div>
                 </div>
 
-                <v-btn rounded dark icon>
-                    <i class="bx bxs-up-arrow-alt"></i> top
-                </v-btn>
 
                 <div class="mobile-row hidden-md-and-up pt-6 mb-7" >
                     <div class="d-flex justify-center my-3" v-for="im in images" :key="im.id">
                         <img width="95%" :src="im.src">
                     </div>
                     <v-btn class="top-btn" rounded dark left href="#top">
-                    <i class="bx bxs-up-arrow-alt bx-sm"></i>top
-                </v-btn>
+                        <i class="bx bxs-up-arrow-alt bx-sm"></i>top
+                    </v-btn>
                 </div>
             </div>
 
@@ -97,7 +94,8 @@ export default {
 }
 
 .gallery {
-  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/bg_nCjNP9Jtf.jpg);
+  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/coffee1_zXbvcAYrD.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

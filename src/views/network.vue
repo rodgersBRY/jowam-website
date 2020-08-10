@@ -6,7 +6,7 @@
             </div>
 
             <div class="exports mb-7 d-flex justify-center align-center">
-                <div class="export-content">
+                <div class="export-content hidden-sm-and-down">
                     <div class="text-center inner-div">
                         <p class="top-title">REGULATORS, FARM MANAGEMENT AGENTS, AUCTONEERS, MILLERS AND MARKETERS</p>
                         <v-list color="transparent">
@@ -16,6 +16,22 @@
                                 <v-list-item class="mt-2 d-flex justify-space-between">
                                     <v-list-content class="name">{{ ag.name }}</v-list-content>
                                     <v-list-content class="name blue--text">{{ ag.email }}</v-list-content>
+                                </v-list-item>
+                                <v-divider></v-divider>
+                            </div>
+                        </v-list>
+                    </div>
+                </div>
+
+                <div class="export-content hidden-md-and-up">
+                    <div class="pa-7">
+                        <p class="top-title">REGULATORS, FARM MANAGEMENT AGENTS, AUCTONEERS, MILLERS AND MARKETERS</p>
+                        <v-list color="transparent">
+                            <div
+                            v-for="(ag, i) in agents"
+                            :key="i">
+                                <v-list-item class="mt-2 text-center">
+                                    <v-list-content class="name">{{ ag.name }}</v-list-content>
                                 </v-list-item>
                                 <v-divider></v-divider>
                             </div>
@@ -83,7 +99,8 @@ export default {
 }
 
 .network {
-  background-image: url(../assets/bg.jpg);
+  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/coffee1_zXbvcAYrD.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

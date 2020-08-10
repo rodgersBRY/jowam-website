@@ -1,6 +1,6 @@
 <template>
     <div class="header text-center">
-        <div class="hidden-sm-and-down">
+        <div class="navBar hidden-sm-and-down">
             <p class="firmName white--text">JOWAM COFFEE TRADERS LTD</p>
             <div class="nav-bar">
                 <!-- use the exact attribute to prevent root route from being always active -->
