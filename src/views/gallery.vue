@@ -51,15 +51,7 @@
 </template>
 
 <script>
-import navBar from '../components/navigation'
-import Footer from '../components/footer'
-
 export default {
-    components: {
-        'nav-bar': navBar,
-        'bottom-view': Footer 
-    },
-
     data() {
         return {
             images: [
