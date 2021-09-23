@@ -8,7 +8,7 @@
             <div class="exports mb-7 d-flex justify-center align-center">
                 <div class="export-content hidden-sm-and-down">
                     <div class="text-center inner-div">
-                        <p class="top-title">REGULATORS, FARM MANAGEMENT AGENTS, AUCTONEERS, MILLERS AND MARKETERS</p>
+                        <p class="top-title">REGULATORS, FARM MANAGEMENT AGENTS, AUCTIONEERS, MILLERS AND MARKETERS</p>
                         <v-list color="transparent">
                             <div
                             v-for="(ag, i) in agents"
