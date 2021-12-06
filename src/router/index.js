@@ -50,6 +50,10 @@ const router = new Router({
       meta: {
         title: 'Photo Gallery || Jowam Coffee Traders'
       }
+    },
+    {
+      path: '/*',
+      component: 404
     }
   ]
 })
