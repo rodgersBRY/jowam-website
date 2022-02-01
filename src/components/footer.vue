@@ -1,7 +1,7 @@
 <template>
-    <div class="footer d-flex justify-center align-center">
+    <div class="footer d-flex justify-center align-center text-center">
         <div>
-            Developed by <a href="mailto:brianmawira2@gmail.com">Mawira </a>Copyright &copy; {{ date }} Jowam Coffee
+            Developed by <a href="mailto:brianmawira2@gmail.com">Mawira </a><br>Copyright &copy; {{ date }} Jowam Coffee
         </div>
     </div>
 </template>
@@ -20,7 +20,7 @@ export default {
 .footer {
     background-color: rgb(46, 22, 14);
     color: grey;
-    height: 50px;
+    height: 100px;
 }
 
 .footer a {

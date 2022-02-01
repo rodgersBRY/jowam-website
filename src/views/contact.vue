@@ -16,9 +16,9 @@
                             v-for="cn in contacts"
                             :key="cn.id">
                                 <v-list-item class="contact-details mt-2 d-flex justify-space-between">
-                                    <v-list-content class="name">{{ cn.title }}</v-list-content>
-                                    <v-list-content>-</v-list-content>
-                                    <v-list-content class="name blue--text" v-html="cn.text"></v-list-content>
+                                    <v-list-item-content class="name">{{ cn.title }}</v-list-item-content>
+                                    <v-list-item-content>-</v-list-item-content>
+                                    <v-list-item-content class="name blue--text" v-html="cn.text"></v-list-item-content>
                                 </v-list-item>
                                 <v-divider></v-divider>
                             </div>
@@ -41,12 +41,12 @@
                             <div
                             v-for="cn in contacts"
                             :key="cn.id">
-                                <v-list-item class="contact-details mt-2 d-flex justify-space-between">
-                                    <v-list-content class="name">{{ cn.title }}</v-list-content>
-                                    <v-list-content>-</v-list-content>
-                                    <v-list-content class="name blue--text" v-html="cn.text"></v-list-content>
+                                <v-list-item class="contact-details mt-2 d-flex justify-space-around">
+                                    <v-list-item-content class="name">{{ cn.title }}</v-list-item-content>
+                                    <v-list-item-content> - </v-list-item-content>
+                                    <v-list-item-content class="name blue--text" v-html="cn.text"></v-list-item-content>
                                 </v-list-item>
-                                <v-divider></v-divider>
+                                <v-divider />
                             </div>
                         </v-list>
 
@@ -56,7 +56,7 @@
                         </div>
                         <div class="call">
                             <p class="name">Call Anytime</p>
-                            <p>+254-722762945</p>
+                            <p>+254-728919092</p>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,8 @@ export default {
                 {title: 'Country', text: 'Kenya'},
                 {title: 'City/Town', text: 'Nairobi'},
                 {title: 'County', text: 'Nairobi'},
-                {title: 'Mobile', text: '+254-722762945, +254-28919092'},
+                {title: 'Mobile', text: '+254-722762945'},
+                {title: '', text: '+254-28919092'},
                 {title: 'Email Address', text: '<i>trading@jowamcoffee.com</i>'},
                 {title: '', text: '<i>bundi.jowamcoffee@gmail.com</i>'}
             ]

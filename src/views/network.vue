@@ -14,8 +14,8 @@
                             v-for="(ag, i) in agents"
                             :key="i">
                                 <v-list-item class="mt-2 d-flex justify-space-between">
-                                    <v-list-content class="name">{{ ag.name }}</v-list-content>
-                                    <v-list-content class="name blue--text">{{ ag.email }}</v-list-content>
+                                    <v-list-item-content class="name">{{ ag.name }}</v-list-item-content>
+                                    <v-list-item-content class="name blue--text">{{ ag.email }}</v-list-item-content>
                                 </v-list-item>
                                 <v-divider></v-divider>
                             </div>
@@ -31,7 +31,7 @@
                             v-for="(ag, i) in agents"
                             :key="i">
                                 <v-list-item class="mt-2 text-center">
-                                    <v-list-content class="name">{{ ag.name }}</v-list-content>
+                                    <v-list-item-content class="name">{{ ag.name }}</v-list-item-content>
                                 </v-list-item>
                                 <v-divider></v-divider>
                             </div>

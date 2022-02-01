@@ -5,71 +5,134 @@
         <nav-bar />
       </div>
 
-    <div class="main-content hidden-sm-and-down">
-      <div class="imageDiv d-flex justify-center  align-center pa-10"
-      v-for="cs in contents" 
-      :key="cs.id">
-        <div class="content">
-          <h3 class="mb-3">{{ cs.title }}</h3>
-          <p>{{ cs.info }}</p>
-        </div>
-        <div class="image">
-          <img width="100%" :src="cs.img">
-        </div>
-      </div>
+      <div class="hidden-sm-and-down">
+        <div style="width: 70%;" class="mx-auto mt-4">
+          <div
+            class="imageDiv d-flex justify-center  align-center pa-10"
+            v-for="cs in contents"
+            :key="cs.id"
+          >
+            <div class="content">
+              <h3 class="mb-3">{{ cs.title }}</h3>
+              <p>{{ cs.info }}</p>
+            </div>
+            <div class="image">
+              <img width="100%" :src="cs.img" />
+            </div>
+          </div>
 
-      <div class="exports mb-7 d-flex justify-center align-center">
-        <div class="export-content ">
-          <div class="text-center inner-div">
-            <h3 class="mb-6">GREEN COFFEE EXPORTS</h3>
-            <p>Jowam Trading Coffee exports approximately 6,000 bags of green coffee from Kenya yearly. The trading operation is run from the Nairobi head office where all the pre-auction and post- auction quality control is carried out. In the search of the right qualities around 500 samples of coffee are roasted and cupped weekly and their quality merits assessed. The team then takes the individual auction lots and carefully blends them to match the requirements of each customer. Jowam Trading Coffee has its warehouse and processing equipment in Nairobi in order to maintain control over quality and security right up to export.</p>
+          <div class="d-flex justify-center  align-center pa-10">
+            
+            <div class="image">
+              <img width="100%" :src="concepts.img" />
+            </div>
+            <div class="content-two">
+              <h3 class="mb-3">{{ concepts.title }}</h3>
+              <p>{{ concepts.info }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="exports d-flex justify-center align-center">
+          <div class="export-content ">
+            <div class="text-center inner-div">
+              <h3 class="mb-6">GREEN COFFEE EXPORTS</h3>
+              <p>
+                Jowam Trading Coffee exports approximately 6,000 bags of green
+                coffee from Kenya yearly. The trading operation is run from the
+                Nairobi head office where all the pre-auction and post- auction
+                quality control is carried out. In the search of the right
+                qualities around 500 samples of coffee are roasted and cupped
+                weekly and their quality merits assessed. The team then takes
+                the individual auction lots and carefully blends them to match
+                the requirements of each customer. Jowam Trading Coffee has its
+                warehouse and processing equipment in Nairobi in order to
+                maintain control over quality and security right up to export.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="pt-8 hidden-md-and-up">
-      <div class="mobile-image-div pa-10"
-      v-for="cs in contents" 
-      :key="cs.id">
-        <div class="mobile-content">
-          <h3 class="mb-3">{{ cs.title }}</h3>
-          <p>{{ cs.info }}</p>
+      <div class="pt-10 hidden-md-and-up">
+        <div class="mobile-image-div pa-10" v-for="cs in contents" :key="cs.id">
+          <div class="mobile-content">
+            <h3 class="mb-3">{{ cs.title }}</h3>
+            <p>{{ cs.info }}</p>
+          </div>
+          <div class="mobile-image">
+            <img width="100%" :src="cs.img" />
+          </div>
         </div>
-        <div class="mobile-image">
-          <img width="100%" :src="cs.img">
-        </div>
-      </div>
 
-      <div class="mobile-exports mb-7 d-flex justify-center align-center">
-        <div class="mobile-export-content">
-          <div class="text-center mobile-inner-div">
-            <h3 class="mb-6">GREEN COFFEE EXPORTS</h3>
-            <p>Jowam Trading Coffee exports approximately 6,000 bags of green coffee from Kenya yearly. The trading operation is run from the Nairobi head office where all the pre-auction and post- auction quality control is carried out. In the search of the right qualities around 500 samples of coffee are roasted and cupped weekly and their quality merits assessed. The team then takes the individual auction lots and carefully blends them to match the requirements of each customer. Jowam Trading Coffee has its warehouse and processing equipment in Nairobi in order to maintain control over quality and security right up to export.</p>
+        <div class="mobile-image-div pa-10" >
+          <div class="mobile-content">
+            <h3 class="mb-3">{{ concepts.title }}</h3>
+            <p>{{ concepts.info }}</p>
+          </div>
+          <div class="mobile-image">
+            <img width="100%" :src="concepts.img" />
+          </div>
+        </div>
+
+        <div class="mobile-exports d-flex justify-center align-center">
+          <div class="mobile-export-content">
+            <div class="text-center mobile-inner-div">
+              <h3 class="mb-6">GREEN COFFEE EXPORTS</h3>
+              <p>
+                Jowam Trading Coffee exports approximately 6,000 bags of green
+                coffee from Kenya yearly. The trading operation is run from the
+                Nairobi head office where all the pre-auction and post- auction
+                quality control is carried out. In the search of the right
+                qualities around 500 samples of coffee are roasted and cupped
+                weekly and their quality merits assessed. The team then takes
+                the individual auction lots and carefully blends them to match
+                the requirements of each customer. Jowam Trading Coffee has its
+                warehouse and processing equipment in Nairobi in order to
+                maintain control over quality and security right up to export.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="footer">
-      <bottom-view />
-    </div>
+      <div class="footer">
+        <bottom-view />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {  
+export default {
   data() {
     return {
+      concepts: {
+        title: "BUSINESS CONCEPTS",
+        info:
+          "Through a business model that is geared towards easy access and convenience for our customers, Jowam Coffee Trading Company has evolved to become a trusted coffee dealer and exporter of Kenyan green Arabica coffee. Our business model has continued to earn global recognition in terms of coffee quality assurance, friendly sales contracts, and timely delivery of shipments. Since the incorporation of Jowam Coffee Trading Company Ltd, we have shipped large volumes of green coffee beans from Kenya to many countries around the world.",
+        img:
+          "https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/intro2_p4HHOt3Ed.jpg",
+      },
+
       contents: [
-        {title: 'INTRODUCTION', info: 'Jowam Coffee Trading Company limited is registered and incorporated under the Company’s Act in the Laws of Kenya. We are licensed under the Coffee Directorate Crops Act, 2013 and the Coffee (Forms) Rules, 2002 as a licensed coffee dealer and exporter in Kenya. With well over thirty years of experience in the Coffee industry coupled with quality control, passion and commitment to service, Jowam Coffee Trading Company founders empower clients by providing coffees that ensure their product sales remain high.', img: 'https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/intro_GDTiXHIH5N.jpeg'},
-        {title: '', info: 'Jowam Coffee Trading Company Limited was founded in June 2006 as an exporting company for coffees. We also promote farmers by providing advanced farming technologies to ensure production of high-quality coffee that is of great value.', img: 'https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/products-03_Q0Kcl9MpnD.jpg'},
-        {title: 'BUSINESS CONCEPTS', info: 'Through a business model that is geared towards easy access and convenience for our customers, Jowam Coffee Trading Company has evolved to become a trusted coffee dealer and exporter of Kenyan green Arabica coffee. Our business model has continued to earn global recognition in terms of coffee quality assurance, friendly sales contracts, and timely delivery of shipments. Since the incorporation of Jowam Coffee Trading Company Ltd, we have shipped large volumes of green coffee beans from Kenya to many countries around the world.', img: 'https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/intro2_p4HHOt3Ed.jpg'}
-      ]
-    }
-  }
-}
+        {
+          title: "INTRODUCTION",
+          info:
+            "Jowam Coffee Trading Company limited is registered and incorporated under the Company’s Act in the Laws of Kenya. We are licensed under the Coffee Directorate Crops Act, 2013 and the Coffee (Forms) Rules, 2002 as a licensed coffee dealer and exporter in Kenya. With well over thirty years of experience in the Coffee industry coupled with quality control, passion and commitment to service, Jowam Coffee Trading Company founders empower clients by providing coffees that ensure their product sales remain high.",
+          img:
+            "https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/intro_GDTiXHIH5N.jpeg",
+        },
+        {
+          title: "",
+          info:
+            "Jowam Coffee Trading Company Limited was founded in June 2006 as an exporting company for coffees. We also promote farmers by providing advanced farming technologies to ensure production of high-quality coffee that is of great value.",
+          img:
+            "https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/products-03_Q0Kcl9MpnD.jpg",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>
@@ -97,7 +160,18 @@ export default {
   padding: 3rem;
   text-align: center;
   position: relative;
-  left: 4%;
+  left: 5%;
+}
+
+.content-two {
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: 300px;
+  width: 40%;
+  border-radius: 10px;
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  right: 5%;
 }
 
 .image {
@@ -113,7 +187,6 @@ export default {
 .mobile-exports {
   background-color: #ba8445;
 }
-
 
 .export-content {
   background-color: rgba(255, 255, 255, 0.9);
@@ -145,9 +218,8 @@ export default {
 
 .mobile-content {
   width: 100%;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 2rem;
   border-radius: 5px 5px 0 0;
 }
-
 </style>
