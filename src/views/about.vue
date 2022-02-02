@@ -11,7 +11,6 @@
             <div class="image-div">
               <img
                 width="100%"
-                height="100px"
                 src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/berries__qOduLnzi.jpg"
               />
             </div>
@@ -91,7 +90,6 @@
             <div>
               <img
                 width="100%"
-                height="200px"
                 src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fekballohouse.com%2Fpics%2Fpost840_2158_Blog2.jpg&f=1&nofb=1"
               />
             </div>
