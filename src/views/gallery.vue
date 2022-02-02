@@ -6,72 +6,17 @@
       </div>
 
       <div class="main-content mb-6 pt-12">
-        <div class="row hidden-sm-and-down">
-          <div class="col">
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/director_Y-QbK_-NV.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/results_jh6D2XOPp.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/packing_a3ZM3Ul9Z.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam3_VO-DO5-j5.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam5_hl4IUeRCu.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam4_6KnsQfhmg.jpg"
-            />
+        <div class="col hidden-sm-and-down mx-auto pl-12">
+          <div class="image-div" v-for="(im, i) in images" :key="i">
+            <v-img class="img" :src="im.src"> </v-img>
           </div>
-          <div class="col">
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/plant_rDAzqrkhT.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam2_p4qS3D639.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/plantation_rDU5jeH3-8.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam7_8SQPrawos.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam2_p4qS3D639.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/plantation_rDU5jeH3-8.jpg"
-            />
-          </div>
-          <div class="col">
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam7_8SQPrawos.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam0_I0sbjpbM2t.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam_zy8E31tbzs.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam6_rZf5Xy5-b.jpg"
-            />
-            <img
-              src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/jowam1_EZSJ9qSBOS.jpg"
-            />
-          </div>
-          -->
         </div>
 
         <div class="mobile-row hidden-md-and-up pa-6 mb-7">
           <div
             class="d-flex justify-center my-3"
-            v-for="im in images"
-            :key="im.id"
+            v-for="(im, i) in images"
+            :key="i"
           >
             <img width="95%" :src="im.src" />
           </div>
@@ -133,21 +78,39 @@ export default {
   background-color: rgba(46, 22, 14, 0.5);
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4rem;
-}
-
 .top-btn {
   position: fixed;
   bottom: 10%;
   right: 2%;
 }
 
-.col img {
-  width: 100%;
+.image-div {
   border-radius: 10px;
-  margin: 8px;
+  margin: 1rem;
+  height: 20rem;
+  width: 30%;
+  display: inline-block;
+  overflow: hidden;
+  animation: zoom-in-zoom-out 2s ease;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.image-div > .img {
+  transition: transform 0.5s ease;
+}
+
+.image-div > .img:hover {
+  transform: scale(1.2);
 }
 </style>
