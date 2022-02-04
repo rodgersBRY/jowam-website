@@ -6,34 +6,26 @@
       </div>
 
       <div class="main-content hidden-sm-and-down">
-        <div style="width: 70%;" class="mx-auto">
-          <div
-            class="imageDiv d-flex justify-center  align-center pa-10"
-            v-for="cs in contents"
-            :key="cs.id"
-          >
-            <div class="content">
-              <h3 class="mb-3">{{ cs.title }}</h3>
-              <p>{{ cs.info }}</p>
-            </div>
-            <div class="image">
-              <img width="100%" :src="cs.img" />
-            </div>
-          </div>
+        <v-carousel cycle hide-delimiters show-arrows-on-hover height="700px">
+          <v-carousel-item v-for="(cnt, i) in contents" :key="i" :src="cnt.img">
+            <v-sheet
+              color="transparent"
+              height="100%"
+              width="60%"
+              class=" mx-auto pb-12 d-flex align-end px-12"
+            >
+              <div>
+                <div class="carousel-title mb-12">
+                  {{ cnt.title }}
+                </div>
+                <div class="carousel-text">{{ cnt.info }}</div>
+              </div>
+            </v-sheet>
+          </v-carousel-item>
+        </v-carousel>
 
-          <div class="d-flex justify-center  align-center pa-10">
-            
-            <div class="image">
-              <img width="100%" :src="concepts.img" />
-            </div>
-            <div class="content-two">
-              <h3 class="mb-3">{{ concepts.title }}</h3>
-              <p>{{ concepts.info }}</p>
-            </div>
-          </div>
-        </div>
         <div class="exports d-flex justify-center align-center">
-          <div class="export-content ">
+          <div class="export-content">
             <div class="text-center inner-div">
               <h3 class="mb-6">GREEN COFFEE EXPORTS</h3>
               <p>
@@ -52,7 +44,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- mobile layout -->
       <div class="pt-10 hidden-md-and-up">
         <div class="mobile-image-div pa-10" v-for="cs in contents" :key="cs.id">
@@ -62,16 +54,6 @@
           </div>
           <div class="mobile-image">
             <img width="100%" :src="cs.img" />
-          </div>
-        </div>
-
-        <div class="mobile-image-div pa-10" >
-          <div class="mobile-content">
-            <h3 class="mb-3">{{ concepts.title }}</h3>
-            <p>{{ concepts.info }}</p>
-          </div>
-          <div class="mobile-image">
-            <img width="100%" :src="concepts.img" />
           </div>
         </div>
 
@@ -107,28 +89,27 @@
 export default {
   data() {
     return {
-      concepts: {
-        title: "BUSINESS CONCEPTS",
-        info:
-          "Through a business model that is geared towards easy access and convenience for our customers, Jowam Coffee Trading Company has evolved to become a trusted coffee dealer and exporter of Kenyan green Arabica coffee. Our business model has continued to earn global recognition in terms of coffee quality assurance, friendly sales contracts, and timely delivery of shipments. Since the incorporation of Jowam Coffee Trading Company Ltd, we have shipped large volumes of green coffee beans from Kenya to many countries around the world.",
-        img:
-          "https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/intro2_p4HHOt3Ed.jpg",
-      },
-
       contents: [
         {
           title: "INTRODUCTION",
           info:
             "Jowam Coffee Trading Company limited is registered and incorporated under the Company’s Act in the Laws of Kenya. We are licensed under the Coffee Directorate Crops Act, 2013 and the Coffee (Forms) Rules, 2002 as a licensed coffee dealer and exporter in Kenya. With well over thirty years of experience in the Coffee industry coupled with quality control, passion and commitment to service, Jowam Coffee Trading Company founders empower clients by providing coffees that ensure their product sales remain high.",
           img:
-            "https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/intro_GDTiXHIH5N.jpeg",
+            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.farmafrica.org%2Fimages%2Ftwitter-cards%2Fgrace-arineitwe-social-card.jpg&f=1&nofb=1",
         },
         {
           title: "",
           info:
             "Jowam Coffee Trading Company Limited was founded in June 2006 as an exporting company for coffees. We also promote farmers by providing advanced farming technologies to ensure production of high-quality coffee that is of great value.",
           img:
-            "https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/products-03_Q0Kcl9MpnD.jpg",
+            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd2ru2mvuh5wx24.cloudfront.net%2Favtivity_bootstrap%2F1204%2Fcoffee_galore__1920x864.jpg&f=1&nofb=1",
+        },
+        {
+          title: "BUSINESS CONCEPTS",
+          info:
+            "Through a business model that is geared towards easy access and convenience for our customers, Jowam Coffee Trading Company has evolved to become a trusted coffee dealer and exporter of Kenyan green Arabica coffee. Our business model has continued to earn global recognition in terms of coffee quality assurance, friendly sales contracts, and timely delivery of shipments. Since the incorporation of Jowam Coffee Trading Company Ltd, we have shipped large volumes of green coffee beans from Kenya to many countries around the world.",
+          img:
+            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftheexchange.africa%2Fwp-content%2Fuploads%2F2018%2F05%2FCoffee-Bill-Coffee-farming-in-East-Africa-Uganda-Coffee-industry.jpg&f=1&nofb=1",
         },
       ],
     };
@@ -144,10 +125,6 @@ export default {
   background-attachment: fixed;
 }
 
-.main-content {
-  padding-top: 8rem;
-}
-
 .header {
   position: relative;
   z-index: 10;
@@ -155,6 +132,17 @@ export default {
 
 .parent {
   background-color: rgba(46, 22, 14, 0.5);
+}
+
+.carousel-title {
+  color: orange;
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.carousel-text {
+  font-size: 24px;
+  color: white;
 }
 
 .content {

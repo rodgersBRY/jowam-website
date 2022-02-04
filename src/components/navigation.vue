@@ -6,16 +6,14 @@
       elevate-on-scroll
       color="transaprent"
       :class="[scrollPosition > 50 ? 'change-color' : 'transparent']"
-      height="100px"
+      height="70px"
       width="80%"
       class="mx-auto mb-10 hidden-sm-and-down"
     >
-      <v-img
-        :src="require('../assets/logo.png')"
-        width="1px"
-        height="100%"
-      ></v-img>
-      <v-toolbar-title class="display-1 white--text ml-3"
+      <div class="transparent" style="width: 50px">
+        <v-img :src="require('../assets/logo.png')" width="100%"></v-img>
+      </div>
+      <v-toolbar-title class="company-name white--text ml-3"
         >JOWAM COFFEE TRADERS LTD</v-toolbar-title
       >
       <v-spacer />
@@ -116,17 +114,19 @@ export default {
 </script>
 
 <style scoped>
+.company-name {
+  font-size: 30px;
+  font-weight: bold;
+}
 .change-color {
-  background: rgb(61, 29, 29);
+  background: rgb(46, 22, 14);
   border-radius: 0 0 10px 10px;
 }
 
 .nav-bar {
   list-style: none;
-  /* background-color: #2e160e; */
   color: white;
   display: flex;
-  /* width: 100%; */
   justify-content: center;
 }
 
@@ -139,7 +139,6 @@ export default {
 .nav-bar li {
   text-decoration: none;
   color: white;
-  /* font-size: 20px; */
 }
 
 .nav-bar li:hover {
