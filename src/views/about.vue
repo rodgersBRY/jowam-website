@@ -5,7 +5,7 @@
         <nav-bar />
       </div>
 
-      <div class="main-content pt-12" style="width: 100%;">
+      <div class="main-content" style="width: 100%;">
         <div class="mx-auto" style="width: 70%;">
           <div class="pa-10 hidden-sm-and-down">
             <div class="image-div">
@@ -352,6 +352,10 @@ export default {};
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.main-content {
+  padding-top: 8rem;
 }
 
 .header {

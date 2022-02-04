@@ -5,7 +5,7 @@
         <nav-bar />
       </div>
 
-      <div class="main-content mb-6 pt-12">
+      <div class="main-content mb-6">
         <div class="col hidden-sm-and-down mx-auto pl-12">
           <div class="image-div" v-for="(im, i) in images" :key="i">
             <v-img class="img" :src="im.src"> </v-img>
@@ -58,13 +58,21 @@ export default {
       ],
     };
   },
+
+  
 };
 </script>
 
 <style scoped>
+
+
 .header {
   position: relative;
   z-index: 10;
+}
+
+.main-content {
+  padding-top: 8rem;
 }
 
 .gallery {

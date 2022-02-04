@@ -5,8 +5,8 @@
         <nav-bar />
       </div>
 
-      <div class="hidden-sm-and-down">
-        <div style="width: 70%;" class="mx-auto mt-4">
+      <div class="main-content hidden-sm-and-down">
+        <div style="width: 70%;" class="mx-auto">
           <div
             class="imageDiv d-flex justify-center  align-center pa-10"
             v-for="cs in contents"
@@ -52,7 +52,8 @@
           </div>
         </div>
       </div>
-
+      
+      <!-- mobile layout -->
       <div class="pt-10 hidden-md-and-up">
         <div class="mobile-image-div pa-10" v-for="cs in contents" :key="cs.id">
           <div class="mobile-content">
@@ -141,6 +142,10 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.main-content {
+  padding-top: 8rem;
 }
 
 .header {
