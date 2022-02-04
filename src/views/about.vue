@@ -8,11 +8,16 @@
       <div class="main-content" style="width: 100%;">
         <div class="mx-auto" style="width: 70%;">
           <div class="pa-10 hidden-sm-and-down">
-            <div class="image-div">
-              <img
-                width="100%"
+            <div
+              class="image-div"
+              style="border-radius: 10px 10px 0 0; overflow: hidden;"
+            >
+              <v-parallax
+                dark
+                height="300"
                 src="https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/berries__qOduLnzi.jpg"
-              />
+              >
+              </v-parallax>
             </div>
             <div class="details hidden-sm-and-down">
               <h3>STRONG COFFEE, STRONG ROOTS</h3>
@@ -87,11 +92,11 @@
 
         <div class="mx-auto" style="width: 70%;">
           <div class="pa-10 hidden-sm-and-down">
-            <div>
-              <img
-                width="100%"
+            <div style="overflow: hidden; border-radius: 10px 10px 0 0">
+              <v-parallax
+                height="300"
                 src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fekballohouse.com%2Fpics%2Fpost840_2158_Blog2.jpg&f=1&nofb=1"
-              />
+              ></v-parallax>
             </div>
             <div class="details">
               <p class="mission">
