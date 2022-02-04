@@ -51,6 +51,7 @@
             </div>
           </div>
         </div>
+        
         <!-- mobile layout -->
         <div class="pt-6 hidden-md-and-up mx-auto" style="width:80%">
           <div class="mobile-image">

@@ -83,7 +83,7 @@ export default {
 }
 
 .parent {
-  background-color: rgba(46, 22, 14, 0.5);
+  background-color: rgba(36, 22, 17, 0.5);
 }
 
 .top-btn {
