@@ -30,8 +30,8 @@
               </v-list>
 
               <div class="hse my-12">
-                <h3 class="name">Caxton Hse, 3rd Floor</h3>
-                <p>Standard Street</p>
+                <h3 class="name">Pension Towers, 4th Floor</h3>
+                <p>Loita Street</p>
               </div>
               <div class="call">
                 <p class="name">Call Anytime</p>
@@ -61,8 +61,8 @@
               </v-list>
 
               <div class="hse my-12">
-                <h3 class="name">Caxton Hse, 3rd Floor</h3>
-                <p>Standard Street</p>
+                <h3 class="name">Pension Towers, 4th Floor</h3>
+                <p>Loita Street</p>
               </div>
               <div class="call">
                 <p class="name">Call Anytime</p>
