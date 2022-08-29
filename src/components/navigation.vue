@@ -28,6 +28,9 @@
         <router-link tag="li" active-class="active" to="/gallery"
           >Photo Gallery</router-link
         >
+        <router-link tag="li" active-class="active" to="/training"
+          >Training Centre</router-link
+        >
         <router-link tag="li" active-class="active" to="/network"
           >Network & Partnerships</router-link
         >
@@ -43,7 +46,7 @@
         class="logo hidden-md-and-up"
         role="button"
         @click="$router.push('/')"
-        style="cursor: pointer;"
+        style="cursor: pointer"
       >
         <img width="40" :src="require('../assets/logo.png')" />
       </div>
@@ -66,7 +69,7 @@
           class="mobile-logo"
           role="button"
           @click="$router.push('/')"
-          style="cursor: pointer;"
+          style="cursor: pointer"
         >
           <img width="40" :src="require('../assets/logo.png')" />
         </div>

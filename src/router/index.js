@@ -53,6 +53,14 @@ const router = new Router({
       },
     },
     {
+      path: '/training',
+      name: 'training',
+      component: () => import('@/views/training.vue'),
+      meta: {
+        title: 'Training Centre'
+      }
+    },
+    {
       path: "/*",
       component: 404,
     },
