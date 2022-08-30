@@ -46,7 +46,7 @@
       <v-divider color="white" />
       <div class="d-flex justify-space-between align-center mt-7">
         <div>
-          Developed by <a href="mailto:brianmawira2@gmail.com">Mawira </a>
+          Developed by <a href="https://mawira.cf" target="_blank">Mawira </a>
         </div>
         <div>Copyright &copy; {{ date }} Jowam Coffee</div>
       </div>
@@ -54,7 +54,7 @@
 
     <div class="footer-mobile hidden-md-and-up text-center">
       <div>
-        Developed by <a href="mailto:brianmawira2@gmail.com">Mawira </a>
+        Developed by <a href="https://mawira.cf">Mawira </a>
       </div>
       <div>Copyright &copy; {{ date }} Jowam Coffee</div>
     </div>
