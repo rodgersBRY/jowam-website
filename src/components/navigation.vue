@@ -28,14 +28,15 @@
         <router-link tag="li" active-class="active" to="/gallery"
           >Photo Gallery</router-link
         >
-        <router-link tag="li" active-class="active" to="/training"
-          >Training Centre</router-link
-        >
+
         <router-link tag="li" active-class="active" to="/network"
           >Network & Partnerships</router-link
         >
         <router-link tag="li" active-class="active" to="/contact"
           >Contact Us</router-link
+        >
+        <router-link tag="li" active-class="active" to="/training"
+          class="training-btn">Training Centre</router-link
         >
       </div>
     </v-app-bar>
@@ -78,7 +79,9 @@
         <router-link tag="li" to="/gallery">Photo Gallery</router-link>
         <router-link tag="li" to="/network">Network & Partnerships</router-link>
         <router-link tag="li" to="/contact">Contact Us</router-link>
-
+        <router-link tag="li" to="/training" class="training-btn"
+          >Training Centre
+        </router-link>
         <div class="copyright white--text">
           <p>copyright &copy; {{ date }}</p>
         </div>
@@ -131,6 +134,7 @@ export default {
   color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nav-bar li {
@@ -187,5 +191,16 @@ export default {
 .firmName {
   padding: 6rem 0;
   font-size: 70px;
+}
+
+.training-btn {
+  background: #ba8445;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.training-btn:hover {
+  background: white;
+  color: black;
 }
 </style>
