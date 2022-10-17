@@ -10,7 +10,7 @@
         </div>
       </header>
   
-      <main>
+      <main style="background">
         <div class="map-div">
           <h3>Find Us</h3>
           <div class="map">

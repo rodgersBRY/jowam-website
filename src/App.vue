@@ -19,8 +19,6 @@ export default {
 
 <style scoped>
 .vapp {
-  background-image: url(./assets/bg.jpg);
-  background-size: cover;
   font-family: 'Raleway', sans-serif;
 }
 </style>
