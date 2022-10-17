@@ -43,7 +43,7 @@ export default {
           title: "Barista Championship",
           pin: "@TheHub Karen",
           details:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni beatae exercitationem odio omnis sit sunt.",
+            "An event organized by some top stakeholders in the coffee business held in Karen at the Hub. We saw one of our own students outdo the rest of the contenstants to win the championship and a chance to go compete in Melbourne",
         },
       ],
     };
