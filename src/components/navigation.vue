@@ -168,7 +168,7 @@ export default {
 
 .drawer li {
   display: block;
-  text-align: right;
+  text-align: center;
   list-style: none;
   margin: 1rem 6px;
   padding: 8px;

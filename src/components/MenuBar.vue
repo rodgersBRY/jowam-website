@@ -39,9 +39,10 @@
         >Contact Us</router-link
       ><router-link
         to="/"
+        tag="li"
         exact-active-class="active"
         style="margin-top: 4rem"
-        class="jowam-btn"
+        class="jowam-btn-mobile"
         >Jowam</router-link
       >
     </div>
@@ -63,13 +64,23 @@ export default {
 
 <style lang="scss" scoped>
 .jowam-btn {
+  margin-left: 3rem;
+  padding: 1rem 2rem;
+}
+
+.jowam-btn-mobile {
+  width: 50%;
+  margin: 0 auto;
+}
+.jowam-btn,
+.jowam-btn-mobile {
   text-decoration: none;
   color: white;
   background: #ba8445;
-  padding: 1rem 2rem;
-  margin-left: 3rem;
+
   border-radius: 5px;
 }
+
 @media screen and (min-width: 1200px) {
   #nav {
     .company-name {
@@ -110,7 +121,6 @@ export default {
       font-size: 25px;
     }
     .mobile-menu-icon {
-      display: block;
       margin-right: 1rem;
       font-size: 20px;
     }
@@ -149,11 +159,12 @@ export default {
   .mobile-menu-icon {
     background: transparent;
     border-style: none;
-    color: white;
+    // color: white;
     cursor: pointer;
   }
 
   .mobile-menu-items {
+    padding-top: 5rem;
     position: fixed;
     right: 0;
     top: 0;
@@ -179,7 +190,8 @@ export default {
       position: absolute;
       right: 2%;
       top: 1%;
-      border-style: none;
+      border: 2px solid grey;
+      padding: 10px;
       font-size: 30px;
       color: white;
       cursor: pointer;
