@@ -39,7 +39,7 @@ export default {
     return {
       events: [
         {
-          img: require("../../assets/barista-champ.webp"),
+          img: require("../../assets/barista-champ.png"),
           title: "Barista Championship",
           pin: "@TheHub Karen",
           details:

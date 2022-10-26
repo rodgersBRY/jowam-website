@@ -72,7 +72,7 @@
   }
   
   header {
-    background-image: url("../../assets/contact-us.webp");
+    background-image: url("../../assets/contact-us.jpg");
     background-size: cover;
     background-position: fixed;
     .header-content {
