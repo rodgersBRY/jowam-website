@@ -16,7 +16,7 @@
           <img
             :src="tr.img"
             :alt="[
-              tr.img,
+              tr.name,
               'jowam teachers',
               'jowam training centre',
               'coffee experts',
