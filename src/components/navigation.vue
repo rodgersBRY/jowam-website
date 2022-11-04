@@ -4,7 +4,6 @@
       elevation="0"
       fixed
       elevate-on-scroll
-      color="transaprent"
       :class="[scrollPosition > 50 ? 'change-color' : 'transparent']"
       height="70px"
       width="80%"

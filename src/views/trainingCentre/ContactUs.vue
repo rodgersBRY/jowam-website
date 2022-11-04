@@ -52,7 +52,7 @@
           placeholder="Enter your message"
           cols="4"
         ></textarea>
-        <button>Submit</button>
+        <button @click="submitEmail">Submit</button>
       </div>
     </main>
     <footer>
@@ -62,23 +62,42 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
       name: "",
       email: "",
       message: "",
-      subject: "",
     };
+  },
+
+  methods: {
+    async submitEmail() {
+      const baseUrl = "/.netlify/functions";
+      
+      let userData = {
+        name: this.name,
+        email: this.email,
+        message: this.message,
+      };
+
+      try {
+        await axios.post(`${baseUrl}/contactUs`, userData);
+
+        await axios.post(`${baseUrl}/autoreply`, userData);
+
+        alert("Message sent successfully");
+      } catch (err) {
+        alert(err.message);
+      }
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-#contact-school {
-  color: black;
-}
-
 header {
   background-image: url("../../assets/contact-us.webp");
   background-size: cover;
@@ -199,7 +218,7 @@ main {
       }
     }
   }
-  
+
   main {
     width: 90%;
     margin: auto;
