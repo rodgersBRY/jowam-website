@@ -55,6 +55,7 @@ export default {
 h1 {
   letter-spacing: 5px;
   font-family: "Abril Fatface", cursive;
+  color: white;
 }
 
 header {
@@ -71,7 +72,6 @@ header {
 }
 
 main {
-  color: black;
   .events-div {
     .card {
       width: 300px;
@@ -95,7 +95,7 @@ main {
     .header-content {
       padding-left: 5rem;
       h1 {
-        font-size: 105px;
+        font-size: 75px;
       }
     }
   }
@@ -124,10 +124,11 @@ main {
     .header-content {
       padding-left: 4rem;
       h1 {
-        font-size: 72px;
+        font-size: 75px;
       }
     }
   }
+
   main {
     .events-div {
       display: flex;
@@ -146,7 +147,7 @@ main {
 
 @media screen and (max-width: 900px) {
   header {
-    height: 50vh;
+    height: 70vh;
     .header-content {
       padding-left: 1rem;
       h1 {

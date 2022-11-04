@@ -187,12 +187,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h2,
-h3,
-p,
-article {
-  color: black;
-}
 
 header {
   background-image: url("../../assets/module-banner.webp");
@@ -201,10 +195,10 @@ header {
     font-weight: bold;
     font-family: "Abril fatface", cursive;
     letter-spacing: 4px;
+    color: white;
   }
 
   .key-points-div {
-    color: black;
     .h3 {
       margin-bottom: 2.5rem;
       font-weight: 700;
@@ -284,7 +278,8 @@ main {
 
 @media screen and (min-width: 1200px) {
   header {
-    height: 90vh;
+    height: 100%;
+    padding-bottom: 2rem;
     h1 {
       font-size: 72px;
     }
@@ -294,7 +289,6 @@ main {
       .key-points-div {
         background-color: rgba($color: #ffff, $alpha: 0.9);
         padding: 3rem;
-        color: black;
         display: flex;
         justify-content: space-between;
 

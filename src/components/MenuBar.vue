@@ -22,7 +22,7 @@
       >
     </div>
 
-    <button class="mobile-menu-icon" @click="openNav">
+    <button class="mobile-menu-icon white--text" @click="openNav">
       <i class="fa fa-bars"></i>
     </button>
 

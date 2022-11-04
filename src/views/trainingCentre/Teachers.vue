@@ -77,12 +77,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-p {
-  color: black;
-}
 h1 {
   letter-spacing: 10px;
   font-family: "Abril Fatface", cursive;
+  color: white;
 }
 
 header {
@@ -127,7 +125,7 @@ main {
     .header-content {
       padding-left: 5rem;
       h1 {
-        font-size: 105px;
+        font-size: 75px;
       }
     }
   }
@@ -153,7 +151,7 @@ main {
     .header-content {
       padding-left: 2rem;
       h1 {
-        font-size: 105px;
+        font-size: 75px;
       }
     }
   }
@@ -173,7 +171,7 @@ main {
 
 @media screen and (max-width: 900px) {
   header {
-    height: 50vh;
+    height: 70vh;
     .header-content {
       padding-left: 1rem;
       h1 {
@@ -184,7 +182,6 @@ main {
 
   main {
     .teachers {
-      // display: block;
       flex-direction: column;
       width: 100%;
       margin: 0;

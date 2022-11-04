@@ -224,7 +224,6 @@ h2,
 h3 {
   font-family: "Abril fatface", cursive;
   letter-spacing: 4px;
-  color: black;
 }
 
 button {
@@ -252,14 +251,15 @@ button {
   .header-content {
     margin: 0 auto;
 
-    h1 {
+    h1,
+    p,
+    a {
       color: white;
     }
 
     button {
       a {
         text-decoration: none;
-        color: white;
       }
     }
 
@@ -374,13 +374,14 @@ main {
 
 @media screen and (min-width: 1200px) {
   h1 {
-    font-size: 105px;
+    font-size: 75px;
   }
   h2 {
     font-size: 28px;
   }
   header {
-    height: 90vh;
+    height: 100%;
+    padding-bottom: 1rem;
     .header-content {
       width: 70%;
     }
