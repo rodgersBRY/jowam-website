@@ -10,27 +10,7 @@
       </div>
     </header>
 
-    <main style="background">
-      <div class="map-div">
-        <h3>Find Us</h3>
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8173752470507!2d36.81552211533582!3d-1.2834391359864927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11b6fa22017b%3A0xdabfba1e3666b1dd!2sJOWAM%20TRAINING%20CENTER!5e0!3m2!1sen!2ske!4v1662716234918!5m2!1sen!2ske"
-            width="100%"
-            height="100%"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <p>
-          Pension Towers, Loita Str. <br />
-          Nairobi, Kenya
-        </p>
-        <p>+254728919092</p>
-      </div>
-
+    <main>
       <div class="email-us">
         <h3>Email Us</h3>
         <input
@@ -53,6 +33,26 @@
           cols="4"
         ></textarea>
         <button @click="submitEmail">Submit</button>
+      </div>
+
+      <div class="map-div">
+        <h3>Find Us</h3>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8173752470507!2d36.81552211533582!3d-1.2834391359864927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11b6fa22017b%3A0xdabfba1e3666b1dd!2sJOWAM%20TRAINING%20CENTER!5e0!3m2!1sen!2ske!4v1662716234918!5m2!1sen!2ske"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <p>
+          Pension Towers, Loita Str. <br />
+          Nairobi, Kenya
+        </p>
+        <p>+254728919092</p>
       </div>
     </main>
     <footer>
@@ -92,7 +92,6 @@ export default {
         this.name = "";
         this.email = "";
         this.message = "";
-        
       } catch (err) {
         alert(err.message);
       }
@@ -158,16 +157,17 @@ main {
   main {
     display: flex;
     justify-content: center;
-    width: 70%;
+    width: 80%;
     margin: 5rem auto;
     .map-div {
       .map {
-        width: 500px;
+        width: 400px;
         height: 400px;
       }
     }
+    
     .email-us {
-      margin-left: 1rem;
+      margin-right: 1rem;
       input,
       textarea {
         padding: 2rem 1rem;
@@ -192,17 +192,16 @@ main {
   main {
     display: flex;
     justify-content: center;
-    width: 70%;
     margin: 5rem auto;
     .map-div {
       .map {
-        width: 500px;
+        width: 400px;
         height: 350px;
       }
     }
 
     .email-us {
-      margin-left: 1rem;
+      margin-right: 1rem;
       input,
       textarea {
         padding: 1.5rem 0.5rem;
@@ -224,6 +223,8 @@ main {
   }
 
   main {
+    display: flex;
+    flex-direction: column;
     width: 90%;
     margin: auto;
     h3 {
@@ -240,7 +241,7 @@ main {
       input,
       textarea {
         padding: 1rem 10px;
-        width: 93%;
+        width: 100%;
       }
     }
   }
