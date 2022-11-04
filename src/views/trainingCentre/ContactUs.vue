@@ -76,7 +76,7 @@ export default {
   methods: {
     async submitEmail() {
       const baseUrl = "/.netlify/functions";
-      
+
       let userData = {
         name: this.name,
         email: this.email,
@@ -89,6 +89,10 @@ export default {
         await axios.post(`${baseUrl}/autoreply`, userData);
 
         alert("Message sent successfully");
+        this.name = "";
+        this.email = "";
+        this.message = "";
+        
       } catch (err) {
         alert(err.message);
       }

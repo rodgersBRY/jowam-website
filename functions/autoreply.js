@@ -8,13 +8,15 @@ exports.handler = (event, body, cb) => {
   const mail = {
     from: process.env.EMAIL,
     to: body.email,
-    subject: "Email Confirmation Jowam T.C.",
+    subject: "Email Confirmation - Jowam T.C.",
     html: `<h3>Hi ${body.name},</h3>
     <p>
-      Thank you for reaching out to us at Jowam Training Centre <br />
-    We have received yur email and will get back to you with feedback.
-      Best Regards, <br />
-      <strong>Jowam Training Centre</strong> 
+    Thank you for reaching out to us at Jowam Training Centre <br />
+    We have received your email and will get back to you with a feedback.
+
+    <br /><br />
+    Best Regards, <br />
+    <strong>Jowam Training Centre</strong> 
     </p>`,
   };
 

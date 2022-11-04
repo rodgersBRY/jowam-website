@@ -8,10 +8,10 @@ exports.handler = (event, context, cb) => {
   const mail = {
     from: body.email,
     to: process.env.EMAIL,
-    subject: "User Feedback",
+    subject: "Jowam Training Centre Feedback",
     html: `<h3>${body.name}</h3>
     <em>${body.email}</em>
-    <p>${body.phone}</p>
+    
     <p>
       ${body.message}
     </p>`,
