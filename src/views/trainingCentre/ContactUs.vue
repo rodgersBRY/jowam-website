@@ -157,7 +157,6 @@ main {
   main {
     display: flex;
     justify-content: center;
-    width: 80%;
     margin: 5rem auto;
     .map-div {
       .map {
