@@ -158,7 +158,7 @@ export default {
           info:
             "Many roasting tests and research findings. one subject. You now have access to all of our expertise, experience, and roasting secrets. Study under the greatest. Get access to master seminars from top coffee roasters",
           ht:
-            "Gain practical experirence in the key elements of sensory evaluation in Sensory skills classes.",
+            "Gain practical experience in the key elements of sensory evaluation in Sensory skills classes.",
           more_info:
             "A cup of coffee can be downed by some in seconds, although you are hopefully able to enjoy your coffee enough to savour it a little longer. But the process leading to a cup of coffee is years long in the making.",
           topics: [

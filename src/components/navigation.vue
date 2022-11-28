@@ -1,92 +1,45 @@
 <template>
-  <div class="header text-center">
-    <v-app-bar
-      elevation="0"
-      fixed
-      elevate-on-scroll
-      :class="[scrollPosition > 50 ? 'change-color' : 'transparent']"
-      height="70px"
-      width="80%"
-      class="mx-auto mb-10 hidden-sm-and-down"
-    >
-      <div class="transparent" style="width: 50px">
-        <v-img :src="require('../assets/logo.png')" width="100%"></v-img>
-      </div>
-      <v-toolbar-title class="company-name white--text ml-3"
-        >JOWAM COFFEE TRADERS LTD</v-toolbar-title
-      >
-      <v-spacer />
-      <div class="nav-bar">
-        <!-- use the exact attribute to prevent root route from being always active -->
-        <router-link role="button" tag="li" active-class="active" to="/" exact
-          >Home</router-link
-        >
-        <router-link tag="li" active-class="active" to="/about"
-          >About Us</router-link
-        >
-        <router-link tag="li" active-class="active" to="/gallery"
-          >Photo Gallery</router-link
-        >
+  <nav class="header">
+    <section class="logo-div d-flex align-center">
+      <img
+        :src="require('../assets/logo.png')"
+        alt="jowam coffee, coffee experts"
+      />
+      <h1>
+        <span>Jowam</span> <br />
+        Coffee Traders
+      </h1>
+    </section>
 
-        <router-link tag="li" active-class="active" to="/network"
-          >Network & Partnerships</router-link
-        >
-        <router-link tag="li" active-class="active" to="/contact"
-          >Contact Us</router-link
-        >
-        <router-link tag="li" active-class="active" to="/training"
-          class="training-btn">Training Centre</router-link
-        >
-      </div>
-    </v-app-bar>
-
-    <!-- mobile layout -->
-    <div class="mobile-nav d-flex justify-space-between">
-      <div
-        class="logo hidden-md-and-up"
-        role="button"
-        @click="$router.push('/')"
-        style="cursor: pointer"
+    <section class="nav-links">
+      <v-btn icon class="mobile-menu-close" color="white" @click="closeNavMenu"
+        ><v-icon>mdi-close</v-icon></v-btn
       >
-        <img width="40" :src="require('../assets/logo.png')" />
-      </div>
-      <!-- hamburger menu -->
-      <v-app-bar-nav-icon
-        large
-        class="grey--text hidden-md-and-up nav"
-        @click="drawer = !drawer"
-      ></v-app-bar-nav-icon>
-
-      <v-navigation-drawer
-        dark
-        v-model="drawer"
-        app
-        right
-        class="drawer hidden-md-and-up"
-        color="#2e160e"
-      >
-        <div
-          class="mobile-logo"
-          role="button"
-          @click="$router.push('/')"
-          style="cursor: pointer"
-        >
-          <img width="40" :src="require('../assets/logo.png')" />
-        </div>
-        <router-link tag="li" to="/">Home</router-link>
-        <router-link tag="li" to="/about">About Us</router-link>
-        <router-link tag="li" to="/gallery">Photo Gallery</router-link>
-        <router-link tag="li" to="/network">Network & Partnerships</router-link>
-        <router-link tag="li" to="/contact">Contact Us</router-link>
-        <router-link tag="li" to="/training" class="training-btn"
-          >Training Centre
+      <ul>
+        <router-link exact-active-class="active" tag="li" to="/">
+          Home
         </router-link>
-        <div class="copyright white--text">
-          <p>copyright &copy; {{ date }}</p>
-        </div>
-      </v-navigation-drawer>
-    </div>
-  </div>
+
+        <span>|</span>
+        <router-link active-class="active" tag="li" to="/about">
+          About Us
+        </router-link>
+
+        <span>|</span>
+        <router-link active-class="active" tag="li" to="/contact">
+          Contact Us
+        </router-link>
+
+        <router-link active-class="active" tag="li" to="/training">
+          Training Centre
+        </router-link>
+      </ul>
+    </section>
+
+    <section class="mobile-menu-open">
+      <v-btn icon small @click="openNavMenu"><v-icon>mdi-menu</v-icon></v-btn>
+    </section>
+  </nav>
 </template>
 
 <script>
@@ -103,103 +56,127 @@ export default {
   mounted() {
     window.addEventListener("scroll", this.updateScroll);
   },
-
-  methods: {
-    updateScroll() {
-      this.scrollPosition = window.scrollY;
-    },
-  },
-
   computed: {
     currentPage() {
       return this.$route.path;
     },
   },
+
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    },
+    openNavMenu() {
+      let navDiv = document.getElementsByClassName("nav-links")[0];
+      navDiv.style.width = "100%";
+    },
+    closeNavMenu() {
+      let navDiv = document.getElementsByClassName("nav-links")[0];
+      navDiv.style.width = "0";
+    },
+  },
 };
 </script>
 
-<style scoped>
-.company-name {
-  font-size: 30px;
-  font-weight: bold;
-}
-.change-color {
-  background: rgb(46, 22, 14);
-  border-radius: 0 0 10px 10px;
-}
-
-.nav-bar {
-  list-style: none;
-  color: white;
+<style scoped lang="scss">
+.header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+
+  .logo-div {
+    h1 {
+      margin-left: 20px;
+      text-align: center;
+      span {
+        color: rgb(130, 202, 130);
+      }
+    }
+  }
+  .nav-links ul {
+    padding: 0;
+    list-style: none;
+    span {
+      font-weight: bold;
+    }
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 1rem;
+      font-weight: bold;
+      &:hover,
+      &.active {
+        color: #ba8445;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
-.nav-bar li {
-  display: inline-block;
-  margin: 1rem 2rem;
-  cursor: pointer;
+@media screen and (min-width: 900px) {
+  .header {
+    width: 70%;
+    margin: 0 auto;
+    padding: 5px 0;
+    .logo-div {
+      img {
+        height: 60px;
+      }
+    }
+
+    .nav-links {
+      li:last-child {
+        background: #ba8445;
+        padding: 20px;
+        border-radius: 5px;
+        color: white;
+      }
+      .mobile-menu-close {
+        display: none;
+      }
+    }
+    .mobile-menu-open {
+      display: none;
+    }
+  }
 }
 
-.nav-bar li {
-  text-decoration: none;
-  color: white;
-}
+@media screen and (max-width: 900px) {
+  .header {
+    padding: 5px;
 
-.nav-bar li:hover {
-  color: rgb(105, 103, 103);
-}
-
-.nav-bar li.active {
-  color: #ba8445;
-}
-
-.mobile-nav {
-  background-color: #2e160e;
-  position: fixed;
-  width: 100%;
-}
-
-.mobile-logo {
-  margin: 4rem 0;
-}
-
-.drawer li {
-  display: block;
-  text-align: center;
-  list-style: none;
-  margin: 1rem 6px;
-  padding: 8px;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.drawer li:hover {
-  background: rgba(160, 157, 157, 0.5);
-  color: #ba8445;
-}
-
-.copyright {
-  position: absolute;
-  width: 100%;
-  bottom: 2px;
-}
-
-.firmName {
-  padding: 6rem 0;
-  font-size: 70px;
-}
-
-.training-btn {
-  background: #ba8445;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.training-btn:hover {
-  background: white;
-  color: black;
+    .logo-div {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .nav-links {
+      z-index: 1;
+      width: 0;
+      background: black;
+      color: white;
+      height: 100vh;
+      position: absolute;
+      overflow: hidden;
+      transition: width 1s ease-in-out;
+      top: 0;
+      left: 0;
+      ul {
+        margin-top: 4rem;
+        li {
+          display: block;
+        }
+        span {
+          display: none;
+        }
+      }
+      .mobile-menu-close {
+        position: absolute;
+        right: 4%;
+        top: 1%;
+      }
+    }
+  }
 }
 </style>

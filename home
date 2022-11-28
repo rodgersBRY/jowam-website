@@ -1,0 +1,83 @@
+
+    <div class="parent">
+      <div class="header">
+        <nav-bar />
+      </div>
+
+      <div class="main-content hidden-sm-and-down">
+        <v-carousel cycle hide-delimiters show-arrows-on-hover height="700px">
+          <v-carousel-item v-for="(cnt, i) in contents" :key="i" :src="cnt.img">
+            <v-sheet
+              color="transparent"
+              height="100%"
+              width="60%"
+              class=" mx-auto pb-12 d-flex align-end px-12"
+            >
+              <div>
+                <div class="carousel-title mb-12">
+                  {{ cnt.title }}
+                </div>
+                <div class="carousel-text">{{ cnt.info }}</div>
+              </div>
+            </v-sheet>
+          </v-carousel-item>
+        </v-carousel>
+
+        <div class="exports d-flex justify-center align-center">
+          <div class="export-content">
+            <div class="text-center inner-div">
+              <h3 class="mb-6">GREEN COFFEE EXPORTS</h3>
+              <p>
+                Jowam Trading Coffee exports approximately 6,000 bags of green
+                coffee from Kenya yearly. The trading operation is run from the
+                Nairobi head office where all the pre-auction and post- auction
+                quality control is carried out. In the search of the right
+                qualities around 500 samples of coffee are roasted and cupped
+                weekly and their quality merits assessed. The team then takes
+                the individual auction lots and carefully blends them to match
+                the requirements of each customer. Jowam Trading Coffee has its
+                warehouse and processing equipment in Nairobi in order to
+                maintain control over quality and security right up to export.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile layout -->
+      <div class="pt-10 hidden-md-and-up">
+        <div class="mobile-image-div pa-10" v-for="cs in contents" :key="cs.id">
+          <div class="mobile-content">
+            <h3 class="mb-3">{{ cs.title }}</h3>
+            <p>{{ cs.info }}</p>
+          </div>
+          <div class="mobile-image">
+            <img width="100%" :src="cs.img" />
+          </div>
+        </div>
+
+        <div class="mobile-exports d-flex justify-center align-center">
+          <div class="mobile-export-content">
+            <div class="text-center mobile-inner-div">
+              <h3 class="mb-6">GREEN COFFEE EXPORTS</h3>
+              <p>
+                Jowam Trading Coffee exports approximately 6,000 bags of green
+                coffee from Kenya yearly. The trading operation is run from the
+                Nairobi head office where all the pre-auction and post- auction
+                quality control is carried out. In the search of the right
+                qualities around 500 samples of coffee are roasted and cupped
+                weekly and their quality merits assessed. The team then takes
+                the individual auction lots and carefully blends them to match
+                the requirements of each customer. Jowam Trading Coffee has its
+                warehouse and processing equipment in Nairobi in order to
+                maintain control over quality and security right up to export.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <bottom-view />
+      </div>
+    </div>
