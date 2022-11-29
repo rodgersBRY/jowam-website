@@ -20,7 +20,7 @@ Vue.config.productionTip = false;
 
 // register the components for global access
 Vue.component("nav-bar", navBar);
-Vue.component("bottom-view", Footer);
+Vue.component("bottom-footer", Footer);
 Vue.component("menu-bar", TrainingMenu);
 Vue.component("training-footer", TrainingFooter);
 

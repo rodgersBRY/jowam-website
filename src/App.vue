@@ -14,6 +14,6 @@ export default {
 
 <style scoped>
 .vapp {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 </style>

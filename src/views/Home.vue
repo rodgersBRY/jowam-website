@@ -48,9 +48,26 @@
         </div>
       </section>
 
-      <h2 class="text-center mt-10">Our Partners</h2>
+      <section class="business-concept">
+        <div>
+          <h1>BUSINESS CONCEPTS</h1>
+          <p>
+            Through a business model that is geared towards easy access and
+            convenience for our customers, Jowam Coffee Trading Company has
+            evolved to become a trusted coffee dealer and exporter of Kenyan
+            green Arabica coffee. Our business model has continued to earn
+            global recognition in terms of coffee quality assurance, friendly
+            sales contracts, and timely delivery of shipments. Since the
+            incorporation of Jowam Coffee Trading Company Ltd, we have shipped
+            large volumes of green coffee beans from Kenya to many countries
+            around the world.
+          </p>
+        </div>
+      </section>
 
-      <section class="partners mt-10">
+      <h2 class="text-center mb-10">OUR PARTNERS</h2>
+
+      <section class="partners">
         <br />
         <div class="partner-logos">
           <img
@@ -62,6 +79,10 @@
         </div>
       </section>
     </main>
+
+    <footer>
+      <bottom-footer />
+    </footer>
   </div>
 </template>
 
@@ -113,7 +134,6 @@ main {
     background-image: url("../assets/img/home-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-
     color: white;
     display: flex;
     justify-content: center;
@@ -125,28 +145,42 @@ main {
     align-items: center;
   }
 
+  .business-concept {
+    background-image: url("../assets/img/home-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .partners {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(144, 144, 144, 0.1);
+    padding: 2rem 0;
     .partner-logos {
       display: flex;
     }
   }
 }
+
 // mobile device
 @media screen and (max-width: 1000px) {
   h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
   h2 {
     font-size: 20px;
   }
   .banner-div {
     height: 50vh;
+    margin-top: 3rem;
     div {
       width: 90%;
       height: 60%;
       p {
-        font-size: 20px;
+        font-size: 16px;
       }
     }
   }
@@ -156,6 +190,22 @@ main {
     margin: 1rem auto 0 auto;
     .about-text {
       width: 100%;
+    }
+  }
+
+  .business-concept {
+    padding: 10px 0;
+    margin: 7rem 0 5rem 0;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      width: 90%;
+      p {
+        font-size: 16px;
+      }
     }
   }
   .partner-logos {
@@ -196,12 +246,23 @@ main {
       width: 50%;
     }
   }
-  .partner-logos {
+  .business-concept {
+    padding: 10px 0;
+    margin: 10rem 0;
+    height: 60vh;
+    color: white;
+    display: flex;
     justify-content: center;
-    img {
-      width: 100px;
-      height: 100px;
+    align-items: center;
+    div {
+      width: 70%;
+      p {
+        font-size: 20px;
+      }
     }
+  }
+  .partner-logos {
+    justify-content: space-around;
   }
 }
 </style>

@@ -46,26 +46,24 @@
 export default {
   data() {
     return {
-      activeClass: "active",
-      drawer: false,
       date: new Date().getFullYear(),
-      scrollPosition: null,
     };
   },
 
   mounted() {
-    window.addEventListener("scroll", this.updateScroll);
-  },
-  computed: {
-    currentPage() {
-      return this.$route.path;
-    },
+    var prevScrollPos = window.pageYOffset;
+    window.onscroll = () => {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollPos > currentScrollPos) {
+        document.getElementsByClassName("header")[0].style.top = "0";
+      } else {
+        document.getElementsByClassName("header")[0].style.top = "-100px";
+      }
+      prevScrollPos = currentScrollPos;
+    };
   },
 
   methods: {
-    updateScroll() {
-      this.scrollPosition = window.scrollY;
-    },
     openNavMenu() {
       let navDiv = document.getElementsByClassName("nav-links")[0];
       navDiv.style.width = "100%";
@@ -80,10 +78,15 @@ export default {
 
 <style scoped lang="scss">
 .header {
+  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  transition: top 0.8s ease;
   .logo-div {
     h1 {
       margin-left: 20px;
@@ -110,14 +113,15 @@ export default {
         cursor: pointer;
       }
     }
+    li:last-child:hover {
+      color: black;
+    }
   }
 }
 
 @media screen and (min-width: 1000px) {
   .header {
-    width: 70%;
-    margin: 0 auto;
-    padding: 5px 0;
+    padding: 5px 5rem;
     .logo-div {
       img {
         height: 60px;
@@ -144,7 +148,6 @@ export default {
 @media screen and (max-width: 1000px) {
   .header {
     padding: 5px;
-
     .logo-div {
       img {
         width: 50px;

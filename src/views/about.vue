@@ -342,7 +342,7 @@
       </div>
 
       <div class="footer">
-        <bottom-view />
+        <bottom-footer />
       </div>
     </div>
   </div>
@@ -352,85 +352,5 @@
 export default {};
 </script>
 
-<style scoped>
-.about {
-  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/coffee1_zXbvcAYrD.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.main-content {
-  padding-top: 8rem;
-}
-
-.header {
-  position: relative;
-  z-index: 10;
-}
-
-.parent {
-  background-color: rgba(46, 22, 14, 0.5);
-}
-
-.details {
-  background: rgba(255, 255, 255, 0.7);
-  padding: 3rem;
-  width: 85%;
-  margin: 0 auto;
-  border-radius: 5px;
-  position: relative;
-  top: -7rem;
-}
-
-.mobile-details {
-  background: rgba(255, 255, 255, 0.7);
-  padding: 1rem;
-}
-
-.mission,
-.vision,
-.objectives {
-  font-size: 35px;
-  font-weight: lighter;
-}
-
-.image-div img {
-  border-radius: 5px;
-}
-
-.mobile-image img {
-  border-radius: 5px 5px 0 0;
-}
-
-.logisitics-div {
-  background-color: #ba8445;
-}
-
-.export-content {
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 70%;
-  margin: 5rem 0;
-  padding: 1rem;
-  border-radius: 5px;
-}
-
-.inner-div {
-  border: 4px solid #ba8445;
-  border-radius: 5px;
-  padding: 2rem;
-}
-
-@media screen and (max-width: 700px) {
-  .export-content {
-    width: 90%;
-    margin: 1rem 0;
-    padding: 10px;
-  }
-  .inner-div {
-    border: 2px solid #ba8445;
-    border-radius: 5px;
-    padding: 1rem;
-  }
-}
+<style scoped lang="scss">
 </style>

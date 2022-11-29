@@ -1,63 +1,28 @@
 <template>
-  <div class="footer">
-    <div class="footer-desktop hidden-sm-and-down">
-      <p class="title">Jowam Coffee</p>
-      <v-divider color="white" />
-      <div class="shortcuts my-5 px-4">
-        <div class="nav-details d-flex">
-          <header>Home</header>
-          <ul>
-            <li>|</li>
-            <li>Introduction</li>
-            <li>Business Concepts</li>
-            <li>Green Coffee Exports</li>
-          </ul>
-        </div>
-        <div class="nav-details d-flex mt-4">
-          <header>About</header>
-          <ul>
-            <li>|</li>
-            <li>Privacy Notice</li>
-            <li>Our Company</li>
-            <li>Mission, Vision, Goals & Objectives</li>
-          </ul>
-        </div>
-        <div class="nav-details d-flex mt-4">
-          <header>Network</header>
-          <ul>
-            <li>|</li>
-            <li>Regulators</li>
-            <li>Farm Management Agents</li>
-            <li>Auctioneers</li>
-            <li>Millers and Marketers</li>
-          </ul>
-        </div>
-        <div class="nav-details d-flex mt-4">
-          <header>Contacts</header>
-          <ul>
-            <li>|</li>
-            <li>City/Town</li>
-            <li>Country</li>
-            <li>Mobile</li>
-            <li>Email</li>
-          </ul>
-        </div>
-      </div>
-      <v-divider color="white" />
-      <div class="d-flex justify-space-between align-center mt-7">
-        <div>
-          Developed by <a href="https://mawira.cf" target="_blank">Mawira </a>
-        </div>
-        <div>Copyright &copy; {{ date }} Jowam Coffee</div>
-      </div>
-    </div>
+  <div id="footer">
+    <section class="nav-links">
+      <ul>
+        <router-link exact-active-class="active" tag="li" to="/">
+          Home
+        </router-link>
 
-    <div class="footer-mobile hidden-md-and-up text-center">
-      <div>
-        Developed by <a href="https://mawira.cf">Mawira </a>
-      </div>
-      <div>Copyright &copy; {{ date }} Jowam Coffee</div>
-    </div>
+        <router-link active-class="active" tag="li" to="/about">
+          About Us
+        </router-link>
+
+        <router-link active-class="active" tag="li" to="/contact">
+          Contact Us
+        </router-link>
+      </ul>
+    </section>
+
+    <section class="copyright">
+      <p>Copyright &copy; {{ date }} All rights reserved.</p>
+      <p>
+        Designed and Developed By
+        <a href="https://mawira.cf" target="_blank">Mawira Corp</a>
+      </p>
+    </section>
   </div>
 </template>
 
@@ -71,27 +36,35 @@ export default {
 };
 </script>
 
-<style scoped>
-.footer {
-  background-color: rgb(46, 22, 14);
-  color: grey;
-}
-
-.footer-desktop {
-  padding: 2rem 10rem;
-}
-
-.footer-mobile {
-  padding: 1rem;
-}
-
-.footer a {
-  text-decoration: none;
-}
-
-.nav-details ul li {
-  list-style-type: none;
-  margin: 0 15px;
-  display: inline-block;
+<style scoped lang="scss">
+#footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  .nav-links {
+    margin-bottom: 2rem;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin: 0 1rem;
+      }
+    }
+  }
+  .copyright {
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: grey;
+    }
+    a {
+      text-decoration: none;
+      color: green;
+    }
+  }
 }
 </style>
