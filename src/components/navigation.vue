@@ -113,7 +113,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   .header {
     width: 70%;
     margin: 0 auto;
@@ -141,7 +141,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .header {
     padding: 5px;
 
@@ -166,6 +166,7 @@ export default {
         margin-top: 4rem;
         li {
           display: block;
+          font-size: 20px;
         }
         span {
           display: none;

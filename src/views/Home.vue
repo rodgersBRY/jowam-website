@@ -7,36 +7,59 @@
     <main>
       <section class="banner-div">
         <div>
-          <h1>A DIGITAL MARKETING & DESIGN AGENCY</h1>
+          <h1>GREEN COFFE EXPORTS COMPANY</h1>
           <p>
-            We love the Web and the work we do.We work closely with our clients
-            to deliver the best possible solutions for their needs
+            Promote majority small-scale farmers by marketing their coffee and
+            thereby creating a steady source of income for them
           </p>
 
-          <v-btn depressed dark color="green">FREE BOOTSTRAP TEMPLATES</v-btn>
+          <!-- <v-btn depressed dark color="green">FREE BOOTSTRAP TEMPLATES</v-btn> -->
         </div>
       </section>
 
       <section class="about-us">
-        <div class="about-text">
-          <h2>ABOUT US</h2>
+        <div class="about-text pa-5">
+          <h2>ABOUT <span class="green--text">US</span></h2>
           <p>
             <em
-              >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Voluptatem repellendus accusantium dignissimos alias adipisci
-              laboriosam et soluta voluptatibus dolor odit libero magni quasi
-              voluptates unde, sapiente ex amet architecto temporibus?</em
+              >Jowam Coffee Trading Company Limited was founded in June 2006 as
+              an exporting company for coffees. We also promote farmers by
+              providing advanced farming technologies to ensure production of
+              high-quality coffee that is of great value.</em
             >
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure illo
-            molestiae voluptatum sunt non, laboriosam voluptas deserunt harum
-            ipsum aperiam eligendi quo provident. Quisquam nihil blanditiis
-            praesentium ipsa incidunt dicta! Quos eum aliquid perferendis iure
-            distinctio. Facilis, porro! Consequatur, commodi.
+            Jowam Coffee Trading Company limited is registered and incorporated
+            under the Company’s Act in the Laws of Kenya. We are licensed under
+            the Coffee Directorate Crops Act, 2013 and the Coffee (Forms) Rules,
+            2002 as a licensed coffee dealer and exporter in Kenya. With well
+            over thirty years of experience in the Coffee industry coupled with
+            quality control, passion and commitment to service, Jowam Coffee
+            Trading Company founders empower clients by providing coffees that
+            ensure their product sales remain high.
           </p>
         </div>
-        <div class="about-img"></div>
+        <div class="about-img">
+          <img
+            width="100%"
+            :src="require('../assets/contact-us.webp')"
+            alt="about jowam coffee"
+          />
+        </div>
+      </section>
+
+      <h2 class="text-center mt-10">Our Partners</h2>
+
+      <section class="partners mt-10">
+        <br />
+        <div class="partner-logos">
+          <img
+            v-for="(partner, index) in partners"
+            :key="index"
+            :src="partner.img"
+            alt="jowam partners"
+          />
+        </div>
       </section>
     </main>
   </div>
@@ -69,41 +92,116 @@ export default {
             "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftheexchange.africa%2Fwp-content%2Fuploads%2F2018%2F05%2FCoffee-Bill-Coffee-farming-in-East-Africa-Uganda-Coffee-industry.jpg&f=1&nofb=1",
         },
       ],
+
+      partners: [
+        { img: require("../assets/KCCE.png"), title: "" },
+        { img: require("../assets/KCTA.png"), title: "" },
+        { img: require("../assets/goldrock.png"), title: "" },
+        { img: require("../assets/java.png"), title: "" },
+        { img: require("../assets/fedex.png"), title: "" },
+        { img: require("../assets/dormans.png"), title: "" },
+        { img: require("../assets/coffee_board.png"), title: "" },
+      ],
     };
   },
 };
 </script>
 
 <style scoped lang="scss">
-h1 {
-  font-size: 50px;
-}
-
-h2 {
-  font-size: 40px;
-}
 main {
   .banner-div {
     background-image: url("../assets/img/home-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-us {
+    display: flex;
+    align-items: center;
+  }
+
+  .partners {
+    background: rgba(0, 0, 0, 0.1);
+    .partner-logos {
+      display: flex;
+    }
+  }
+}
+// mobile device
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .banner-div {
+    height: 50vh;
+    div {
+      width: 90%;
+      height: 60%;
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+  .about-us {
+    flex-direction: column;
+    width: 90%;
+    margin: 1rem auto 0 auto;
+    .about-text {
+      width: 100%;
+    }
+  }
+  .partner-logos {
+    flex-direction: column;
+    align-items: center;
+    img {
+      margin: 1rem 0;
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+// desktop device
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .banner-div {
+    background-attachment: fixed;
     padding: 2rem 0;
     height: 70vh;
     div {
       width: 50%;
-      margin: 3rem auto;
-
+      height: 60%;
       p {
         font-size: 30px;
       }
     }
   }
-
   .about-us {
     width: 70%;
-    margin: 3rem auto;
+    margin: 10rem auto 0 auto;
+    .about-text {
+      width: 50%;
+    }
+  }
+  .partner-logos {
+    justify-content: center;
+    img {
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 </style>
