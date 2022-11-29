@@ -1,356 +1,110 @@
 <template>
-  <div class="about">
-    <div class="parent">
-      <div class="header">
-        <nav-bar />
-      </div>
+  <div id="about">
+    <header>
+      <nav-bar />
+    </header>
 
-      <div class="main-content" style="width: 100%;">
-        <div class="mx-auto" style="width: 70%;">
-          <div class="pa-10 hidden-sm-and-down">
-            <div
-              class="image-div"
-              style="border-radius: 10px 10px 0 0; overflow: hidden;"
-            >
-              <v-parallax
-                dark
-                height="300"
-                :src="require('../assets/berries.webp')"
-              >
-              </v-parallax>
-            </div>
-            <div class="details hidden-sm-and-down">
-              <h3>STRONG COFFEE, STRONG ROOTS</h3>
-              <p class="mission">OUR MISSION</p>
-              <p>
-                Jowam Coffee Trading Limited is committed to transforming the
-                lives and livelihoods of coffee farmers, socially and
-                economically by availing to them modern inclusive technologies
-                for coffee farming, milling and beans evaluation and ensure
-                production of the best quality coffee that will, in turn,
-                generate more income for them.
-              </p>
-              <p class="vision">OUR VISION</p>
-              <p>
-                To export large volumes of coffee from the region and beyond to
-                international markets, sustain quality and help in reviving
-                coffee farming in Kenya and the region as a viable business
-                entity.
-              </p>
-              <p class="objectives">GOALS & OBJECTIVES</p>
-              <p>
-                We are determined to be the best coffee dealers and merchants in
-                the region and beyond, to promote unique coffees to the whole
-                consumer world, to always provide our clients with the best
-                quality, affordable coffee and to guarantee quality to our
-                clients under the guidance of our directors who have
-                decades-long experience in the industry. One of our main goals
-                is to promote majority small-scale farmers by marketing their
-                coffee and thereby creating a steady source of income for them
-              </p>
-            </div>
-          </div>
+    <main>
+      <section class="about-banner">
+        <div>
+          <h1>ABOUT US</h1>
+          <p>Strong Coffee, Strong Roots</p>
         </div>
-        
-        <!-- mobile layout -->
-        <div class="pt-6 hidden-md-and-up mx-auto" style="width:80%">
-          <div class="mobile-image">
-            <img
-              width="100%"
-              :src="require('../assets/berries.webp')"
-            />
-          </div>
-          <div class="mobile-details">
-            <h3>STRONG COFFEE, STRONG ROOTS</h3>
-            <p class="mission">OUR MISSION</p>
-            <p>
-              Jowam Coffee Trading Limited is committed to transforming the
-              lives and livelihoods of coffee farmers, socially and economically
-              by availing to them modern inclusive technologies for coffee
-              farming, milling and beans evaluation and ensure production of the
-              best quality coffee that will, in turn, generate more income for
-              them.
-            </p>
-            <p class="vision">OUR VISION</p>
-            <p>
-              To export large volumes of coffee from the region and beyond to
-              international markets, sustain quality and help in reviving coffee
-              farming in Kenya and the region as a viable business entity.
-            </p>
-            <p class="objectives">GOALS & OBJECTIVES</p>
-            <p>
-              We are determined to be the best coffee dealers and merchants in
-              the region and beyond, to promote unique coffees to the whole
-              consumer world, to always provide our clients with the best
-              quality, affordable coffee and to guarantee quality to our clients
-              under the guidance of our directors who have decades-long
-              experience in the industry. One of our main goals is to promote
-              majority small-scale farmers by marketing their coffee and thereby
-              creating a steady source of income for them
-            </p>
-          </div>
-        </div>
+      </section>
 
-        <div class="mx-auto" style="width: 70%;">
-          <div class="pa-10 hidden-sm-and-down">
-            <div style="overflow: hidden; border-radius: 10px 10px 0 0">
-              <v-parallax
-                height="300"
-                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fekballohouse.com%2Fpics%2Fpost840_2158_Blog2.jpg&f=1&nofb=1"
-              ></v-parallax>
-            </div>
-            <div class="details">
-              <p class="mission">
-                QUALITY ASSURANCE <br />
-                & COMMITMENT
-              </p>
-              <ul style="list-style: circle;">
-                <li>
-                  From cooperative society factory where berries are washed,
-                  processed, dried and stored, we move to private and
-                  state-owned coffee millers for another level of quality
-                  assurance by hulling dried coffee beans, grading/screening by
-                  size (AA, AB, C, E, HE, PB, SB, T, TT, UG, UG1, UG2, and UG3),
-                  shape, colour and weight. They label beans according to beans
-                  source farm, cooperative, plantation or garden for
-                  ascertaining FCS domestic collector/dealer connectivity with
-                  actual farmers.
-                </li>
-                <li>
-                  Coffee millers, Coffee Board of Kenya, and Nairobi Coffee
-                  Exchange confirm local consumption and export coffee beans and
-                  standardization involved to all exporting cooperatives,
-                  private exporting companies, direct foreign buyers, government
-                  export agencies and all coffee dealers involved in the
-                  process.
-                </li>
-                <li>
-                  The warehouse log trace coffee beans from the farm where they
-                  were produced, cooperative society factory where wet/dry
-                  pulping was processed and miller where hulling, grading and
-                  packaging was done. The above rigorous process also includes
-                  all FLO (Fairtrade), UTZ, CAFE, 4C and RA certification
-                  standards which forms part of quality authenticity measures.
-                  The coffee traded is Utz Certified (Amsterdam standards); Caf
-                  Certified (Sturbacks std); nationally Kenya Bureau of
-                  standards, and we are currently other ISO standards. In order
-                  to ensure quality, we have a fully equipped coffee-liquoring
-                  laboratory where all the coffee is analyzed in preparation for
-                  export.
-                </li>
-                <li>
-                  Roasters and coffee connoisseurs through their quality
-                  roasting and grinding do their thorough cupping rituals to
-                  return the same good quality verdict. Quality roasting
-                  equipment and experienced connoisseurs do routinely and
-                  randomly sample our export coffee beans for assurance of our
-                  coffee export. The coffee is specially blended to bring out
-                  all the characteristics that give Kenyan coffee its worldwide
-                  reputation for outstanding quality and flavor. All our green
-                  coffees are carefully processed prior to roasting.
-                </li>
-                <li>
-                  We, Jowam Trading Coffee Exporters, are committed to managing
-                  health, safety and environmental (HS&E) matters involved in
-                  the process as an integral part of our business. It is the
-                  company policy to assure the HS&E integrity of our processes
-                  and facilities at all times and all places. We are adhering to
-                  the following principles:
-                  <ul style="list-style: disc;">
-                    <li>
-                      We are complying with all applicable laws and regulations
-                      and will implement programmes and procedures to assure
-                      compliance. Strict compliance with HS&E standards are key
-                      ingredient in the training, performance reviews and
-                      incentives of all our employees. Where, existing laws and
-                      regulations are not adequate to assure protection of human
-                      health, safety and the environment, we do establish and
-                      meet our own HS&E quality standards.
-                    </li>
-                    <li>
-                      We are employing management systems and procedures
-                      specifically designed to prevent activities and or
-                      conditions that pose a threat to human health, safety or
-                      the environment. We are minimizing risk and protect our
-                      employees and the communities in which we operate by
-                      employing safe technologies and operating procedures, as
-                      well as being prepared for emergencies. We will strive to
-                      prevent releases to the atmosphere, land or water. We will
-                      minimize the amount and toxicity of waste generated and
-                      will ensure the safe treatment and disposal of waste.
-                    </li>
-                    <li>
-                      We are communicating our commitment to HS&E quality to our
-                      employee, vendors and customers. We are soliciting their
-                      input in meeting our HS&E goals and in turn will offer
-                      assistance to meet their goals.
-                    </li>
-                    <li>
-                      We are continuously seeking opportunities to improve our
-                      differences to these principles and are periodically
-                      reporting progress to our stakeholders.
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <section class="about">
+        <div class="about-img"></div>
+        <div class="about-text">
+          <h2>WE STRIVE TO BE THE BEST</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim,
+            accusantium repellat ex autem numquam iure officiis facere vitae
+            itaque. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Nam qui vel cupiditate exercitationem, ea fuga est velit nulla culpa
+            modi quis iste tempora non, suscipit repellendus labore voluptatem
+            dicta amet? Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Provident, neque!
+          </p>
         </div>
+      </section>
 
-        <!-- mobile layout -->
-        <div
-          class="mobile-bottom hidden-md-and-up mx-auto my-12"
-          style="width:80%"
-        >
-          <div class="mobile-image">
-            <img
-              width="100%"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fekballohouse.com%2Fpics%2Fpost840_2158_Blog2.jpg&f=1&nofb=1"
-            />
-          </div>
-          <div class="mobile-details">
-            <p class="mission">
-              QUALITY ASSURANCE <br />
-              & COMMITMENT
-            </p>
-            <ul style="list-style: circle;">
-              <li>
-                From cooperative society factory where berries are washed,
-                processed, dried and stored, we move to private and state-owned
-                coffee millers for another level of quality assurance by hulling
-                dried coffee beans, grading/screening by size (AA, AB, C, E, HE,
-                PB, SB, T, TT, UG, UG1, UG2, and UG3), shape, colour and weight.
-                They label beans according to beans source farm, cooperative,
-                plantation or garden for ascertaining FCS domestic
-                collector/dealer connectivity with actual farmers.
-              </li>
-              <li>
-                Coffee millers, Coffee Board of Kenya, and Nairobi Coffee
-                Exchange confirm local consumption and export coffee beans and
-                standardization involved to all exporting cooperatives, private
-                exporting companies, direct foreign buyers, government export
-                agencies and all coffee dealers involved in the process.
-              </li>
-              <li>
-                The warehouse log trace coffee beans from the farm where they
-                were produced, cooperative society factory where wet/dry pulping
-                was processed and miller where hulling, grading and packaging
-                was done. The above rigorous process also includes all FLO
-                (Fairtrade), UTZ, CAFE, 4C and RA certification standards which
-                forms part of quality authenticity measures. The coffee traded
-                is Utz Certified (Amsterdam standards); Caf Certified (Sturbacks
-                std); nationally Kenya Bureau of standards, and we are currently
-                other ISO standards. In order to ensure quality, we have a fully
-                equipped coffee-liquoring laboratory where all the coffee is
-                analyzed in preparation for export.
-              </li>
-              <li>
-                Roasters and coffee connoisseurs through their quality roasting
-                and grinding do their thorough cupping rituals to return the
-                same good quality verdict. Quality roasting equipment and
-                experienced connoisseurs do routinely and randomly sample our
-                export coffee beans for assurance of our coffee export. The
-                coffee is specially blended to bring out all the characteristics
-                that give Kenyan coffee its worldwide reputation for outstanding
-                quality and flavor. All our green coffees are carefully
-                processed prior to roasting.
-              </li>
-              <li>
-                We, Jowam Trading Coffee Exporters, are committed to managing
-                health, safety and environmental (HS&E) matters involved in the
-                process as an integral part of our business. It is the company
-                policy to assure the HS&E integrity of our processes and
-                facilities at all times and all places. We are adhering to the
-                following principles:
-                <ul style="list-style: disc;">
-                  <li>
-                    We are complying with all applicable laws and regulations
-                    and will implement programmes and procedures to assure
-                    compliance. Strict compliance with HS&E standards are key
-                    ingredient in the training, performance reviews and
-                    incentives of all our employees. Where, existing laws and
-                    regulations are not adequate to assure protection of human
-                    health, safety and the environment, we do establish and meet
-                    our own HS&E quality standards.
-                  </li>
-                  <li>
-                    We are employing management systems and procedures
-                    specifically designed to prevent activities and or
-                    conditions that pose a threat to human health, safety or the
-                    environment. We are minimizing risk and protect our
-                    employees and the communities in which we operate by
-                    employing safe technologies and operating procedures, as
-                    well as being prepared for emergencies. We will strive to
-                    prevent releases to the atmosphere, land or water. We will
-                    minimize the amount and toxicity of waste generated and will
-                    ensure the safe treatment and disposal of waste.
-                  </li>
-                  <li>
-                    We are communicating our commitment to HS&E quality to our
-                    employee, vendors and customers. We are soliciting their
-                    input in meeting our HS&E goals and in turn will offer
-                    assistance to meet their goals.
-                  </li>
-                  <li>
-                    We are continuously seeking opportunities to improve our
-                    differences to these principles and are periodically
-                    reporting progress to our stakeholders.
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <section class="values">
+          <v-card
+            flat
+            dark
+            color="transparent"
+            width="300px"
+            class="pa-3"
+            v-for="(val, index) in values"
+            :key="index"
+          >
+            <v-icon large>{{ val.icon }}</v-icon>
+            <v-card-title>{{ val.tab }}</v-card-title>
+            <v-card-text>{{ val.content }}</v-card-text>
+          </v-card>
+      </section>
+    </main>
 
-      <div>
-        <div class="logisitics-div d-flex justify-center align-center">
-          <div class="export-content">
-            <div class="text-center inner-div">
-              <h3 class="mb-6">LOGISTICS INVOLVED IN OUR WORK</h3>
-              <p>
-                Quality coffee delivery on your breakfast table start from
-                human, donkeys, carts and pickups delivering ripe red cherry to
-                cooperative society factories for pulping, washing and sun
-                drying. From here they are then transported to private and
-                state-owned coffee mills for hulling, grading/screening, and
-                certifications such as FLO, UTZ, RA, and 4C whenever is
-                necessary. For us at Jowam Trading Coffee, delivery start from
-                farmers’ farm inputs, cooperatives’ wet/dry processing,
-                marketing agents’ and millers’ milling and grading, and
-                warehouses’ handling. Then we move to coffee auctioning,
-                shipping and customs’ documentation, and the final destination
-                monitoring for the clients. Here is a warehousing service
-                provider, which on behalf of us and our final customers takes
-                custody of coffee, and general food items and provides value
-                addition services and logistical services suited to meet its
-                customer requirements. For the above shipping process to be
-                seemless and operational, we initially propose to our clients
-                our partners involved: Bollore Africa (K) Ltd, TNT, FedEx to
-                deliver our green coffee beans. Our esteemed clients too are
-                given a choice of their own logistics mode preference as long as
-                the shipping line, clearing & forwarding, and courier services
-                agents are reputable, reliable and do have local branch offices
-                in Kenya (Mombasa or Nairobi). Lastly, concise documentation
-                from the farm, cooperative societies, coffee millers, coffee
-                exchange, clearing and forwarding, insurance and bankers are up
-                to standards.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer">
-        <bottom-footer />
-      </div>
-    </div>
+    <footer>
+      <bottom-footer />
+    </footer>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      tab: null,
+      values: [
+        {
+          icon: "mdi-barley",
+          tab: "MISSION",
+          content:
+            "Jowam Coffee Trading Limited is committed to transforming the lives and livelihoods of coffee farmers, socially and economically by availing to them modern inclusive technologies for coffee farming, milling and beans evaluation and ensure production of the best quality coffee that will, in turn, generate more income for them.",
+        },
+        {
+          icon: "mdi-camera-document",
+          tab: "VISION",
+          content:
+            "To export large volumes of coffee from the region and beyond to international markets, sustain quality and help in reviving coffee farming in Kenya and the region as a viable business entity.",
+        },
+        {
+          icon: "mdi-car-brake-retarder",
+          tab: "GOALS & OBJECTIVE",
+          content:
+            "We are determined to be the best coffee dealers and merchants in the region and beyond, to promote unique coffees to the whole consumer world, to always provide our clients with the best quality, affordable coffee and to guarantee quality to our clients under the guidance of our directors who have decades-long experience in the industry. One of our main goals is to promote majority small-scale farmers by marketing their coffee and thereby creating a steady source of income for them",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">
+h1 {
+  font-size: 50px;
+}
+
+.about-banner {
+  background-image: url("../assets/img/home-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 50vh;
+  color: white;
+  padding: 0 0 3rem 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+
+.values {
+  padding: 1rem 5rem;
+  display: flex;
+  background: rgb(28, 28, 28);
+  justify-content: space-around;
+}
+
 </style>

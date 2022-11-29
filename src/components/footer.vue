@@ -52,6 +52,9 @@ export default {
       li {
         display: inline-block;
         margin: 0 1rem;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
