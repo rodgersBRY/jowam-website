@@ -6,8 +6,6 @@ import goTo from "vuetify/lib/services/goto";
 import Home from "../views/Home.vue";
 import About from "../views/about.vue";
 import Contact from "../views/contact.vue";
-import Network from "../views/network.vue";
-import Gallery from "../views/gallery.vue";
 
 Vue.use(Router);
 
@@ -29,27 +27,11 @@ const router = new Router({
       },
     },
     {
-      path: "/network",
-      name: "network",
-      component: Network,
-      meta: {
-        title: "Partnerships",
-      },
-    },
-    {
       path: "/contact",
       name: "contact",
       component: Contact,
       meta: {
         title: "Contact Us",
-      },
-    },
-    {
-      path: "/gallery",
-      name: "gallery",
-      component: Gallery,
-      meta: {
-        title: "Photo Gallery",
       },
     },
     {
