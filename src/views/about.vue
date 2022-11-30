@@ -13,35 +13,49 @@
       </section>
 
       <section class="about">
-        <div class="about-img"></div>
         <div class="about-text">
           <h2>WE STRIVE TO BE THE BEST</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim,
-            accusantium repellat ex autem numquam iure officiis facere vitae
-            itaque. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Nam qui vel cupiditate exercitationem, ea fuga est velit nulla culpa
-            modi quis iste tempora non, suscipit repellendus labore voluptatem
-            dicta amet? Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Provident, neque!
+            From cooperative society factory where berries are washed,
+            processed, dried and stored, we move to private and state-owned
+            coffee millers for another level of quality assurance by hulling
+            dried coffee beans, grading/screening by size (AA, AB, C, E, HE, PB,
+            SB, T, TT, UG, UG1, UG2, and UG3), shape, colour and weight. They
+            label beans according to beans source farm, cooperative, plantation
+            or garden for ascertaining FCS domestic collector/dealer
+            connectivity with actual farmers.
           </p>
+          <p>
+            We, Jowam Trading Coffee Exporters, are committed to managing
+            health, safety and environmental (HS&E) matters involved in the
+            process as an integral part of our business. It is the company
+            policy to assure the HS&E integrity of our processes and facilities
+            at all times and all places.
+          </p>
+        </div>
+        <div class="about-img">
+          <img
+            :src="require('../assets/img/plantation.jpg')"
+            alt="jowam values"
+          />
         </div>
       </section>
 
       <section class="values">
-          <v-card
-            flat
-            dark
-            color="transparent"
-            width="300px"
-            class="pa-3"
-            v-for="(val, index) in values"
-            :key="index"
-          >
-            <v-icon large>{{ val.icon }}</v-icon>
-            <v-card-title>{{ val.tab }}</v-card-title>
-            <v-card-text>{{ val.content }}</v-card-text>
-          </v-card>
+        <v-card
+          dark
+          flat
+          color="transparent"
+          class="pa-3"
+          v-for="(val, index) in values"
+          :key="index"
+        >
+          <v-card-title>
+            <v-icon large class="mr-5">{{ val.icon }}</v-icon>
+            {{ val.tab }}
+          </v-card-title>
+          <v-card-text>{{ val.content }}</v-card-text>
+        </v-card>
       </section>
     </main>
 
@@ -82,29 +96,82 @@ export default {
 </script>
 
 <style scoped lang="scss">
-h1 {
-  font-size: 50px;
-}
-
 .about-banner {
   background-image: url("../assets/img/home-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 50vh;
   color: white;
-  padding: 0 0 3rem 3rem;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
 }
 
+.about {
+  display: flex;
+}
 
 .values {
-  padding: 1rem 5rem;
   display: flex;
   background: rgb(28, 28, 28);
-  justify-content: space-around;
 }
 
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 50px;
+  }
+  .about-banner {
+    background-attachment: fixed;
+    height: 50vh;
+    padding: 0 0 3rem 3rem;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  .about {
+    justify-content: space-around;
+    width: 70%;
+    margin: 5rem auto;
+    .about-text {
+      width: 40%;
+    }
+    .about-img {
+      width: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .values {
+    padding: 1rem 5rem;
+    justify-content: space-around;
+    .v-card {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 40px;
+  }
+  .about-banner {
+    background-attachment: fixed;
+    height: 40vh;
+    padding: 0 0 0 1rem;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  .about {
+    flex-direction: column;
+    padding: 1rem;
+    margin: 2rem 0;
+    .about-img {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .values {
+    flex-direction: column;
+  }
+}
 </style>

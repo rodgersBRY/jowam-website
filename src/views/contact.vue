@@ -1,163 +1,245 @@
 <template>
-  <div class="contact">
-    <div class="parent">
-      <div class="header">
-        <nav-bar />
-      </div>
+  <div id="contact">
+    <header>
+      <nav-bar />
+    </header>
 
-      <div class="main pt-10">
-        <div class="exports d-flex justify-center align-center">
-          <div class="export-content">
-            <!-- desktop layout -->
-            <div class="text-center inner-div hidden-sm-and-down">
-              <h3 class="top-title mb-6">OUR CONTACTS</h3>
-              <v-list color="transparent">
-                <div v-for="cn in contacts" :key="cn.id">
-                  <v-list-item
-                    class="contact-details mt-2 d-flex justify-space-between"
-                  >
-                    <v-list-item-content class="name">{{
-                      cn.title
-                    }}</v-list-item-content>
-                    <v-list-item-content>-</v-list-item-content>
-                    <v-list-item-content
-                      class="name blue--text"
-                      v-html="cn.text"
-                    ></v-list-item-content>
-                  </v-list-item>
-                  <v-divider></v-divider>
-                </div>
-              </v-list>
-
-              <div class="hse my-12">
-                <h3 class="name">Pension Towers, 4th Floor</h3>
-                <p>Loita Street</p>
-              </div>
-              <div class="call">
-                <p class="name">Call Anytime</p>
-                <p>+254-722762945</p>
-              </div>
-            </div>
-
-            <!-- mobile layout -->
-            <div class="text-center pa-7 hidden-md-and-up">
-              <h3 class="top-title mb-6">OUR CONTACTS</h3>
-              <v-list color="transparent">
-                <div v-for="cn in contacts" :key="cn.id">
-                  <v-list-item
-                    class="contact-details mt-2 d-flex justify-space-around"
-                  >
-                    <v-list-item-content class="name">{{
-                      cn.title
-                    }}</v-list-item-content>
-                    <v-list-item-content> - </v-list-item-content>
-                    <v-list-item-content
-                      class="name blue--text"
-                      v-html="cn.text"
-                    ></v-list-item-content>
-                  </v-list-item>
-                  <v-divider />
-                </div>
-              </v-list>
-
-              <div class="hse my-12">
-                <h3 class="name">Pension Towers, 4th Floor</h3>
-                <p>Loita Street</p>
-              </div>
-              <div class="call">
-                <p class="name">Call Anytime</p>
-                <p>+254-728919092</p>
-              </div>
-            </div>
-          </div>
+    <main>
+      <section class="contact-banner">
+        <div>
+          <h1>Drop Us A Note</h1>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p> -->
         </div>
-      </div>
+      </section>
 
-      <div class="footer">
-        <bottom-view />
-      </div>
-    </div>
+      <section class="contact-form">
+        <div>
+          <input
+            type="text"
+            name="name"
+            v-model="name"
+            class="input"
+            placeholder="Your Name"
+          />
+          <input
+            type="text"
+            name="email"
+            v-model="email"
+            class="input"
+            placeholder="Email Address"
+          />
+          <input
+            type="text"
+            name="subject"
+            v-model="subject"
+            class="input"
+            placeholder="Subject"
+          />
+        </div>
+        <div>
+          <textarea
+            name="message"
+            v-model="message"
+            cols="60"
+            rows="7"
+            class="input"
+            placeholder="Your Message"
+          >
+          </textarea>
+          <button type="button" @click="sendEmail" class="send-btn">Send Message</button>
+        </div>
+      </section>
+
+      <section class="location">
+        <h2>Stop By For A Visit</h2>
+        <p>
+          <v-icon class="mr-2">mdi-map-marker-outline</v-icon>Pension Towers,
+          4th Floor. Loita Street
+        </p>
+        <p>
+          <v-icon class="mr-2">mdi-email-outline</v-icon>
+          Emails
+         <ul style="list-style:none">
+          <li class="ml-3"><em>trading@jowamcoffee.com</em> </li>
+          <li class="ml-3"><em>bundi.jowamcoffee@gmail.com</em> </li>
+         </ul>
+        </p>
+        <p>
+          <v-icon class="mr-2">mdi-phone-outline</v-icon>Phone: 254728919092, 254722762945
+        </p>
+
+        <div class="social-media">
+          <v-btn icon large href="https://www.instagram.com/jowamcoffee/">
+            <v-icon>mdi-instagram</v-icon>
+          </v-btn>
+          <v-btn icon large>
+            <v-icon>mdi-facebook</v-icon>
+          </v-btn>
+          <v-btn icon large>
+            <v-icon>mdi-google</v-icon>
+          </v-btn>
+          <v-btn icon large>
+            <v-icon>mdi-linkedin</v-icon>
+          </v-btn>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <bottom-footer />
+    </footer>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data() {
     return {
-      contacts: [
-        { title: "Address", text: "P.O Box: <i>58513-0200 City Square</i>" },
-        { title: "Country", text: "Kenya" },
-        { title: "City/Town", text: "Nairobi" },
-        { title: "County", text: "Nairobi" },
-        { title: "Mobile", text: "+254-722762945" },
-        { title: "", text: "+254-28919092" },
-        { title: "Email Address", text: "<i>trading@jowamcoffee.com</i>" },
-        { title: "", text: "<i>bundi.jowamcoffee@gmail.com</i>" },
-      ],
+      name: '',
+      email:'',
+      subject: '',
+      message: '',
     };
   },
+
+  methods: {
+    async submitEmail() {
+      const baseUrl = "/.netlify/functions";
+
+      let userData = {
+        name: this.name,
+        email: this.email,
+        subject: this.subject,
+        message: this.message,
+      };
+
+      try {
+        await axios.post(`${baseUrl}/contactCompany`, userData);
+
+        await axios.post(`${baseUrl}/autoreply`, userData);
+
+        alert("Message sent successfully");
+        this.name = "";
+        this.email = "";
+        this.message = "";
+      } catch (err) {
+        alert(err.message);
+      }
+    },
+  }
 };
 </script>
 
-<style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Marck+Script&display=swap");
-
-.header {
-  position: relative;
-  z-index: 10;
-  padding-bottom: 1.7rem;
+<style scoped lang="scss">
+textarea {
+  resize: none;
 }
-
-.contact {
-  background-image: url(https://ik.imagekit.io/qxekjpfx0b/Jowam_Coffee/coffee1_zXbvcAYrD.jpg);
+.contact-banner {
+  background-image: url("../assets/about2.webp");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  color: white;
+  display: flex;
 }
 
-.exports {
-  background-color: #ba8445;
-}
-
-.export-content {
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 65%;
-  border-radius: 5px;
-  margin: 4rem 0;
-  padding: 5px;
-}
-
-.inner-div {
-  border: 4px solid #ba8445;
-  border-radius: 5px;
-  padding: 8rem;
-}
-
-@media screen and (max-width: 700px) {
-  .exports {
-    background-color: #ba8445;
+.contact-form {
+  .input {
+    background: rgb(236, 236, 236);
+    border: 1px solid rgb(220, 225, 220);
+    &:focus {
+      outline: none;
+    }
   }
-
-  .export-content {
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 90%;
-    border-radius: 5px;
-    margin: 4rem 0;
-    padding: 5px;
-  }
-
-  .inner-div {
-    border: 4px solid #ba8445;
-    border-radius: 5px;
-    padding: 1rem;
+  button {
+    background: rgb(131, 154, 131);
+    color: white;
+    padding: 15px;
+    width: 100%;
   }
 }
 
-.name {
-  font-family: "Lato", sans-serif;
+.location {
+  padding: 10px;
+  h2 {
+    margin-bottom: 1rem;
+  }
 }
 
-.top-title {
-  font-size: 40px;
+// mobile device
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  .contact-banner {
+    height: 50vh;
+    align-items: flex-end;
+    padding-left: 10px;
+    div {
+      text-align: center;
+      height: 25%;
+    }
+  }
+
+  .contact-form,
+  .location {
+    width: 100%;
+    margin: 3rem auto;
+  }
+
+  .contact-form {
+    div {
+      margin: 0 1rem;
+    }
+    .input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  }
+
+  .location {
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+// desktop device
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  .contact-banner {
+    background-attachment: fixed;
+    height: 60vh;
+    padding-left: 2rem;
+    justify-content: center;
+    align-items: flex-end;
+    div {
+      text-align: center;
+      height: 50%;
+    }
+  }
+
+  .contact-form,
+  .location {
+    width: 40%;
+    margin: 3rem auto;
+  }
+
+  .contact-form {
+    display: flex;
+    div {
+      margin: 0 1rem;
+    }
+    .input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+    }
+  }
 }
 </style>

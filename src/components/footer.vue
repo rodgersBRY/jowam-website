@@ -54,6 +54,7 @@ export default {
         margin: 0 1rem;
         &:hover {
           cursor: pointer;
+          color: green;
         }
       }
     }

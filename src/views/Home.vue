@@ -42,7 +42,7 @@
         <div class="about-img">
           <img
             width="100%"
-            :src="require('../assets/contact-us.webp')"
+            :src="require('../assets/img/jowam7.jpg')"
             alt="about jowam coffee"
           />
         </div>
@@ -146,7 +146,7 @@ main {
   }
 
   .business-concept {
-    background-image: url("../assets/img/home-background.jpg");
+    background-image: url("../assets/about1.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -194,8 +194,8 @@ main {
   }
 
   .business-concept {
-    padding: 10px 0;
-    margin: 7rem 0 5rem 0;
+    padding: 2rem 0;
+    margin: 3rem 0 5rem 0;
     height: 100%;
     color: white;
     display: flex;
@@ -244,6 +244,9 @@ main {
     margin: 10rem auto 0 auto;
     .about-text {
       width: 50%;
+    }
+    img {
+      height: 500px;
     }
   }
   .business-concept {

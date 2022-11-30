@@ -1,6 +1,10 @@
 <template>
   <nav class="header">
-    <section class="logo-div d-flex align-center">
+    <section
+      class="logo-div d-flex align-center"
+      @click="$router.push('/')"
+      style="cursor: pointer;"
+    >
       <img
         :src="require('../assets/logo.png')"
         alt="jowam coffee, coffee experts"
