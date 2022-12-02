@@ -13,7 +13,10 @@
     <main>
       <section class="teachers">
         <div class="card" v-for="(tr, i) in teachers" :key="i">
-          <img
+          <v-avatar color="grey lighten-2" size="200">
+            <v-icon size="150">mdi-account-outline</v-icon>
+          </v-avatar>
+          <!-- <img
             :src="tr.img"
             :alt="[
               tr.name,
@@ -23,7 +26,7 @@
               'coffee barista',
               'coffee courses',
             ]"
-          />
+          /> -->
           <p>{{ tr.name }}</p>
           <p class="subtitle">{{ tr.subtitle }}</p>
         </div>
@@ -41,35 +44,35 @@ export default {
     return {
       teachers: [
         {
-          img: require("../../assets/potrait2.webp"),
-          name: "Derreck Thompson",
+          // img: require("../../assets/potrait2.webp"),
+          name: "Wesley Yeaman",
+          subtitle: "Supervisor",
+        },
+        {
+          // img: require("../../assets/potrait3.webp"),
+          name: "Tee",
           subtitle: "Barista",
         },
         {
-          img: require("../../assets/potrait3.webp"),
-          name: "John Mark",
-          subtitle: "",
+          // img: require("../../assets/potrait4.webp"),
+          name: "Anthony",
+          subtitle: "Mixology",
         },
-        {
-          img: require("../../assets/potrait4.webp"),
-          name: "Ivan Mutugi",
-          subtitle: "",
-        },
-        {
-          img: require("../../assets/potrait5.webp"),
-          name: "Lady Las",
-          subtitle: "",
-        },
-        {
-          img: require("../../assets/potrait6.webp"),
-          name: "Jackie Jun",
-          subtitle: "",
-        },
-        {
-          img: require("../../assets/potrait7.webp"),
-          name: "Lizzie Kims",
-          subtitle: "",
-        },
+        // {
+        //   img: require("../../assets/potrait5.webp"),
+        //   name: "Lady Las",
+        //   subtitle: "",
+        // },
+        // {
+        //   img: require("../../assets/potrait6.webp"),
+        //   name: "Jackie Jun",
+        //   subtitle: "",
+        // },
+        // {
+        //   img: require("../../assets/potrait7.webp"),
+        //   name: "Lizzie Kims",
+        //   subtitle: "",
+        // },
       ],
     };
   },
@@ -102,6 +105,7 @@ main {
     flex-flow: row wrap;
     .card {
       text-align: center;
+      margin: 15px 0;
       img {
         border-radius: 50%;
       }
@@ -121,7 +125,7 @@ main {
 
 @media screen and (min-width: 1200px) {
   header {
-    height: 70vh;
+    height: 60vh;
     .header-content {
       padding-left: 5rem;
       h1 {
@@ -171,7 +175,7 @@ main {
 
 @media screen and (max-width: 900px) {
   header {
-    height: 70vh;
+    height: 40vh;
     .header-content {
       padding-left: 1rem;
       h1 {
