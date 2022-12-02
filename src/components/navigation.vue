@@ -92,6 +92,11 @@ export default {
   width: 100%;
   transition: top 0.8s ease;
   .logo-div {
+    img {
+      position: relative;
+      top: 1.5rem;
+      left: 2%;
+    }
     h1 {
       margin-left: 20px;
       text-align: center;
@@ -117,7 +122,6 @@ export default {
         cursor: pointer;
       }
     }
-    
   }
 }
 
