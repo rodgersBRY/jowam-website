@@ -117,9 +117,7 @@ export default {
         cursor: pointer;
       }
     }
-    li:last-child:hover {
-      color: black;
-    }
+    
   }
 }
 
@@ -138,6 +136,9 @@ export default {
         padding: 20px;
         border-radius: 5px;
         color: white;
+        &:hover {
+          color: black;
+        }
       }
       .mobile-menu-close {
         display: none;
