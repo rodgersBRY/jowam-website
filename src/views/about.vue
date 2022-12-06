@@ -16,7 +16,7 @@
         <div class="about-text">
           <h2>WE STRIVE TO BE THE BEST</h2>
           <p>
-            From cooperative society factory where berries are washed,
+            From co-operative society factory where berries are washed,
             processed, dried and stored, we move to private and state-owned
             coffee millers for another level of quality assurance by hulling
             dried coffee beans, grading/screening by size (AA, AB, C, E, HE, PB,
