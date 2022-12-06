@@ -35,47 +35,6 @@ const router = new Router({
       },
     },
     {
-      path: '/training',
-      name: 'training',
-      component: () => import('../views/trainingCentre/Home.vue'),
-      meta: {
-        title: 'Training Centre'
-      }
-    },
-    // lazy load the other routes
-  {
-    path: "/module/:id",
-    name: "module-details",
-    component: () => import("../views/trainingCentre/module_details.vue"),
-    meta: {
-      title: ''
-    }
-  },
-  {
-    path: "/teachers",
-    name: "Teachers",
-    component: () => import("../views/trainingCentre/Teachers.vue"),
-    meta: {
-      title: 'Teachers'
-    }
-  },
-  {
-    path: '/events',
-    name: 'Events',
-    component: () => import('../views/trainingCentre/Events.vue'),
-    meta: {
-      title: 'Events'
-    }
-  },
-  {
-    path: "/contact-us",
-    name: "School Contact",
-    component: () => import("../views/trainingCentre/ContactUs.vue"),
-    meta: {
-      title: 'Contact School'
-    }
-  },
-    {
       path: "/*",
       component: 404,
     },
