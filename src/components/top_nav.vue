@@ -53,6 +53,19 @@
 
 <script>
 export default {
+  created() {
+    var prevScrollPos = window.pageYOffset;
+    window.onscroll = () => {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollPos > currentScrollPos) {
+        document.getElementById("nav").style.top = "0";
+      } else {
+        document.getElementById("nav").style.top = "-100px";
+      }
+      prevScrollPos = currentScrollPos;
+    };
+  },
+
   methods: {
     openNav() {
       document.getElementById("mobile-menu-items").style.width = "100%";
@@ -65,6 +78,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  transition: top 0.5s ease;
+}
+
 .jowam-btn-mobile {
   text-decoration: none;
   color: white;
