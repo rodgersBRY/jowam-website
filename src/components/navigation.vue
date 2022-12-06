@@ -34,9 +34,15 @@
           Contact Us
         </router-link>
 
-        <router-link active-class="active" tag="li" to="/training">
+        <br class="br" />
+        <br class="br"/>
+        <a
+          class="jowam-btn"
+          tag="li"
+          href="https://training.jowamcoffee.co.ke"
+        >
           Training Centre
-        </router-link>
+        </a>
       </ul>
     </section>
 
@@ -122,10 +128,20 @@ export default {
         cursor: pointer;
       }
     }
+    .jowam-btn {
+      text-decoration: none;
+      color: white;
+      background: #ba8445;
+      padding: 1rem;
+      border-radius: 10px;
+    }
   }
 }
 
 @media screen and (min-width: 1000px) {
+  .br {
+    display: none;
+  }
   .header {
     padding: 5px 5rem;
     .logo-div {
@@ -135,15 +151,6 @@ export default {
     }
 
     .nav-links {
-      li:last-child {
-        background: #ba8445;
-        padding: 20px;
-        border-radius: 5px;
-        color: white;
-        &:hover {
-          color: black;
-        }
-      }
       .mobile-menu-close {
         display: none;
       }
@@ -183,6 +190,9 @@ export default {
         span {
           display: none;
         }
+      }
+      .jowam-btn {
+        margin-left: 1rem;
       }
       .mobile-menu-close {
         position: absolute;
