@@ -83,7 +83,7 @@ export default {
       modules: [
         {
           id: 1,
-          img: require("../../assets/barista.webp"),
+          img: require("../assets/barista.webp"),
           title: "Barista",
           info:
             "Students that enroll in the barista training program learn how to produce a variety of coffee and non-coffee-based drinks, as well as how to grind and brew coffee. Some courses cover information on different roasts, growth areas, and grind varieties. The training often covers inventory management, cash register operation, and customer service protocols. A few programs provide specialized training in techniques like cupping and latte art.",
@@ -103,12 +103,12 @@ export default {
           ],
           teachers: [
             {
-              img: require("../../assets/potrait.webp"),
+              img: require("../assets/potrait.webp"),
               name: "Esther Nyokabi",
               divider: true,
             },
             {
-              img: require("../../assets/potrait_1.webp"),
+              img: require("../assets/potrait_1.webp"),
               name: "kelvin Bundi",
               divider: false,
             },
@@ -116,7 +116,7 @@ export default {
         },
         {
           id: 2,
-          img: require("../../assets/mixology.webp"),
+          img: require("../assets/mixology.webp"),
           title: "Mixology",
           info:
             "You'll learn about all of the many types of ingredients and items used behind the bar, their flavor profiles, and how to work with them in cocktails in this course, which is much more than just a 'overview of ingredients'",
@@ -140,12 +140,12 @@ export default {
           ],
           teachers: [
             {
-              img: require("../../assets/potrait.webp"),
+              img: require("../assets/potrait.webp"),
               name: "Esther Nyokabi",
               divider: true,
             },
             {
-              img: require("../../assets/potrait_1.webp"),
+              img: require("../assets/potrait_1.webp"),
               name: "kelvin Bundi",
               divider: false,
             },
@@ -153,7 +153,7 @@ export default {
         },
         {
           id: 3,
-          img: require("../../assets/roasting.webp"),
+          img: require("../assets/roasting.webp"),
           title: "Roasting",
           info:
             "Many roasting tests and research findings. one subject. You now have access to all of our expertise, experience, and roasting secrets. Study under the greatest. Get access to master seminars from top coffee roasters",
@@ -169,12 +169,12 @@ export default {
           ],
           teachers: [
             {
-              img: require("../../assets/potrait.webp"),
+              img: require("../assets/potrait.webp"),
               name: "Esther Nyokabi",
               divider: true,
             },
             {
-              img: require("../../assets/potrait_1.webp"),
+              img: require("../assets/potrait_1.webp"),
               name: "kelvin Bundi",
               divider: false,
             },
@@ -189,7 +189,7 @@ export default {
 <style lang="scss" scoped>
 
 header {
-  background-image: url("../../assets/module-banner.webp");
+  background-image: url("../assets/module-banner.webp");
   background-size: cover;
   h1 {
     font-weight: bold;

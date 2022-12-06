@@ -102,7 +102,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  background-image: url("../../assets/contact-us.webp");
+  background-image: url("../assets/contact-us.webp");
   background-size: cover;
   background-position: fixed;
   .header-content {

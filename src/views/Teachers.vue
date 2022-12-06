@@ -13,17 +13,9 @@
     <main>
       <section class="teachers">
         <div class="card" v-for="(tr, i) in teachers" :key="i">
-          <img
-            :src="tr.img"
-            :alt="[
-              tr.name,
-              'jowam teachers',
-              'jowam training centre',
-              'coffee experts',
-              'coffee barista',
-              'coffee courses',
-            ]"
-          />
+          <v-avatar color="grey lighten-2" size="200">
+            <v-icon size="150">mdi-account-outline</v-icon>
+          </v-avatar>
           <p>{{ tr.name }}</p>
           <p class="subtitle">{{ tr.subtitle }}</p>
         </div>
@@ -41,34 +33,16 @@ export default {
     return {
       teachers: [
         {
-          img: require("../../assets/potrait2.webp"),
-          name: "Derreck Thompson",
+          name: "Wesley Yeaman",
+          subtitle: "Supervisor",
+        },
+        {
+          name: "Tee",
           subtitle: "Barista",
         },
         {
-          img: require("../../assets/potrait3.webp"),
-          name: "John Mark",
-          subtitle: "",
-        },
-        {
-          img: require("../../assets/potrait4.webp"),
-          name: "Ivan Mutugi",
-          subtitle: "",
-        },
-        {
-          img: require("../../assets/potrait5.webp"),
-          name: "Lady Las",
-          subtitle: "",
-        },
-        {
-          img: require("../../assets/potrait6.webp"),
-          name: "Jackie Jun",
-          subtitle: "",
-        },
-        {
-          img: require("../../assets/potrait7.webp"),
-          name: "Lizzie Kims",
-          subtitle: "",
+          name: "Anthony",
+          subtitle: "Mixology",
         },
       ],
     };
@@ -84,7 +58,7 @@ h1 {
 }
 
 header {
-  background-image: url("../../assets/teachers-banner.webp");
+  background-image: url("../assets/teachers-banner.webp");
   background-size: cover;
   padding-bottom: 3rem;
   .header-content {

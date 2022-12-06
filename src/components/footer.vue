@@ -1,28 +1,23 @@
 <template>
   <div id="footer">
-    <section class="nav-links">
-      <ul>
-        <router-link exact-active-class="active" tag="li" to="/">
-          Home
-        </router-link>
-
-        <router-link active-class="active" tag="li" to="/about">
-          About Us
-        </router-link>
-
-        <router-link active-class="active" tag="li" to="/contact">
-          Contact Us
-        </router-link>
-      </ul>
-    </section>
-
-    <section class="copyright">
-      <p>Copyright &copy; {{ date }} All rights reserved.</p>
-      <p>
-        Designed and Developed By
-        <a href="https://mawira.cf" target="_blank">Mawira Corp</a>
-      </p>
-    </section>
+    <div class="nav-links">
+      <div
+        class="company-name"
+        @click="$router.push('/training')"
+        style="cursor: pointer;"
+      >
+        Training Centre
+      </div>
+      <div class="router-links">
+        <router-link to="https://jowamcoffee.co.ke" tag="li">Jowam</router-link>
+        <router-link to="/events" tag="li">Events</router-link>
+        <router-link to="/teachers" tag="li">Teachers</router-link>
+        <router-link to="/contact-us" tag="li">Contact Us</router-link>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; {{ year }} All Rights Reserved</p>
+    </div>
   </div>
 </template>
 
@@ -30,45 +25,76 @@
 export default {
   data() {
     return {
-      date: new Date().getFullYear(),
+      year: new Date().getFullYear(),
     };
   },
 };
 </script>
 
-<style scoped lang="scss">
-#footer {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
-  .nav-links {
-    margin-bottom: 2rem;
-    ul {
-      list-style: none;
-      padding: 0;
-      li {
-        display: inline-block;
-        margin: 0 1rem;
-        &:hover {
-          cursor: pointer;
-          color: green;
-        }
+<style lang="scss" scoped>
+@media screen and (min-width: 1200px) {
+  #footer {
+    color: black;
+    .nav-links {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .company-name {
+        font-size: 32px;
       }
     }
   }
+}
+@media screen and (max-width: 1200px) {
+  #footer {
+    .nav-links {
+      width: 90%;
+      .company-name {
+        font-size: 25px;
+      }
+      .router-links {
+        display: none;
+      }
+    }
+    .copyright {
+      display: none;
+    }
+  }
+}
+#app {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+#footer {
+  background-color: black;
+  color: white;
+  .nav-links {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .company-name {
+      font-family: "Abril Fatface", cursive;
+      border-top: 3px solid white;
+    }
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 1.5rem;
+      padding: 1rem 0;
+    }
+    li:hover {
+      cursor: pointer;
+    }
+  }
   .copyright {
-    p {
-      margin: 0;
-      font-size: 14px;
-      color: grey;
-    }
-    a {
-      text-decoration: none;
-      color: green;
-    }
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    color: #adadad;
   }
 }
 </style>

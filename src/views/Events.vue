@@ -39,7 +39,7 @@ export default {
     return {
       events: [
         {
-          img: require("../../assets/barista-champ.webp"),
+          img: require("../assets/barista-champ.webp"),
           title: "Barista Championship",
           pin: "@TheHub Karen",
           details:
@@ -59,7 +59,7 @@ h1 {
 }
 
 header {
-  background-image: url("../../assets/events.webp");
+  background-image: url("../assets/events.webp");
   background-size: cover;
   background-position: fixed;
   padding-bottom: 3rem;

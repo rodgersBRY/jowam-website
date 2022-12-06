@@ -17,9 +17,13 @@
       <router-link to="/contact-us" tag="li" active-class="active"
         >Contact Us</router-link
       >
-      <router-link to="/" exact-active-class="active" class="jowam-btn"
-        >Jowam</router-link
+      <a
+        href="https://jowamcoffee.co.ke"
+        exact-active-class="active"
+        class="jowam-btn"
       >
+        Jowam
+      </a>
     </div>
 
     <button class="mobile-menu-icon white--text" @click="openNav">
@@ -37,13 +41,13 @@
       >
       <router-link to="/contact-us" tag="li" active-class="active"
         >Contact Us</router-link
-      ><router-link
-        to="/"
+      ><a
+        href="https://jowamcoffee.co.ke"
         tag="li"
         exact-active-class="active"
         style="margin-top: 4rem"
         class="jowam-btn-mobile"
-        >Jowam</router-link
+        >Jowam</a
       >
     </div>
   </div>

@@ -6,10 +6,8 @@ import vuetify from "./plugins/vuetify";
 import router from "./router/index";
 
 // import common components
-import navBar from "./components/navigation";
-import Footer from "./components/footer";
-import TrainingMenu from "./components/MenuBar.vue";
-import TrainingFooter from "./components/training-footer.vue";
+import TopNav from "./components/top_nav.vue";
+import Footer from "./components/footer.vue";
 
 Vue.use(VueMeta, {
   keyName: "metaInfo",
@@ -19,10 +17,8 @@ Vue.use(VueMeta, {
 Vue.config.productionTip = false;
 
 // register the components for global access
-Vue.component("nav-bar", navBar);
-Vue.component("bottom-footer", Footer);
-Vue.component("menu-bar", TrainingMenu);
-Vue.component("training-footer", TrainingFooter);
+Vue.component("menu-bar", TopNav);
+Vue.component("training-footer", Footer);
 
 new Vue({
   vuetify,
