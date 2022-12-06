@@ -60,6 +60,7 @@ h1 {
 header {
   background-image: url("../assets/teachers-banner.webp");
   background-size: cover;
+  background-attachment: fixed;
   padding-bottom: 3rem;
   .header-content {
     display: flex;

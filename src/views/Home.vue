@@ -247,6 +247,7 @@ button {
     url("../assets/header.webp");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 
   .header-content {
     margin: 0 auto;
@@ -293,8 +294,9 @@ main {
     margin: 5rem 0;
     background: url("../assets/coffee-img.webp");
     background-size: cover;
-    background-position: fixed;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+
     max-height: 700px;
     h1 {
       color: white;
@@ -337,6 +339,8 @@ main {
       ),
       url("../assets/signup-form.webp");
     background-size: cover;
+    background-attachment: fixed;
+
     .signup-text-div {
       h1,
       p {

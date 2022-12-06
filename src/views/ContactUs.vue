@@ -105,6 +105,8 @@ header {
   background-image: url("../assets/contact-us.webp");
   background-size: cover;
   background-position: fixed;
+  background-attachment: fixed;
+
   .header-content {
     h1 {
       color: white;
@@ -164,7 +166,7 @@ main {
         height: 400px;
       }
     }
-    
+
     .email-us {
       margin-right: 1rem;
       input,

@@ -60,8 +60,8 @@ h1 {
 
 header {
   background-image: url("../assets/events.webp");
+  background-attachment: fixed;
   background-size: cover;
-  background-position: fixed;
   padding-bottom: 3rem;
   .header-content {
     display: flex;

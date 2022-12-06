@@ -187,10 +187,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 header {
   background-image: url("../assets/module-banner.webp");
   background-size: cover;
+  background-attachment: fixed;
+
   h1 {
     font-weight: bold;
     font-family: "Abril fatface", cursive;

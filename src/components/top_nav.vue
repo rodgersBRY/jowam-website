@@ -2,7 +2,7 @@
   <div id="nav">
     <div
       class="company-name"
-      @click="$router.push('/training')"
+      @click="$router.push('/')"
       style="cursor: pointer;"
     >
       Training Centre
@@ -33,22 +33,20 @@
     <div class="mobile-menu-items" id="mobile-menu-items">
       <button @click="closeNav"><i class="fa fa-close"></i></button>
 
-      <router-link to="/events" tag="li" active-class="active"
-        >Events</router-link
-      >
-      <router-link to="/teachers" tag="li" active-class="active"
-        >Teachers</router-link
-      >
-      <router-link to="/contact-us" tag="li" active-class="active"
-        >Contact Us</router-link
-      ><a
-        href="https://jowamcoffee.co.ke"
-        tag="li"
-        exact-active-class="active"
-        style="margin-top: 4rem"
-        class="jowam-btn-mobile"
-        >Jowam</a
-      >
+      <router-link to="/events" tag="li" active-class="active">
+        Events
+      </router-link>
+      <router-link to="/teachers" tag="li" active-class="active">
+        Teachers
+      </router-link>
+      <router-link to="/contact-us" tag="li" active-class="active">
+        Contact Us
+      </router-link>
+      <br class="br" />
+      <br class="br" />
+      <a href="https://jowamcoffee.co.ke" class="jowam-btn-mobile">
+        Jowam Coffee
+      </a>
     </div>
   </div>
 </template>
@@ -67,25 +65,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.jowam-btn {
-  margin-left: 3rem;
-  padding: 1rem 2rem;
-}
-
-.jowam-btn-mobile {
-  width: 50%;
-  margin: 0 auto;
-}
-.jowam-btn,
 .jowam-btn-mobile {
   text-decoration: none;
   color: white;
   background: #ba8445;
+  padding: 16px 3rem;
+  border-radius: 5px;
+  width: 100%;
+}
 
+.jowam-btn {
+  margin-left: 3rem;
+  text-decoration: none;
+  color: white;
+  background: #ba8445;
+  padding: 1rem 2rem;
   border-radius: 5px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   #nav {
     .company-name {
       margin-left: 10rem;
@@ -101,25 +99,14 @@ export default {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
+  .jowam-btn-mobile {
+    margin-left: 40%;
+  }
   #nav {
-    .company-name {
-      margin-left: 3rem;
-      font-size: 27px;
-    }
-    .mobile-menu-icon {
-      display: block;
-      margin-right: 3rem;
-      font-size: 22px;
-    }
     .router-links {
       display: none;
     }
-  }
-}
-
-@media screen and (max-width: 900px) {
-  #nav {
     .company-name {
       margin-left: 2rem;
       font-size: 25px;
