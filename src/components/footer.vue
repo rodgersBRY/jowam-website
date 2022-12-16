@@ -9,7 +9,6 @@
         Training Centre
       </div>
       <div class="router-links">
-        <router-link to="https://jowamcoffee.co.ke" tag="li">Jowam</router-link>
         <router-link to="/events" tag="li">Events</router-link>
         <router-link to="/teachers" tag="li">Teachers</router-link>
         <router-link to="/contact-us" tag="li">Contact Us</router-link>
