@@ -8,29 +8,29 @@
       <section class="contact-banner">
         <div>
           <h1>Drop Us A Note</h1>
-          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p> -->
         </div>
       </section>
 
       <section class="contact-form">
-        <div>
+        <form action="https://formspree.io/f/mdovnojj" method="POST">
+ <div>
           <input
             type="text"
-            name="name"
+            name="Name"
             v-model="name"
             class="input"
             placeholder="Your Name"
           />
           <input
             type="text"
-            name="email"
+            name="Email"
             v-model="email"
             class="input"
             placeholder="Email Address"
           />
           <input
             type="text"
-            name="subject"
+            name="Subject"
             v-model="subject"
             class="input"
             placeholder="Subject"
@@ -38,7 +38,7 @@
         </div>
         <div>
           <textarea
-            name="message"
+            name="Message"
             v-model="message"
             cols="60"
             rows="7"
@@ -46,8 +46,11 @@
             placeholder="Your Message"
           >
           </textarea>
-          <button type="button" @click="sendEmail" class="send-btn">Send Message</button>
+          <button type="submit" class="send-btn">Submit Feedback</button>
         </div>
+
+        </form>
+       
       </section>
 
       <section class="location">
@@ -92,7 +95,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
   data() {
@@ -104,31 +107,31 @@ export default {
     };
   },
 
-  methods: {
-    async submitEmail() {
-      const baseUrl = "/.netlify/functions";
+  // methods: {
+  //   async submitEmail() {
+  //     const baseUrl = "/.netlify/functions";
 
-      let userData = {
-        name: this.name,
-        email: this.email,
-        subject: this.subject,
-        message: this.message,
-      };
+  //     let userData = {
+  //       name: this.name,
+  //       email: this.email,
+  //       subject: this.subject,
+  //       message: this.message,
+  //     };
 
-      try {
-        await axios.post(`${baseUrl}/contactCompany`, userData);
+  //     try {
+  //       await axios.post(`${baseUrl}/contactCompany`, userData);
 
-        await axios.post(`${baseUrl}/autoreply`, userData);
+  //       await axios.post(`${baseUrl}/autoreply`, userData);
 
-        alert("Message sent successfully");
-        this.name = "";
-        this.email = "";
-        this.message = "";
-      } catch (err) {
-        alert(err.message);
-      }
-    },
-  }
+  //       alert("Message sent successfully");
+  //       this.name = "";
+  //       this.email = "";
+  //       this.message = "";
+  //     } catch (err) {
+  //       alert(err.message);
+  //     }
+  //   },
+  // }
 };
 </script>
 
