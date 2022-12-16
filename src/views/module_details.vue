@@ -191,6 +191,8 @@ header {
   background-image: url("../assets/module-banner.webp");
   background-size: cover;
   background-attachment: fixed;
+  height: 100%;
+  padding: 5rem 0 2rem 0;
 
   h1 {
     font-weight: bold;
@@ -260,7 +262,7 @@ main {
   }
 
   .article-section {
-    margin: 2rem auto 10rem auto;
+    margin: 2rem auto 4rem auto;
     h3 {
       font-size: 24px;
     }
@@ -279,8 +281,6 @@ main {
 
 @media screen and (min-width: 1200px) {
   header {
-    height: 100%;
-    padding-bottom: 2rem;
     h1 {
       font-size: 72px;
     }
@@ -342,7 +342,6 @@ main {
 
 @media screen and (max-width: 1200px) {
   header {
-    height: 70vh;
     h1 {
       font-size: 50px;
     }
@@ -380,8 +379,6 @@ main {
 
 @media screen and (max-width: 900px) {
   header {
-    height: 100%;
-    padding-bottom: 3rem;
     h1 {
       font-size: 39px;
     }
