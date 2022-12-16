@@ -49,7 +49,7 @@ export default {
         {
           img: require("../assets/aeropress.png"),
           title: "Aeropress Competition",
-          pin: "@westgatemall Westlands",
+          pin: "@WestGateMall Westlands",
           details:
             "Aeropress competition held at Westgate Mall saw our students emerge as champions and got recognition from top coffee organizations",
         },
