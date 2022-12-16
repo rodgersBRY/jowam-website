@@ -14,6 +14,7 @@
       <div class="events-div">
         <div class="card" v-for="(event, index) in events" :key="index">
           <img
+          height="300px"
             :src="event.img"
             alt="coffee events, coffee roasting, barista, jowam events, jowam experts"
           />
@@ -44,6 +45,13 @@ export default {
           pin: "@TheHub Karen",
           details:
             "An event organized by some top stakeholders in the coffee business held in Karen at the Hub. We saw one of our own students outdo the rest of the contenstants to win the championship and a chance to go compete in Melbourne",
+        },
+        {
+          img: require("../assets/aeropress.png"),
+          title: "Aeropress Competition",
+          pin: "@westgatemall Westlands",
+          details:
+            "Aeropress competition held at Westgate Mall saw our students emerge as champions and got recognition from top coffee organizations",
         },
       ],
     };

@@ -31,42 +31,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media screen and (min-width: 1200px) {
-  #footer {
-    color: black;
-    .nav-links {
-      width: 80%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      .company-name {
-        font-size: 32px;
-      }
-    }
-  }
-}
-@media screen and (max-width: 1200px) {
-  #footer {
-    .nav-links {
-      width: 90%;
-      .company-name {
-        font-size: 25px;
-      }
-      .router-links {
-        display: none;
-      }
-    }
-    .copyright {
-      display: none;
-    }
-  }
-}
 #app {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
 }
+
 #footer {
   background-color: black;
   color: white;
@@ -94,6 +65,38 @@ export default {
     background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     color: #adadad;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #footer {
+    color: black;
+    .nav-links {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .company-name {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #footer {
+    .nav-links {
+      width: 90%;
+      .company-name {
+        font-size: 25px;
+      }
+      .router-links {
+        display: none;
+      }
+    }
+    .copyright {
+      display: none;
+    }
   }
 }
 </style>

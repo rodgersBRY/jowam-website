@@ -80,13 +80,13 @@
           <input
             type="text"
             name="name"
-            placeholder="Enter your name"
+            placeholder="Full Name"
             v-model="name"
           />
           <input
             type="email"
             name="email"
-            placeholder="Enter your email address"
+            placeholder="Email Address"
             v-model="email"
           />
           <button @click.prevent="handleSubmit">SIGNUP</button>
@@ -163,6 +163,12 @@ export default {
           title: "Barista <br> Championship.",
           description:
             "Our lead barista @tessthebarista took part in the KNBC 18th Edition hosted at TheHub in Karen and won it all",
+        },
+        {
+          img: require("../assets/aeropress.png"),
+          title: "Aeropress Competition",
+          description:
+            "Aeropress competition held at Westgate Mall saw our students emerge as champions and got recognition from top coffee organizations",
         },
       ],
     };
@@ -351,7 +357,7 @@ main {
     }
     .signup-form {
       background-color: rgba(0, 0, 0, 0.73);
-      padding: 3rem;
+      padding: 3rem 1rem;
       display: flex;
       justify-content: center;
       input {
