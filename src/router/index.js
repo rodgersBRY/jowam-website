@@ -4,8 +4,6 @@ import Router from "vue-router";
 import goTo from "vuetify/lib/services/goto";
 
 import Home from "../views/Home.vue";
-import About from "../views/about.vue";
-import Contact from "../views/contact.vue";
 
 Vue.use(Router);
 
@@ -18,20 +16,37 @@ const router = new Router({
       name: "home",
       component: Home,
     },
+    // lazy load the other routes
     {
-      path: "/about",
-      name: "about",
-      component: About,
+      path: "/module/:id",
+      name: "module-details",
+      component: () => import("../views/module_details.vue"),
       meta: {
-        title: "About Us",
+        title: "",
       },
     },
     {
-      path: "/contact",
-      name: "contact",
-      component: Contact,
+      path: "/teachers",
+      name: "Teachers",
+      component: () => import("../views/Teachers.vue"),
       meta: {
-        title: "Contact Us",
+        title: "Teachers",
+      },
+    },
+    {
+      path: "/events",
+      name: "Events",
+      component: () => import("../views/Events.vue"),
+      meta: {
+        title: "Events",
+      },
+    },
+    {
+      path: "/contact-us",
+      name: "School Contact",
+      component: () => import("../views/ContactUs.vue"),
+      meta: {
+        title: "Contact School",
       },
     },
     {
