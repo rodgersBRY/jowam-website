@@ -118,7 +118,6 @@ export default {
         { img: require("../assets/KCCE.png"), title: "" },
         { img: require("../assets/KCTA.png"), title: "" },
         { img: require("../assets/goldrock.png"), title: "" },
-        { img: require("../assets/java.png"), title: "" },
         { img: require("../assets/fedex.png"), title: "" },
         { img: require("../assets/dormans.png"), title: "" },
         { img: require("../assets/coffee_board.png"), title: "" },
