@@ -103,6 +103,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+textarea {
+  resize: none;
+}
 header {
   background-image: url("../assets/contact-us.webp");
   background-size: cover;
