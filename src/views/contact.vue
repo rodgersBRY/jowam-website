@@ -64,7 +64,7 @@
           Emails
          <ul style="list-style:none">
           <li class="ml-3"><em>trading@jowamcoffee.com</em> </li>
-          <li class="ml-3"><em>bundi.jowamcoffee@gmail.com</em> </li>
+          <li class="ml-3"><em>kelvin.bundi@jowamcoffee.com</em> </li>
          </ul>
         </p>
         <p>
@@ -74,15 +74,6 @@
         <div class="social-media">
           <v-btn icon large href="https://www.instagram.com/jowamcoffee/">
             <v-icon>mdi-instagram</v-icon>
-          </v-btn>
-          <v-btn icon large>
-            <v-icon>mdi-facebook</v-icon>
-          </v-btn>
-          <v-btn icon large>
-            <v-icon>mdi-google</v-icon>
-          </v-btn>
-          <v-btn icon large>
-            <v-icon>mdi-linkedin</v-icon>
           </v-btn>
         </div>
       </section>
