@@ -32,18 +32,7 @@ export default {
   data() {
     return {
       teachers: [
-        {
-          name: "Wesley Yeaman",
-          subtitle: "Supervisor",
-        },
-        {
-          name: "Tee",
-          subtitle: "Barista",
-        },
-        {
-          name: "Anthony",
-          subtitle: "Mixology",
-        },
+        
       ],
     };
   },
