@@ -11,7 +11,8 @@
         </div>
       </section>
 
-      <section class="contact-form">
+      <div class="contacts-row">
+         <section class="contact-form">
         <form action="https://formspree.io/f/mdovnojj" method="POST">
  <div>
           <input
@@ -51,32 +52,61 @@
 
         </form>
        
-      </section>
+          </section>
 
-      <section class="location">
-        <h2>Stop By For A Visit</h2>
-        <p>
-          <v-icon class="mr-2">mdi-map-marker-outline</v-icon>Pension Towers,
-          4th Floor. Loita Street
-        </p>
-        <p>
-          <v-icon class="mr-2">mdi-email-outline</v-icon>
-          Emails
-         <ul style="list-style:none">
-          <li class="ml-3"><em>trading@jowamcoffee.com</em> </li>
-          <li class="ml-3"><em>kelvin.bundi@jowamcoffee.com</em> </li>
-         </ul>
-        </p>
-        <p>
-          <v-icon class="mr-2">mdi-phone-outline</v-icon>Phone: 254728919092, 254722762945
-        </p>
+        <section class="location">
+          <h2>Stop By For A Visit</h2>
+          <p>
+            <v-icon class="mr-2">mdi-map-marker-outline</v-icon>Pension Towers,
+            4th Floor. Loita Street
+          </p>
+          <p>
+            <v-icon class="mr-2">mdi-email-outline</v-icon>
+            Emails
+          <ul style="list-style:none">
+            <li class="ml-3"><em>trading@jowamcoffee.com</em> </li>
+            <li class="ml-3"><em>kelvin.bundi@jowamcoffee.com</em> </li>
+          </ul>
+          </p>
+          <p>
+            <v-icon class="mr-2">mdi-phone-outline</v-icon>Phone: 254728919092, 254722762945
+          </p>
 
-        <div class="social-media">
-          <v-btn text large href="https://www.instagram.com/jowamcoffee/" color="orange darken-2" style="text-transform: lowercase;">
-            <v-icon class="mr-3">mdi-instagram</v-icon> jowamcoffee
-          </v-btn>
-        </div>
-      </section>
+          <div class="social-media">
+            <v-btn text large href="https://www.instagram.com/jowamcoffee/" color="orange darken-2" style="text-transform: lowercase;">
+              <v-icon class="mr-3">mdi-instagram</v-icon> jowamcoffee
+            </v-btn>
+          </div>
+        </section>
+
+        <section class="japanese d-flex justify-space-between" style="width: 60%; margin: 1rem auto 3rem auto;">
+          <div class="company-profile-p display-1"></div>
+          <v-card flat width="350px">
+            <v-card-title>会社概要</v-card-title>
+            <v-card-text>
+             <p>代表: Josphat Mwirigi Mburugu</p>
+             <p>役職: Director</p>
+              <p>会社: Jowam Coffee Traders Co.Ltd</p>
+              <p>TEL: +254722762945</p>
+              <p>Mail: trading@jowamcoffee.com</p>
+              <p>Mail: quality@jowamcoffee.com</p>
+              <p>住所: 00200 Nairobi P.O Box 58513-00200 Nairobi Kenya Kenya</p>
+            </v-card-text>
+          </v-card>
+          <v-card  flat width="350px">
+            <v-card-title>海外事業部日本担当</v-card-title>
+            <v-card-text>
+              <p>Alex Nduati アレックスドゥアティ（日本語可</p>
+              <p>TEL: +254722659595</p>
+              <p>Mail: alex.nduati@jowamcoffee.com</p>
+              <p>株式会社カードマップ</p>
+              <p>小川鉄男</p>
+              <p>080-3138-8110</p>
+              <p>Mail: 0610oriver@gmail.com</p>
+            </v-card-text>
+          </v-card>
+        </section>
+      </div>     
     </main>
 
     <footer>
