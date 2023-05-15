@@ -79,10 +79,9 @@
           </div>
         </section>
 
-        <section class="japanese d-flex justify-space-between" style="width: 60%; margin: 1rem auto 3rem auto;">
-          <div class="company-profile-p display-1"></div>
+        <section class="japanese">
           <v-card flat width="350px">
-            <v-card-title>会社概要</v-card-title>
+            <v-card-title class="title">会社概要</v-card-title>
             <v-card-text>
              <p>代表: Josphat Mwirigi Mburugu</p>
              <p>役職: Director</p>
@@ -94,7 +93,7 @@
             </v-card-text>
           </v-card>
           <v-card  flat width="350px">
-            <v-card-title>海外事業部日本担当</v-card-title>
+            <v-card-title class="title">海外事業部日本担当</v-card-title>
             <v-card-text>
               <p>Alex Nduati アレックスドゥアティ（日本語可</p>
               <p>TEL: +254722659595</p>
@@ -132,6 +131,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+.japanese .title  {
+  color: #e09f55;
+}
+
 textarea {
   resize: none;
 }
@@ -203,12 +207,20 @@ textarea {
       text-align: center;
     }
   }
+
 }
 
 // desktop device
 @media screen and (min-width: 1000px) {
   h1 {
     font-size: 50px;
+  }
+
+  .japanese {
+    width: 60%;
+    margin: 1rem auto 3rem auto;
+    display: flex;
+    justify-content: space-around;
   }
 
   .contact-banner {
