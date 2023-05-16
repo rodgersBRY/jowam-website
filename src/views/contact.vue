@@ -98,7 +98,6 @@
               <p>Alex Nduati アレックスドゥアティ（日本語可</p>
               <p>TEL: +254722659595</p>
               <p>Mail: alex.nduati@jowamcoffee.com</p>
-              <p>株式会社カードマップ</p>
               <p>小川鉄男</p>
               <p>080-3138-8110</p>
               <p>Mail: 0610oriver@gmail.com</p>
