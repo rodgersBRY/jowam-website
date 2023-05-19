@@ -93,7 +93,7 @@
             </v-card-text>
           </v-card>
           <v-card  flat width="350px">
-            <v-card-title class="title">海外事業部日本担当</v-card-title>
+            <v-card-title class="title">海外事業部日本・中国アジア担当</v-card-title>
             <v-card-text>
               <p>Alex Nduati アレックスドゥアティ（日本語可</p>
               <p>TEL: +254722659595</p>
