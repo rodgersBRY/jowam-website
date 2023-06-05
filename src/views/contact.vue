@@ -100,7 +100,7 @@
               <p>Mail: alex.nduati@jowamcoffee.com</p>
               <p>小川鉄男</p>
               <p>080-3138-8110</p>
-              <p>Mail: 0610oriver@gmail.com</p>
+              <p>Mail: contact@jowamcoffee.co.jp</p>
             </v-card-text>
           </v-card>
         </section>
