@@ -4,7 +4,7 @@ import router from "./router";
 import vuetify from "./plugins/vuetify";
 import { loadFonts } from "./plugins/webfontloader";
 
-import NavBar from "./components/navigation.vue";
+import TopNav from "./components/top_nav.vue"
 import Footer from "./components/footer.vue";
 
 loadFonts();
@@ -12,6 +12,6 @@ loadFonts();
 createApp(App)
   .use(router)
   .use(vuetify)
-  .component("nav-bar", NavBar)
-  .component("bottom-footer", Footer)
+  .component("menu-bar", TopNav)
+  .component("training-footer", Footer)
   .mount("#app");

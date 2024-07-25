@@ -1,24 +1,22 @@
 <template>
   <div id="footer">
-    <section class="nav-links">
-      <ul>
-        <router-link exact-active-class="active" class="nav-link" to="/">
-          Home
-        </router-link>
-
-        <router-link active-class="active" class="nav-link" to="/about">
-          About Us
-        </router-link>
-
-        <router-link active-class="active" class="nav-link" to="/contact">
-          Contact Us
-        </router-link>
-      </ul>
-    </section>
-
-    <section class="copyright">
-      <p>Copyright &copy; {{ date }} All rights reserved.</p>
-    </section>
+    <div class="nav-links">
+      <div
+        class="company-name"
+        @click="$router.push('/training')"
+        style="cursor: pointer;"
+      >
+        Training Centre
+      </div>
+      <div class="router-links">
+        <router-link to="/events" class="nav-link">Events</router-link>
+        <router-link to="/teachers" class="nav-link">Teachers</router-link>
+        <router-link to="/contact-us" class="nav-link">Contact Us</router-link>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; {{ year }} All Rights Reserved</p>
+    </div>
   </div>
 </template>
 
@@ -26,46 +24,74 @@
 export default {
   data() {
     return {
-      date: new Date().getFullYear(),
+      year: new Date().getFullYear(),
     };
   },
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 #footer {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
+  background-color: black;
+  color: white;
   .nav-links {
-    margin-bottom: 2rem;
-    ul {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .company-name {
+      font-family: "Abril Fatface", cursive;
+      border-top: 3px solid white;
+      color: white;
+    }
+    .nav-link {
+      text-decoration: none;
       list-style: none;
-      padding: 0;
-      .nav-link {
-        text-decoration: none;
-        color: black;
-        display: inline-block;
-        margin: 0 1rem;
-        &:hover {
-          cursor: pointer;
-          color: green;
-        }
-      }
+      display: inline-block;
+      color: white;
+      margin: 0 1.5rem;
+      padding: 1rem 0;
+    }
+    li:hover {
+      cursor: pointer;
     }
   }
   .copyright {
-    p {
-      margin: 0;
-      font-size: 14px;
-      color: grey;
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    color: #adadad;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #footer {
+    color: black;
+    .nav-links {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .company-name {
+        font-size: 32px;
+      }
     }
-    a {
-      text-decoration: none;
-      color: green;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #footer {
+    .nav-links {
+      width: 90%;
+      .company-name {
+        font-size: 25px;
+      }
+      .router-links {
+        display: none;
+      }
+    }
+    .copyright {
+      display: none;
     }
   }
 }

@@ -1,271 +1,623 @@
 <template>
-  <div class="home">
-    <header>
-      <nav-bar />
+  <div id="home">
+    <header class="header">
+      <menu-bar />
+
+      <div class="header-content">
+        <h1>
+          A school <br />
+          that values <br />
+          success.
+        </h1>
+        <button>
+          <a href="#featured-courses">FIND THE PERFECT COURSE</a>
+        </button>
+        <hr />
+        <p>
+          We are a school that places high value on both students, and high
+          quality education.
+        </p>
+      </div>
     </header>
 
     <main>
-      
-      <section class="banner-div">
-        <div>
-          <h1>GREEN COFFE EXPORTS COMPANY</h1>
-          <p>
-            Promote majority small-scale farmers by marketing their coffee and
-            thereby creating a steady source of income for them
-          </p>
+      <section class="featured-courses" id="featured-courses">
+        <h1>
+          Featured <br />
+          Modules.
+        </h1>
 
-          <!-- <v-btn depressed dark color="green">FREE BOOTSTRAP TEMPLATES</v-btn> -->
+        <div class="courses-div">
+          <div class="card" v-for="module in modules" :key="module.id">
+            <img
+              width="100%"
+              :src="module.img"
+              alt="course-img, jowam, training center, barista course, mixology classes, coffee training, coffee, coffee roasting, roasting coffee, professional coffee training "
+            />
+            <div class="divider"></div>
+            <h2>{{ module.title }}</h2>
+            <p>
+              {{ module.description }}
+            </p>
+
+            <!-- <button @click.prevent="goToModule(module.id)">Explore</button> -->
+          </div>
         </div>
       </section>
 
-      <section class="about-us">
-        <div class="about-text pa-5">
-          <h2>ABOUT <span class="green--text">US</span></h2>
-          <p>
-            <em
-              >Jowam Coffee Trading Company Limited was founded in June 2006 as
-              an exporting company for coffees. We also promote farmers by
-              providing advanced farming technologies to ensure production of
-              high-quality coffee that is of great value.</em
-            >
-          </p>
-          <p>
-            Jowam Coffee Trading Company limited is registered and incorporated
-            under the Company’s Act in the Laws of Kenya. We are licensed under
-            the Coffee Directorate Crops Act, 2013 and the Coffee (Forms) Rules,
-            2002 as a licensed coffee dealer and exporter in Kenya. With well
-            over thirty years of experience in the Coffee industry coupled with
-            quality control, passion and commitment to service, Jowam Coffee
-            Trading Company founders empower clients by providing coffees that
-            ensure their product sales remain high.
-          </p>
+      <section class="scenic-route">
+        <h1>
+          '' <br />
+          <span>
+            <div class="divider"></div>
+          </span>
+          Insert coffee to begin.
+        </h1>
+      </section>
+
+      <section class="teachers-div">
+        <div class="img-div"></div>
+        <div class="divider"></div>
+        <h1>
+          Teachers <br />
+          that care.
+        </h1>
+        <button @click.prevent="$router.push('/teachers')">
+          FIND THE PERFECT FIT
+        </button>
+      </section>
+
+      <section class="signup">
+        <div class="signup-text-div">
+          <div class="divider"></div>
+          <h1>
+            Signup. <br />
+            Totally free.
+          </h1>
+          <p>Receive early notice on new courses.</p>
         </div>
-        <div class="about-img">
-          <img
-            width="100%"
-            :src="require('../assets/img/jowam7.jpg')"
-            alt="about jowam coffee"
+        <div class="signup-form">
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            v-model="name"
           />
-        </div>
-      </section>
-
-      <section class="business-concept">
-        <div>
-          <h1>BUSINESS CONCEPTS</h1>
-          <p>
-            Through a business model that is geared towards easy access and
-            convenience for our customers, Jowam Coffee Trading Company has
-            evolved to become a trusted coffee dealer and exporter of Kenyan
-            green Arabica coffee. Our business model has continued to earn
-            global recognition in terms of coffee quality assurance, friendly
-            sales contracts, and timely delivery of shipments. Since the
-            incorporation of Jowam Coffee Trading Company Ltd, we have shipped
-            large volumes of green coffee beans from Kenya to many countries
-            around the world.
-          </p>
-        </div>
-      </section>
-
-      <h2 class="text-center mb-10">OUR PARTNERS</h2>
-
-      <section class="partners">
-        <br />
-        <div class="partner-logos">
-          <img
-            v-for="(partner, index) in partners"
-            :key="index"
-            :src="partner.img"
-            alt="jowam partners"
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            v-model="email"
           />
+          <button @click.prevent="handleSubmit">SIGNUP</button>
+        </div>
+      </section>
+
+      <section class="current-events">
+        <h1>
+          Current <br />
+          Events.
+        </h1>
+        <div class="cards">
+          <div class="event-card" v-for="(event, i) in events" :key="i">
+            <img
+              :src="event.img"
+              :alt="[
+                event.title,
+                'coffee champions, kenyan coffee, barista kenya, jowam, barista events, coffee training',
+              ]"
+            />
+            <div class="read-more">
+              <div class="divider"></div>
+              <h2 v-html="event.title"></h2>
+
+              <p style="color: grey">{{ event.description }}</p>
+              <!-- <button>Read</button> -->
+            </div>
+          </div>
         </div>
       </section>
     </main>
-
     <footer>
-      <bottom-footer />
+      <training-footer />
     </footer>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
-      contents: [
+      name: "",
+      email: "",
+
+      modules: [
         {
-          title: "INTRODUCTION",
-          info:
-            "Jowam Coffee Trading Company limited is registered and incorporated under the Company’s Act in the Laws of Kenya. We are licensed under the Coffee Directorate Crops Act, 2013 and the Coffee (Forms) Rules, 2002 as a licensed coffee dealer and exporter in Kenya. With well over thirty years of experience in the Coffee industry coupled with quality control, passion and commitment to service, Jowam Coffee Trading Company founders empower clients by providing coffees that ensure their product sales remain high.",
-          img:
-            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.farmafrica.org%2Fimages%2Ftwitter-cards%2Fgrace-arineitwe-social-card.jpg&f=1&nofb=1",
+          id: 1,
+          img: require("../assets/barista.webp"),
+          title: "Barista",
+          description:
+            "Four week course that takes a wholistic and indepth approach to coffee brewing.",
         },
         {
-          title: "",
-          info:
-            "Jowam Coffee Trading Company Limited was founded in June 2006 as an exporting company for coffees. We also promote farmers by providing advanced farming technologies to ensure production of high-quality coffee that is of great value.",
-          img:
-            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd2ru2mvuh5wx24.cloudfront.net%2Favtivity_bootstrap%2F1204%2Fcoffee_galore__1920x864.jpg&f=1&nofb=1",
+          id: 2,
+          img: require("../assets/mixology.webp"),
+          title: "Mixology",
+          description:
+            "Learn to make your own infusions, syrups, and craft cocktails using advanced techniques.",
         },
         {
-          title: "BUSINESS CONCEPTS",
-          info:
-            "Through a business model that is geared towards easy access and convenience for our customers, Jowam Coffee Trading Company has evolved to become a trusted coffee dealer and exporter of Kenyan green Arabica coffee. Our business model has continued to earn global recognition in terms of coffee quality assurance, friendly sales contracts, and timely delivery of shipments. Since the incorporation of Jowam Coffee Trading Company Ltd, we have shipped large volumes of green coffee beans from Kenya to many countries around the world.",
-          img:
-            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftheexchange.africa%2Fwp-content%2Fuploads%2F2018%2F05%2FCoffee-Bill-Coffee-farming-in-East-Africa-Uganda-Coffee-industry.jpg&f=1&nofb=1",
+          id: 3,
+          img: require("../assets/roasting.webp"),
+          title: "Roasting",
+          description:
+            "Gain practical experirence in the key elements of sensory evaluation in Sensory skills classes.",
         },
       ],
 
-      partners: [
-        { img: require("../assets/KCCE.png"), title: "" },
-        { img: require("../assets/KCTA.png"), title: "" },
-        { img: require("../assets/goldrock.png"), title: "" },
-        { img: require("../assets/fedex.png"), title: "" },
-        { img: require("../assets/dormans.png"), title: "" },
-        { img: require("../assets/coffee_board.png"), title: "" },
+      events: [
+        {
+          img: require("../assets/barista-champ.webp"),
+          title: "Barista <br> Championship.",
+          description:
+            "Our lead barista @tessthebarista took part in the KNBC 18th Edition hosted at TheHub in Karen and won it all",
+        },
+        {
+          img: require("../assets/aeropress.png"),
+          title: "Aeropress Competition",
+          description:
+            "Aeropress competition held at Westgate Mall saw our students emerge as champions and got recognition from top coffee organizations",
+        },
       ],
     };
+  },
+
+  methods: {
+    goToModule(id) {
+      this.$router.push({ name: "module-details", params: { id: id } });
+    },
+
+    async handleSubmit() {
+      const data = {
+        name: this.name,
+        email: this.email,
+      };
+
+      const res = await axios.post("/api/sendThankYou", data);
+      if (res.status == 200) {
+        document.getElementById("subscribed-form").style.display = "block";
+      }
+    },
   },
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
+.subscribed-form {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.73);
+  .success-message {
+    width: 400px;
+    min-height: 300px;
+    text-align: center;
+    max-height: 500px;
+    margin: 10% auto;
+    padding: 3rem;
+    background: white;
+    color: black;
+    h2 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 30px;
+      color: red;
+      position: relative;
+      left: 80%;
+      width: 50px;
+      cursor: pointer;
+      border: 2px solid red;
+    }
+  }
+}
+h1,
+h2,
+h3 {
+  font-family: "Abril fatface", cursive;
+  letter-spacing: 4px;
+}
+
+button {
+  background: black;
+  padding: 9px 15px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.header {
+  color: white;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(117, 66, 19, 0.73)
+    ),
+    url("../assets/header.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 1rem;
+  height: 100%;
+
+  .header-content {
+    padding: 6rem 0 0 1rem;
+
+    h1,
+    p,
+    a {
+      color: white;
+    }
+
+    button {
+      a {
+        text-decoration: none;
+      }
+    }
+
+    hr {
+      margin: 3.5rem 0;
+    }
+  }
+}
+
 main {
-  .banner-div {
-    background-image: url("../assets/img/home-background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  p {
+    color: black;
+  }
+  .featured-courses {
+    margin: 0 auto;
+    .courses-div {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      .card {
+        .divider {
+          height: 3px;
+          background: black;
+          margin-top: 5rem;
+        }
+      }
+    }
   }
 
-  .about-us {
-    display: flex;
-    align-items: center;
-  }
-
-  .business-concept {
-    background-image: url("../assets/about1.webp");
+  .scenic-route {
+    margin: 5rem 0;
+    background: url("../assets/coffee-img.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    max-height: 700px;
+    h1 {
+      color: white;
+      .divider {
+        height: 3px;
+        background: white;
+      }
+    }
   }
 
-  .partners {
-    background: rgba(144, 144, 144, 0.1);
-    padding: 2rem 0;
-    .partner-logos {
+  .teachers-div {
+    text-align: center;
+    .divider {
+      height: 3px;
+      width: 10%;
+      margin: 4rem auto 0 auto;
+      background: black;
+    }
+    .img-div {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: blue;
+      background: url("../assets/educate.webp");
+      background-size: cover;
+      margin: auto;
+    }
+    button {
+      background-color: rgb(237, 201, 134);
+    }
+  }
+
+  .signup {
+    margin: 3rem 0;
+    color: white;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(132, 132, 132, 0.52),
+        rgba(66, 66, 66, 0.73)
+      ),
+      url("../assets/signup-form.webp");
+    background-size: cover;
+    background-attachment: fixed;
+
+    .signup-text-div {
+      h1,
+      p {
+        color: white;
+      }
+    }
+    .signup-form {
+      background-color: rgba(0, 0, 0, 0.73);
+      padding: 3rem 1rem;
       display: flex;
+      justify-content: center;
+      input {
+        background: transparent;
+        border-style: none;
+        border: 2px solid white;
+        color: white;
+        padding: 0 5px;
+      }
+      button {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+
+  .current-events {
+    .event-card {
+      .divider {
+        height: 3px;
+        background: black;
+      }
     }
   }
 }
 
-// mobile device
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 1200px) {
   h1 {
-    font-size: 30px;
+    font-size: 75px;
   }
   h2 {
-    font-size: 20px;
+    font-size: 28px;
   }
-  .banner-div {
-    height: 50vh;
-    margin-top: 3rem;
-    div {
+  header {
+    .header-content {
+      width: 70%;
+    }
+  }
+  main {
+    .featured-courses {
       width: 90%;
-      height: 60%;
-      p {
-        font-size: 16px;
+      .courses-div {
+        flex-direction: row;
+        .divider {
+          width: 30%;
+        }
+      }
+      .card {
+        width: 25%;
       }
     }
-  }
-  .about-us {
-    flex-direction: column;
-    width: 90%;
-    margin: 1rem auto 0 auto;
-    .about-text {
-      width: 100%;
+    .scenic-route {
+      display: flex;
+      justify-content: center;
+      h1 {
+        width: 40%;
+        .divider {
+          width: 20%;
+        }
+      }
     }
-  }
+    .signup {
+      .signup-text-div {
+        width: 60%;
+        margin: 5rem auto;
+        h1,
+        p {
+          color: white;
+        }
+      }
+      .signup-form {
+        display: flex;
+        justify-content: center;
+        input {
+          width: 20%;
+          height: 50px;
+          font-size: 20px;
+        }
+        button {
+          width: 300px;
+        }
+      }
+    }
 
-  .business-concept {
-    padding: 2rem 0;
-    margin: 3rem 0 5rem 0;
-    height: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    div {
+    .current-events {
       width: 90%;
-      p {
-        font-size: 16px;
+      margin: 0 auto 7rem auto;
+      .cards {
+        display: flex;
+        flex-flow: row wrap;
+        .event-card {
+          width: 40%;
+          display: flex;
+          margin: 10px;
+          img {
+            width: 50%;
+          }
+          .divider {
+            width: 70%;
+          }
+          .read-more {
+            margin-left: 20px;
+          }
+        }
       }
-    }
-  }
-  .partner-logos {
-    flex-direction: column;
-    align-items: center;
-    img {
-      margin: 1rem 0;
-      width: 200px;
-      height: 200px;
     }
   }
 }
 
-// desktop device
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 70px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  header {
+    .header-content {
+      width: 80%;
+    }
+  }
+  main {
+    .featured-courses {
+      width: 90%;
+
+      .courses-div {
+        .divider {
+          width: 30%;
+        }
+      }
+      .card {
+        width: 25%;
+      }
+    }
+    .scenic-route {
+      padding: 4rem 0;
+      h1 {
+        width: 80%;
+        margin: 0 auto;
+        .divider {
+          width: 20%;
+        }
+      }
+    }
+    .signup {
+      .signup-text-div {
+        width: 60%;
+        margin: 5rem auto;
+        h1,
+        p {
+          color: white;
+        }
+      }
+      .signup-form {
+        display: flex;
+        justify-content: center;
+        input {
+          width: 20%;
+          height: 50px;
+          font-size: 20px;
+        }
+        button {
+          width: 300px;
+        }
+      }
+    }
+
+    .current-events {
+      width: 90%;
+      margin: 0 auto 7rem auto;
+      .cards {
+        display: flex;
+        .event-card {
+          margin: 0 1rem;
+          img {
+            width: 100%;
+          }
+          .divider {
+            margin-top: 3rem;
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
   h1 {
     font-size: 50px;
   }
-  h2 {
-    font-size: 40px;
+  header {
+    .header-content {
+      width: 90%;
+    }
   }
-  .banner-div {
-    background-attachment: fixed;
-    padding: 2rem 0;
-    height: 70vh;
-    div {
-      width: 50%;
-      height: 60%;
-      p {
-        font-size: 30px;
+  main {
+    .featured-courses {
+      width: 90%;
+      h1 {
+        font-size: 40px;
+      }
+      .courses-div {
+        flex-direction: column;
+        .divider {
+          width: 30%;
+        }
+      }
+      .card {
+        width: 100%;
+        margin-bottom: 2rem;
+        img {
+          height: 250px;
+        }
       }
     }
-  }
-  .about-us {
-    width: 70%;
-    margin: 10rem auto 0 auto;
-    .about-text {
-      width: 50%;
-    }
-    img {
-      height: 500px;
-    }
-  }
-  .business-concept {
-    padding: 10px 0;
-    margin: 10rem 0;
-    height: 60vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    div {
-      width: 70%;
-      p {
-        font-size: 20px;
+    .scenic-route {
+      h1 {
+        width: 90%;
+        margin: 0 auto;
+        .divider {
+          width: 30%;
+        }
       }
     }
-  }
-  .partner-logos {
-    justify-content: space-around;
+    .signup {
+      .signup-text-div {
+        width: 90%;
+        margin: 5rem auto;
+      }
+      .signup-form {
+        input {
+          display: block;
+          width: 40%;
+          height: 50px;
+          font-size: 14px;
+        }
+        button {
+          width: 20%;
+        }
+      }
+    }
+
+    .current-events {
+      width: 90%;
+      margin: 0 auto 7rem auto;
+      .cards {
+        display: block;
+        .event-card {
+          margin-bottom: 2rem;
+          border: 1px solid black;
+          .divider {
+            width: 30%;
+          }
+          .read-more {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
   }
 }
 </style>

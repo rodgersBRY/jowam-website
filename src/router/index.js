@@ -1,28 +1,44 @@
 import { createRouter, createWebHistory } from "vue-router";
+import {nextTick} from 'vue'
 
-import About from "@/views/about.vue";
-import Contact from "@/views/contact.vue";
+import Home from "@/views/Home.vue"
+
+const DEFAULT_TITLE = "Jowam Coffee Traders Ltd";
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: () => import("../views/Home.vue"),
+    component: Home,
+  },
+  // lazy load the other routes
+  {
+    path: "/module/:id",
+    name: "module-details",
+    component: () => import("@/views/module_details.vue"),
   },
   {
-    path: "/about",
-    name: "about",
-    component: About,
+    path: "/teachers",
+    name: "Teachers",
+    component: () => import("@/views/Teachers.vue"),
     meta: {
-      title: "About Us",
+      title: `Teachers | ${DEFAULT_TITLE}`,
     },
   },
   {
-    path: "/contact",
-    name: "contact",
-    component: Contact,
+    path: "/events",
+    name: "Events",
+    component: () => import("@/views/Events.vue"),
     meta: {
-      title: "Contact Us",
+      title: `Events | ${DEFAULT_TITLE}`,
+    },
+  },
+  {
+    path: "/contact-us",
+    name: "School Contact",
+    component: () => import("@/views/ContactUs.vue"),
+    meta: {
+      title: `Contact School | ${DEFAULT_TITLE}`,
     },
   },
   {
@@ -43,9 +59,9 @@ const router = createRouter({
   },
 });
 
-const DEFAULT_TITLE = "Jowam Coffee Traders Ltd";
-router.afterEach((to, from) => {
-  Vue.nextTick(() => {
+
+router.afterEach((to, _) => {
+  nextTick(() => {
     document.title = to.meta.title || DEFAULT_TITLE;
   });
 });
