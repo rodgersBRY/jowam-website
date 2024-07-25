@@ -34,6 +34,13 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+    // always scroll to top
+    return { left: 0, top: 0 };
+  },
 });
 
 const DEFAULT_TITLE = "Jowam Coffee Traders Ltd";
