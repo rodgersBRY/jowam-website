@@ -54,7 +54,7 @@
           Pension Towers, Loita Str. <br />
           Nairobi, Kenya
         </p>
-        <p>+254 714480745</p>
+        <p>+254 722762945</p>
       </div>
     </main>
     <footer>
