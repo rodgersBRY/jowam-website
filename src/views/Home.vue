@@ -72,6 +72,8 @@
         <br />
         <div class="partner-logos">
           <img
+          width="100%"
+          height="150px"
             v-for="(partner, index) in partners"
             :key="index"
             :src="partner.img"
@@ -119,8 +121,7 @@ export default {
         { img: require("../assets/KCCE.png"), title: "" },
         { img: require("../assets/KCTA.png"), title: "" },
         { img: require("../assets/goldrock.png"), title: "" },
-        { img: require("../assets/fedex.png"), title: "" },
-        { img: require("../assets/dormans.png"), title: "" },
+        { img: require("../assets/dhl.png"), title: "" },
         { img: require("../assets/coffee_board.png"), title: "" },
       ],
     };
