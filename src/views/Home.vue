@@ -72,7 +72,7 @@
         <br />
         <div class="partner-logos">
           <img
-          width="100%"
+          width="250px"
           height="150px"
             v-for="(partner, index) in partners"
             :key="index"
