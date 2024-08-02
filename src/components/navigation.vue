@@ -198,6 +198,7 @@ export default {
       margin-right: 2rem;
     }
     .contact {
+      margin-right: 0;
       background-color: var(--secondary-color);
       padding: 12px 12px;
       color: white;
@@ -222,10 +223,10 @@ export default {
   .mobile-nav-links {
     display: none;
   }
-  .nav-links {
+  .nav-links, .contact {
     display: block;
   }
-  
+
   .mobile-menu-open,
     .mobile-menu-close {
       display: none;
