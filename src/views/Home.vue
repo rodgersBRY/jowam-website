@@ -49,10 +49,12 @@
 
       <section class="business-concept">
         <div
-        data-aos="fade-right"
-        data-aos-duration="2400">
-          <h1>BUSINESS CONCEPTS</h1>
-          <p>
+        >
+          <h1 data-aos="fade-right"
+          data-aos-duration="1600">BUSINESS CONCEPTS</h1>
+        
+          <p data-aos="fade-right"
+          data-aos-duration="2000">
             Through a business model that is geared towards easy access and
             convenience for our customers, Jowam Coffee Trading Company has
             evolved to become a trusted coffee dealer and exporter of Kenyan
@@ -141,14 +143,19 @@ main {
   }
 
   .business-concept {
-    background-image: url("../assets/about1.webp");
+    background-image: url("../assets/img/cargo-ship.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    div {
+      background-color: rgba($color: black, $alpha: 0.6);
+      color: white;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .partner-logos {
@@ -239,7 +246,6 @@ main {
   }
 
   .business-concept {
-    padding: 2rem 0;
     margin: 3rem 0 5rem 0;
     height: 100%;
     color: white;
@@ -248,6 +254,7 @@ main {
     align-items: center;
     div {
       width: 90%;
+      padding: 2rem 10px;
       p {
         font-size: 16px;
       }
@@ -274,6 +281,7 @@ main {
       }
     }
   }
+
   .about-us {
     width: 70%;
     margin: 10rem auto 0 auto;
@@ -284,8 +292,8 @@ main {
       height: 500px;
     }
   }
+
   .business-concept {
-    padding: 10px 0;
     margin: 10rem 0;
     height: 60vh;
     color: white;
@@ -293,7 +301,10 @@ main {
     justify-content: center;
     align-items: center;
     div {
-      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 3rem 10rem;
       p {
         font-size: 20px;
       }
