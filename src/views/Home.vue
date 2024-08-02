@@ -127,7 +127,6 @@ main {
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      padding-inline: 2rem;
       .header-intro {
         height: 50%;
         display: flex;
@@ -229,7 +228,6 @@ main {
   .banner-div {
     height: 50vh;
     div {
-      width: 90%;
       height: 60%;
       p {
         font-size: 16px;

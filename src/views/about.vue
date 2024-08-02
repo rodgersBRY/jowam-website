@@ -1,17 +1,17 @@
 <template>
   <div id="about">
     <header>
-      <nav-bar />
-    </header>
+      <div class="wrapper">
+        <nav-bar />
 
-    <main>
-      <section class="about-banner">
         <div>
           <h1>ABOUT US</h1>
           <p>Strong Coffee, Strong Roots</p>
         </div>
-      </section>
+      </div>
+    </header>
 
+    <main>
       <section class="about">
         <div class="about-text">
           <h2>WE STRIVE TO BE THE BEST</h2>
@@ -95,12 +95,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.about-banner {
-  background-image: url("../assets/img/home-background.jpg");
-  background-size: cover;
+header {
+  background-image: url("../assets/img/cherries.jpg");
+  background-size: contain;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   color: white;
   display: flex;
+  flex-direction: column;
 }
 
 .about {
@@ -118,16 +120,28 @@ export default {
   }
 }
 
+// desktop
 @media screen and (min-width: 1000px) {
   h1 {
     font-size: 50px;
   }
-  .about-banner {
-    background-attachment: fixed;
-    height: 50vh;
-    padding: 0 0 3rem 3rem;
-    justify-content: flex-start;
-    align-items: flex-end;
+
+  header {
+    height: 60vh;
+    .wrapper {
+      background-color: rgba($color: black, $alpha: 0.5);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      div {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
   }
   .about {
     justify-content: space-around;
@@ -153,16 +167,28 @@ export default {
   }
 }
 
+// tablet and mobile
 @media screen and (max-width: 1000px) {
   h1 {
     font-size: 40px;
   }
-  .about-banner {
-    background-attachment: fixed;
-    height: 40vh;
-    padding: 0 0 0 1rem;
-    justify-content: flex-start;
-    align-items: flex-end;
+  header {
+    height: 50vh;
+    align-items: center;
+    .wrapper {
+      background-color: rgba($color: black, $alpha: 0.7);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      div {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
   }
   .about {
     flex-direction: column;

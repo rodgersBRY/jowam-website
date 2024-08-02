@@ -1,16 +1,16 @@
 <template>
   <div id="contact">
     <header>
-      <nav-bar />
-    </header>
+      <div class="wrapper">
+        <nav-bar />
 
-    <main>
-      <section class="contact-banner">
         <div>
           <h1>Drop Us A Note</h1>
         </div>
-      </section>
+      </div>
+    </header>
 
+    <main>
       <div class="contacts-row">
         <div class="form-contact-div">
           <section class="contact-form">
@@ -95,29 +95,6 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
-
-        <section class="japanese">
-          <v-card flat width="350px">
-            <v-card-title class="title">会社概要</v-card-title>
-            <v-card-text>
-             <p>代表: Josphat Mwirigi Mburugu</p>
-             <p>役職: Director</p>
-              <p>会社: Jowam Coffee Traders Co.Ltd</p>
-              <p>TEL: +254722762945</p>
-              <p>Mail: trading@jowamcoffee.com</p>
-              <p>Mail: quality@jowamcoffee.com</p>
-              <p>住所: 00200 Nairobi P.O Box 58513-00200 Nairobi Kenya Kenya</p>
-            </v-card-text>
-          </v-card>
-          <v-card  flat width="350px">
-            <v-card-title class="title">海外事業部日本・中国アジア担当</v-card-title>
-            <v-card-text>
-              <p>Alex Nduati アレックスドゥアティ（日本語可</p>
-              <p>TEL: +254722659595</p>
-              <p>Mail: alex.nduati@jowamcoffee.com</p>
-            </v-card-text>
-          </v-card>
-        </section>
       </div>     
     </main>
 
@@ -142,19 +119,31 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-.japanese .title  {
-  color: #e09f55;
-}
-
 textarea {
   resize: none;
 }
-.contact-banner {
+
+header {
   background-image: url("../assets/about2.webp");
   background-size: cover;
+  background-attachment: fixed;
   color: white;
   display: flex;
+  flex-direction: column;
+  .wrapper {
+    background-color: rgba($color: black, $alpha: 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+      text-align: center;
+      height: 50%;
+      display: flex;
+      align-items: end;
+    }
+  }
 }
 
 .form-contact-div {
@@ -201,14 +190,8 @@ textarea {
     font-size: 35px;
   }
 
-  .contact-banner {
+  header {
     height: 50vh;
-    align-items: flex-end;
-    padding-left: 10px;
-    div {
-      text-align: center;
-      height: 25%;
-    }
   }
 
   .form-contact-div {
@@ -243,14 +226,6 @@ textarea {
       text-align: center;
     }
   }
-
-  .japanese {
-    margin: 1.5rem 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
 }
 
 // desktop device
@@ -258,25 +233,8 @@ textarea {
   h1 {
     font-size: 50px;
   }
-
-  .japanese {
-    padding: 20px 0;
-    width: 60%;
-    margin: 1rem auto 3rem auto;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .contact-banner {
-    background-attachment: fixed;
-    height: 60vh;
-    padding-left: 2rem;
-    justify-content: center;
-    align-items: flex-end;
-    div {
-      text-align: center;
-      height: 50%;
-    }
+  header {
+    height: 60vh;    
   }
 
   .form-contact-div {

@@ -14,6 +14,7 @@
       <v-btn icon class="mobile-menu-close" color="white" @click="closeNavMenu"
         ><span class="mdi mdi-close"></span></v-btn
       >
+
       <ul>
         <router-link exact-active-class="active" class="nav-link" to="/">
           Home
@@ -26,18 +27,18 @@
         <router-link active-class="active" class="nav-link" to="/contact">
           Training Centre
         </router-link>
-
-        <router-link active-class="active" class="contact nav-link" to="/contact">
-          Contact Us
-        </router-link>
       </ul>
     </section>
+
+    <router-link active-class="active" class="contact nav-link" to="/contact">
+      Contact Us
+  </router-link>
 
     <section class="mobile-nav-links">
       <i icon class="mobile-menu-close" color="white" @click="closeNavMenu"
         ><span class="mdi mdi-close"></span></
       i>
-      <ul>
+      <ul class="list">
         <router-link exact-active-class="active" class="nav-link" to="/">
           Home
         </router-link>
@@ -46,11 +47,11 @@
           About Us
         </router-link>
         
-        <router-link active-class="active" class="nav-link" to="/contact">
+        <router-link active-class="active" class="nav-link" to="/contact-us">
           Training Centre
         </router-link>
 
-        <router-link active-class="active" class="contact nav-link" to="/contact">
+        <router-link class="contact nav-link" to="/contact">
           Contact Us
         </router-link>
       </ul>
@@ -71,15 +72,17 @@ export default {
   },
 
   mounted() {
-    var prevScrollPos = window.scrollY;
     window.onscroll = () => {
-      var currentScrollPos = window.scrollY;
-      if (prevScrollPos > currentScrollPos) {
-        document.getElementsByClassName("navbar")[0].style.top = "0";
+      var navBar = document.getElementsByClassName('navbar')[0]
+
+      if (window.scrollY > 150) {
+        navBar.style.position = "fixed";
+        navBar.style.top = "5";
+        navBar.style.left = "0";
+        navBar.style.right = "0";
       } else {
-        document.getElementsByClassName("navbar")[0].style.top = "-100px";
+        navBar.style.position = "relative";
       }
-      prevScrollPos = currentScrollPos;
     };
   },
 
@@ -104,6 +107,10 @@ export default {
   align-items: center;
   border-radius: 50px;
   margin-top: 1.5rem;
+  z-index: 1;
+  margin-inline: auto;
+  box-shadow: 0 4px 8px rgba($color: black, $alpha: 0.1);
+  padding: 7px 1rem;
   img {
     width: 40px;
     height: 40px;
@@ -121,7 +128,7 @@ export default {
   }
 }
 
-.nav-links {
+.nav-links, .contact {
   display: none;
 }
 
@@ -153,15 +160,21 @@ export default {
     border-radius: 50%;
     text-align: center;
   }
-  .nav-link {
-    display: block;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: white;
-    font-size: 22px;
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .nav-link {
+      display: block;
+      margin-bottom: 2rem;
+      color: white;
+      font-size: 22px;
+    }
   }
+  
   .contact {
-    width: 50%;
+    text-align: center;
+    width: 40%;
     margin: 8rem auto 0 auto;
     background-color: var(--secondary-color);
     padding: 10px;
@@ -170,19 +183,18 @@ export default {
   }
 }
 
+// mobile device
 @media screen and (max-width: 700px) {
   .navbar {
-    width: 100%;
-    padding: 7px 1rem;
+    width: 90%;
   }
 }
 
+// tablet and desktop
 @media screen and (min-width: 700px) {
   .navbar {
-    
     width: 70%;
-    padding: 6px 1rem;
-    .nav-link:not(:last-child) {
+    .nav-link {
       margin-right: 2rem;
     }
     .contact {
@@ -193,7 +205,7 @@ export default {
       transition: all 0.3s ease-in-out;
       font-weight: 500;
       &:hover {
-        transform: translateY(-10px);
+        transform: translateY(-2px);
         background-color: var(--primary-color);
         color: white;
       }
@@ -202,6 +214,7 @@ export default {
   }
 }
 
+// large screens
 @media screen and (min-width: 1024px) {
   .navbar {
     width: 65%;
@@ -212,6 +225,7 @@ export default {
   .nav-links {
     display: block;
   }
+  
   .mobile-menu-open,
     .mobile-menu-close {
       display: none;
