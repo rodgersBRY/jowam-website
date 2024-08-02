@@ -1,7 +1,6 @@
 <template>
-  <nav class="header">
+  <nav class="navbar">
     <section
-      class="logo-div d-flex align-center"
       @click="$router.push('/')"
       style="cursor: pointer;"
     >
@@ -9,10 +8,6 @@
         :src="require('../assets/logo.png')"
         alt="jowam coffee, coffee experts"
       />
-      <h1>
-        <span>Jowam</span> <br />
-        Coffee Traders
-      </h1>
     </section>
 
     <section class="nav-links">
@@ -24,29 +19,45 @@
           Home
         </router-link>
 
-        <span>|</span>
         <router-link active-class="active" class="nav-link" to="/about">
           About Us
         </router-link>
-
-        <span>|</span>
+        
         <router-link active-class="active" class="nav-link" to="/contact">
-          Contact Us
+          Training Centre
         </router-link>
 
-        <br class="br" />
-        <br class="br"/>
-        <a
-          class="jowam-btn"
-          href="https://training.jowamcoffee.co.ke"
-        >
+        <router-link active-class="active" class="contact nav-link" to="/contact">
+          Contact Us
+        </router-link>
+      </ul>
+    </section>
+
+    <section class="mobile-nav-links">
+      <i icon class="mobile-menu-close" color="white" @click="closeNavMenu"
+        ><span class="mdi mdi-close"></span></
+      i>
+      <ul>
+        <router-link exact-active-class="active" class="nav-link" to="/">
+          Home
+        </router-link>
+
+        <router-link active-class="active" class="nav-link" to="/about">
+          About Us
+        </router-link>
+        
+        <router-link active-class="active" class="nav-link" to="/contact">
           Training Centre
-        </a>
+        </router-link>
+
+        <router-link active-class="active" class="contact nav-link" to="/contact">
+          Contact Us
+        </router-link>
       </ul>
     </section>
 
     <section class="mobile-menu-open">
-      <v-btn icon small @click="openNavMenu"><span class="mdi mdi-menu text-xl"></span></v-btn>
+      <v-btn icon small flat><span class="mdi mdi-menu text-xl" @click="openNavMenu"></span></v-btn>
     </section>
   </nav>
 </template>
@@ -64,9 +75,9 @@ export default {
     window.onscroll = () => {
       var currentScrollPos = window.scrollY;
       if (prevScrollPos > currentScrollPos) {
-        document.getElementsByClassName("header")[0].style.top = "0";
+        document.getElementsByClassName("navbar")[0].style.top = "0";
       } else {
-        document.getElementsByClassName("header")[0].style.top = "-100px";
+        document.getElementsByClassName("navbar")[0].style.top = "-100px";
       }
       prevScrollPos = currentScrollPos;
     };
@@ -74,11 +85,11 @@ export default {
 
   methods: {
     openNavMenu() {
-      let navDiv = document.getElementsByClassName("nav-links")[0];
+      let navDiv = document.getElementsByClassName("mobile-nav-links")[0];
       navDiv.style.width = "100%";
     },
     closeNavMenu() {
-      let navDiv = document.getElementsByClassName("nav-links")[0];
+      let navDiv = document.getElementsByClassName("mobile-nav-links")[0];
       navDiv.style.width = "0";
     },
   },
@@ -86,122 +97,124 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.header {
-  background: white;
+.navbar {
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  width: 100%;
-  transition: top 0.8s ease;
-  .logo-div {
-    img {
-      position: relative;
-      top: 1.5rem;
-      left: 2%;
-    }
-    h1 {
-      margin-left: 20px;
-      text-align: center;
-      span {
-        color: rgb(130, 202, 130);
-      }
-    }
+  border-radius: 50px;
+  margin-top: 1.5rem;
+  img {
+    width: 40px;
+    height: 40px;
   }
-  .mdi {
-    font-size: 25px;
-  }
-  .nav-links ul {
-    padding: 0;
-    list-style: none;
-    .nav-link {
-      display: inline-block;
-      text-decoration: none;
-      margin: 0 10px;
-      padding: 10px 1rem;
-      color: black;
-      font-weight: bold;
-      &:hover,
-      &.active {
-        color: #ba8445;
-        cursor: pointer;
-      }
+  .nav-link {
+    text-decoration: none;
+    color: gray;
+    font-weight: 400;
+    &:hover {
+      color: var(--primary-color);
     }
-    .jowam-btn {
-      text-decoration: none;
-      color: white;
-      background: #ba8445;
-      padding: 1rem;
-      border-radius: 10px;
+    &.active {
+      color: var(--primary-color);
     }
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .br {
+.nav-links {
+  display: none;
+}
+
+.mobile-nav-links {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: rgba(0, 0, 0, .5);
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  .mobile-menu-close {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    right: -80%;
+    top: 2%;
+    color: white;
+    border: 2px solid white;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  .nav-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 22px;
+  }
+  .contact {
+    width: 50%;
+    margin: 8rem auto 0 auto;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 25px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    width: 100%;
+    padding: 7px 1rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .navbar {
+    
+    width: 70%;
+    padding: 6px 1rem;
+    .nav-link:not(:last-child) {
+      margin-right: 2rem;
+    }
+    .contact {
+      background-color: var(--secondary-color);
+      padding: 12px 12px;
+      color: white;
+      border-radius: 50px;
+      transition: all 0.3s ease-in-out;
+      font-weight: 500;
+      &:hover {
+        transform: translateY(-10px);
+        background-color: var(--primary-color);
+        color: white;
+      }
+    }
+    
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    width: 65%;
+  }
+  .mobile-nav-links {
     display: none;
   }
-  .header {
-    padding: 5px 5rem;
-    .logo-div {
-      img {
-        height: 60px;
-      }
-    }
-
-    .nav-links {
-      .mobile-menu-close {
-        display: none;
-      }
-    }
-    .mobile-menu-open {
+  .nav-links {
+    display: block;
+  }
+  .mobile-menu-open,
+    .mobile-menu-close {
       display: none;
     }
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .header {
-    padding: 5px;
-    .logo-div {
-      img {
-        width: 50px;
-        height: 50px;
-      }
-    }
-    .nav-links {
-      z-index: 1;
-      width: 0;
-      background: black;
-      color: white;
-      height: 100vh;
-      position: absolute;
-      overflow: hidden;
-      transition: width 1s ease-in-out;
-      top: 0;
-      left: 0;
-      ul {
-        margin-top: 4rem;
-        .nav-link {
-           color: white;
-          display: block;
-          font-size: 20px;
-        }
-        span {
-          display: none;
-        }
-      }
-      .jowam-btn {
-        margin-left: 1rem;
-      }
-      .mobile-menu-close {
-        position: absolute;
-        right: 4%;
-        top: 1%;
-      }
-    }
-  }
 }
 </style>

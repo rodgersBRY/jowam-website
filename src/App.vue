@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'App',
 
@@ -16,3 +15,14 @@ export default {
   }),
 }
 </script>
+
+<style>
+:root {
+  --primary-color: orange;
+  --secondary-color: green;
+  --accent-color: rgb(208, 87, 87);
+}
+* {
+  box-sizing: border-box;
+}
+</style>
