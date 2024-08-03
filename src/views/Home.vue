@@ -16,18 +16,13 @@
     <main>
       <section class="about-us">
         <div class="about-text pa-5">
-          <h2>ABOUT <span class="green--text">US</span></h2>
-          <p>
-            <em
-              >Jowam Coffee Trading Company Limited was founded in June 2006 as
-              an exporting company for coffees. We also promote farmers by
-              providing advanced farming technologies to ensure production of
-              high-quality coffee that is of great value.</em
-            >
-          </p>
-          <p>
-            Jowam Coffee Trading Company limited is registered and incorporated
-            under the Company’s Act in the Laws of Kenya. We are licensed under
+          <p data-aos="fade-right" data-aos-duration="2000">
+            <span class="title">Jowam Coffee Trading Company LTD</span>
+            was founded in June 2006 as an exporting company for coffees. We promote farmers by
+            providing advanced farming technologies to ensure production of
+            high-quality coffee that is of great value.
+            The company is registered and incorporated
+            under the Company’s Act in the Laws of Kenya and licensed under
             the Coffee Directorate Crops Act, 2013 and the Coffee (Forms) Rules,
             2002 as a licensed coffee dealer and exporter in Kenya. With well
             over thirty years of experience in the Coffee industry coupled with
@@ -36,24 +31,39 @@
             ensure their product sales remain high.
           </p>
         </div>
-        <div class="about-img">
+
+        <div
+        class="about-img"
+        data-aos="fade-left"
+        data-aos-duration="2000">
           <img
-            data-aos="fade-right"
-            data-aos-duration="2000"
-            width="100%"
             :src="require('../assets/img/jowam7.jpg')"
             alt="about jowam coffee"
           />
         </div>
       </section>
 
+      <section class="gateway">
+        <div class="info-div" data-aos="fade-left" data-aos-duration="2000">
+          <p class="section-title mb-3">Your Gateway to Kenya’s Finest Green Coffee</p>
+
+          <p>
+            Kenya’s green coffee beans are celebrated worldwide for their bright acidity, full-bodied flavor, and delightful fruity notes. We partner with local farmers who share our dedication to quality, ensuring that each bean is a perfect representation of the unique Kenyan terroir.
+          </p>
+        </div>
+        
+        <div class="image-div" data-aos="fade-right" data-aos-duration="2000">
+          <img :src="require('@/assets/img/g_beans.webp')" alt="coffee beans">
+        </div>
+      </section>
+
       <section class="business-concept">
         <div
         >
-          <h1 data-aos="fade-right"
+          <h1 data-aos="fade-up"
           data-aos-duration="1600">BUSINESS CONCEPTS</h1>
         
-          <p data-aos="fade-right"
+          <p data-aos="fade-up"
           data-aos-duration="2000">
             Through a business model that is geared towards easy access and
             convenience for our customers, Jowam Coffee Trading Company has
@@ -93,6 +103,51 @@
           <div class="marquee item-5">
             <img :src="require('../assets/coffee_board.png')" alt="coffee board logo" />
           </div>          
+        </div>
+      </section>
+
+      <section class="choose-us">
+        <p
+        class="section-title"
+        data-aos="fade-up"
+        data-aos-duration="1600">Why Choose Our Green Coffee?</p>
+
+        <div class="div-1">
+          <div class="img-div" data-aos="fade-up"
+          data-aos-duration="2000">
+            <img :src="require('@/assets/img/global.webp')" alt="global initiative">
+          </div>
+
+          <div class="details" data-aos="fade-up"
+          data-aos-duration="2400">
+            <div class="icon">
+              <i class="mdi mdi-earth"></i>
+            </div>
+            
+            <div class="text">
+              <p><span>Traceability: </span>We provide complete transparency from the farm to your roastery, allowing you to trace the origin of every batch of beans.</p>
+              <p><span>Global Expertise: </span>With a robust logistics network, we ensure timely and efficient delivery to roasters and coffee traders worldwide.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div-2">
+          <div class="img-div" data-aos="fade-up"
+          data-aos-duration="1600">
+            <img :src="require('@/assets/img/quality.png')" alt="quality control">
+          </div>
+
+          <div class="details" data-aos="fade-up"
+          data-aos-duration="2000">
+            <div class="icon">
+              <i class="mdi mdi-gold"></i>
+            </div>
+            
+            <div class="text">
+              <p><span>Exceptional Quality: </span>We meticulously source and export only the highest quality Arabica beans, known for their distinct flavor profile and consistency.</p>
+              <p><span>Sustainability: </span>Our partnerships are built on sustainable practices that support environmental stewardship and uplift the farming communities.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -136,9 +191,57 @@ main {
     }
   }
 
+  .section-title {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+
   .about-us {
     display: flex;
     align-items: center;
+    gap: 6rem;
+    .about-text {
+        flex: 3;
+        .title {
+          color: var(--primary-color);
+        }
+    }
+    .about-img {
+      width: 100%;
+      height: 20%;
+      border-radius: 20px;
+      overflow: hidden;
+      flex: 2;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .gateway {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3rem;
+    width: 70%;
+    margin-inline: auto;
+    margin-block: 3rem;
+    .info-div {
+      flex: 1;
+    }
+    .image-div {
+      height: 300px;
+      width: 700px;
+      overflow: hidden;
+      border-radius: 10px;
+      flex: 2;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 
   .business-concept {
@@ -209,7 +312,65 @@ main {
       animation-delay: calc(30s / 5 * (5 - 5) * -1);
     }
   }
+
+  .choose-us {
+    width: 80%;
+    margin-inline: auto;
+    margin-block: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    .section-title {
+      text-align: center;
+      font-size: 25px;
+    }
+    .div-1,
+    .div-2 {
+      display: flex;
+      gap: 1rem;
+      box-shadow: 0 4px 8px rgba($color: black, $alpha: 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 0 12px 0 0;
+      .img-div {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .details {
+        display: flex;
+        gap: 3rem;
+        justify-content: space-around;
+        .icon {
+          background-color: var(--secondary-color);
+          height: 70px;
+          width: 150px;
+          border-radius: 25%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 35px;
+        }
+        .text p {
+          font-size: 17px;
+          margin-bottom: 10px;
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
 }
+
+
 
 @keyframes scrollLeft {
   to {
@@ -270,7 +431,7 @@ main {
   }
   .banner-div {
     background-attachment: fixed;
-    height: 70vh;
+    height: 90vh;
     div {
       width: 50%;
       height: 60%;

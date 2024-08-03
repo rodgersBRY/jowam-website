@@ -118,7 +118,7 @@ export default {
   .nav-link {
     text-decoration: none;
     color: gray;
-    font-weight: 400;
+    font-weight: 700;
     &:hover {
       color: var(--primary-color);
     }

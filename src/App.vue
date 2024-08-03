@@ -18,9 +18,11 @@ export default {
 
 <style>
 :root {
-  --primary-color: orange;
-  --secondary-color: green;
+  --primary-color: rgb(255, 165, 0);
+  --secondary-color: rgb(0, 128, 0);
   --accent-color: rgb(208, 87, 87);
+  --faded-primary-color: rgba(255, 165, 0, 0.5);
+  --faded-secondary-color: rgba(0, 128, 0, 0.5);
 }
 * {
   box-sizing: border-box;
