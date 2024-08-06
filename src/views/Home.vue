@@ -8,6 +8,7 @@
           <div class="header-intro">
             <h1 data-aos="fade-down" data-aos-duration="2400">Jowam Coffee Traders</h1>
             <p data-aos="fade-down" data-aos-duration="2000">Promote majority small-scale farmers by marketing their coffee</p>
+            <i class="mt-10 bx bx-chevrons-down bx-fade-down"></i>
           </div>
         </div>
       </section>
@@ -15,45 +16,37 @@
 
     <main>
       <section class="about-us">
-        <div class="about-text pa-5">
-          <p data-aos="fade-right" data-aos-duration="2000">
-            <span class="title">Jowam Coffee Trading Company LTD</span>
-            was founded in June 2006 as an exporting company for coffees. We promote farmers by
-            providing advanced farming technologies to ensure production of
-            high-quality coffee that is of great value.
-            The company is registered and incorporated
-            under the Company’s Act in the Laws of Kenya and licensed under
-            the Coffee Directorate Crops Act, 2013 and the Coffee (Forms) Rules,
-            2002 as a licensed coffee dealer and exporter in Kenya. With well
-            over thirty years of experience in the Coffee industry coupled with
-            quality control, passion and commitment to service, Jowam Coffee
-            Trading Company founders empower clients by providing coffees that
-            ensure their product sales remain high.
-          </p>
+        <div class="intro">
+          <div class="text-div pa-5">
+            <p data-aos="fade-right" data-aos-duration="2000">
+              At <span class="title">Jowam Coffee Trading Company LTD</span>
+              We are dedicated to delivering green coffee beans that meet the highest industry standards. Our rigorous quality control processes and close relationships with growers ensure that our clients receive beans that are perfect for roasting, cupping, and savoring
+            </p>
+          </div>
+  
+          <div
+          class="img-div"
+          data-aos="fade-left"
+          data-aos-duration="2000">
+            <img
+              :src="require('../assets/img/jowam7.jpg')"
+              alt="about jowam coffee"
+            />
+          </div>
         </div>
 
-        <div
-        class="about-img"
-        data-aos="fade-left"
-        data-aos-duration="2000">
-          <img
-            :src="require('../assets/img/jowam7.jpg')"
-            alt="about jowam coffee"
-          />
-        </div>
-      </section>
-
-      <section class="gateway">
-        <div class="info-div" data-aos="fade-left" data-aos-duration="2000">
-          <p class="section-title mb-3">Your Gateway to Kenya’s Finest Green Coffee</p>
-
-          <p>
-            Kenya’s green coffee beans are celebrated worldwide for their bright acidity, full-bodied flavor, and delightful fruity notes. We partner with local farmers who share our dedication to quality, ensuring that each bean is a perfect representation of the unique Kenyan terroir.
-          </p>
-        </div>
-        
-        <div class="image-div" data-aos="fade-right" data-aos-duration="2000">
-          <img :src="require('@/assets/img/g_beans.webp')" alt="coffee beans">
+        <div class="gateway">
+          <div class="text-div" data-aos="fade-left" data-aos-duration="2000">
+            <p class="section-title mb-3">Your Gateway to Kenya’s Finest Green Coffee</p>
+  
+            <p>
+              Kenya’s green coffee beans are celebrated worldwide for their bright acidity, full-bodied flavor, and delightful fruity notes. We partner with local farmers who share our dedication to quality, ensuring that each bean is a perfect representation of the unique Kenyan terroir.
+            </p>
+          </div>
+          
+          <div class="img-div" data-aos="fade-right" data-aos-duration="2000">
+            <img :src="require('@/assets/img/g_beans.webp')" alt="coffee beans">
+          </div>
         </div>
       </section>
 
@@ -187,6 +180,10 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        i {
+          font-size: 30px;
+        }
       }
     }
   }
@@ -197,50 +194,42 @@ main {
   }
 
   .about-us {
-    display: flex;
-    align-items: center;
-    gap: 6rem;
-    .about-text {
-        flex: 3;
-        .title {
-          color: var(--primary-color);
-        }
-    }
-    .about-img {
-      width: 100%;
-      height: 20%;
-      border-radius: 20px;
-      overflow: hidden;
-      flex: 2;
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-
-  .gateway {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 3rem;
-    width: 70%;
+    margin-top: 6rem;
+    width: 80%;
     margin-inline: auto;
-    margin-block: 3rem;
-    .info-div {
-      flex: 1;
-    }
-    .image-div {
-      height: 300px;
-      width: 700px;
-      overflow: hidden;
-      border-radius: 10px;
-      flex: 2;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    .intro,
+    .gateway {
+      display: flex;
+      gap: 2rem;
+      .text-div {
+        flex: 1;
+        span {
+          color: var(--primary-color);
+          font-weight: 500;
+        }
       }
+      .img-div {
+        flex: 1;
+        width: 200px;
+        height: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: all .7s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .gateway {
+      flex-direction: row-reverse;
     }
   }
 
@@ -395,7 +384,7 @@ main {
       }
     }
   }
-  .about-us {
+  .intro {
     flex-direction: column;
     width: 90%;
     margin: 1rem auto 0 auto;
@@ -438,17 +427,6 @@ main {
       p {
         font-size: 30px;
       }
-    }
-  }
-
-  .about-us {
-    width: 70%;
-    margin: 10rem auto 0 auto;
-    .about-text {
-      width: 50%;
-    }
-    img {
-      height: 500px;
     }
   }
 

@@ -1,29 +1,27 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import About from "@/views/about.vue";
-import Contact from "@/views/contact.vue";
+import Home from "@/views/Home.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: () => import("../views/Home.vue"),
+    component: Home,
   },
   {
     path: "/about",
     name: "about",
-    component: About,
-    meta: {
-      title: "About Us",
-    },
+    component: () => import('@/views/about.vue'),
   },
   {
     path: "/contact",
     name: "contact",
-    component: Contact,
-    meta: {
-      title: "Contact Us",
-    },
+    component: () => import("@/views/contact.vue"),
+  },
+  {
+    path: "/training",
+    name: "training",
+    component: () => import("@/views/Training.vue"),
   },
   {
     path: "/*",
@@ -41,13 +39,6 @@ const router = createRouter({
     // always scroll to top
     return { left: 0, top: 0 };
   },
-});
-
-const DEFAULT_TITLE = "Jowam Coffee Traders Ltd";
-router.afterEach((to, from) => {
-  Vue.nextTick(() => {
-    document.title = to.meta.title || DEFAULT_TITLE;
-  });
 });
 
 export default router;

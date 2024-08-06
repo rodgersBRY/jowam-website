@@ -16,23 +16,23 @@
       >
 
       <ul>
-        <router-link exact-active-class="active" class="nav-link" to="/">
+        <router-link exact-active-class="active" class="nav-link duration-500 ease-in-out" to="/">
           Home
         </router-link>
 
-        <router-link active-class="active" class="nav-link" to="/about">
+        <router-link active-class="active" class="nav-link duration-500 ease-in-out" to="/about">
           About Us
         </router-link>
         
-        <router-link active-class="active" class="nav-link" to="/contact">
+        <router-link active-class="active" class="nav-link duration-500 ease-in-out" to="/training">
           Training Centre
         </router-link>
       </ul>
     </section>
 
-    <router-link active-class="active" class="contact nav-link" to="/contact">
+    <router-link active-class="active" class="contact nav-link bg-green-600 text-white font-bold" to="/contact">
       Contact Us
-  </router-link>
+    </router-link>
 
     <section class="mobile-nav-links">
       <i icon class="mobile-menu-close" color="white" @click="closeNavMenu"
@@ -47,11 +47,11 @@
           About Us
         </router-link>
         
-        <router-link active-class="active" class="nav-link" to="/contact-us">
+        <router-link active-class="active" class="nav-link" to="/training">
           Training Centre
         </router-link>
 
-        <router-link class="contact nav-link" to="/contact">
+        <router-link class="contact nav-link font-semibold" to="/contact">
           Contact Us
         </router-link>
       </ul>
@@ -176,7 +176,6 @@ export default {
     text-align: center;
     width: 40%;
     margin: 8rem auto 0 auto;
-    background-color: var(--secondary-color);
     padding: 10px;
     border-radius: 25px;
     font-weight: 500;
@@ -199,7 +198,6 @@ export default {
     }
     .contact {
       margin-right: 0;
-      background-color: var(--secondary-color);
       padding: 12px 12px;
       color: white;
       border-radius: 50px;

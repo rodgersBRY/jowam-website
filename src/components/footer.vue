@@ -16,41 +16,60 @@
         </div>
       </div>
       
-      <div class="socials">
-        <p class="section-title">FOLLOW US ON INSTAGRAM</p>
+      <div class="insta">
+        <p class="section-title tracking-wider">FOLLOW US ON INSTAGRAM</p>
 
         <div class="insta-div">
           <p>Jowam Coffee Traders</p>
-          <div class="platform">
+          <a
+          class="platform cursor-pointer rounded-lg"
+          href="https://www.instagram.com/jowamcoffee/" target="_blank">
             <i class="mdi mdi-instagram"></i>
             <p>INSTAGRAM</p>
-          </div>
+          </a>
         </div>
       </div>
   
       <div class="contact-info">
-        <p class="section-title">CONTACT INFO</p>
+        <p class="section-title tracking-wider">CONTACT INFO</p>
         <div class="info">
-          <p>Address: 4th Flr, Pension Towers. Loita Str. Nairobi</p>
-          Phone: 254728919092/254722762945
-          Email: trading@jowamcoffee.com
+          <p><span>Address:</span> 4th Flr, Pension Towers. Loita Str. Nairobi</p>
+          <p><span>Phone:</span> +254728919092/+254722762945</p>
+          <p><span>Email:</span> trading@jowamcoffee.com</p>
+        </div>
+      </div>
+
+      <div class="hours">
+        <p class="section-title tracking-wider">BUSINESS HOURS</p>
+
+        <div class="">
+          <p>Mon - Fri</p>
+          <p>7.00 am - 5.00 pm</p>
         </div>
       </div>
     </section>
 
     <section class="bottom">
-      <p>&copy; {{ date }} Jowam Coffee Traders LTD. - Developed by <span><a href="">Mawira Corp.</a></span></p>
+      <p>Copyright &copy; {{ date }} Jowam Coffee Traders LTD - Developed by
+        <span>
+          <a href="https://mawira.netlify.app/" target="_blank" class="duration-500 ease-in-out">Mawira Corp.</a>
+        </span>
+      </p>
       <div class="links">
         <ul>
-          <router-link exact-active-class="active" class="nav-link" to="/">
+          <router-link exact-active-class="active" class="nav-link duration-500 ease-in-out" to="/">
             Home
           </router-link>
   
-          <router-link active-class="active" class="nav-link" to="/about">
+          <router-link active-class="active" class="nav-link duration-500 ease-in-out" to="/about">
             About Us
           </router-link>
+
+          <router-link active-class="active" class="nav-link duration-500 ease-in-out" to="/training">
+            Training Centre
+          </router-link>
   
-          <router-link active-class="active" class="nav-link" to="/contact">
+          <router-link active-class="active" class="nav-link duration-500 ease-in-out" to="/contact">
             Contact Us
           </router-link>
         </ul>
@@ -72,16 +91,21 @@ export default {
 <style scoped lang="scss">
 #footer {
   background-color: var(--faded-secondary-color);
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
   .section-title {
     font-weight: bold;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid green;
   }
   .top {
-    font-size: 15px;
+    font-size: 14px;
     padding: 4rem 6rem;
     display: flex;
     justify-content: space-between;
+    gap: 4rem;
     .about {
       width: 300px;
       .logo {
@@ -132,6 +156,16 @@ export default {
     }
     .contact-info {
       width: 300px;
+      span {
+        font-weight: 500;
+      }
+    }
+    .hours{
+      width: 300px;
+      div {
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
   .bottom {
