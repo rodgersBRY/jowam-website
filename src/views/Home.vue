@@ -16,36 +16,38 @@
 
     <main>
       <section class="about-us">
-        <div class="intro">
-          <div class="text-div pa-5">
-            <p data-aos="fade-right" data-aos-duration="2000">
+        <div class="gateway text-xl tracking-wide">
+          <div class="text-div" data-aos="fade-left" data-aos-duration="2000">
+            <p>
               At <span class="title">Jowam Coffee Trading Company LTD</span>
               We are dedicated to delivering green coffee beans that meet the highest industry standards. Our rigorous quality control processes and close relationships with growers ensure that our clients receive beans that are perfect for roasting, cupping, and savoring
+            </p>
+          </div>
+          
+          <div class="img-div" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-back">
+            <img :src="require('@/assets/img/g_beans.webp')" alt="coffee beans">
+          </div>
+        </div>
+
+        <div class="intro">
+          <div class="text-div pa-5">
+            <p class="section-title mb-3" data-aos="fade-right" data-aos-duration="1600">Your Gateway to Kenya’s Finest Green Coffee</p>
+
+            <p class="text-xl tracking-wide" data-aos="fade-right" data-aos-duration="2000">
+              Kenya’s green coffee beans are celebrated worldwide for their bright acidity, full-bodied flavor, and delightful fruity notes. We partner with local farmers who share our dedication to quality, ensuring that each bean is a perfect representation of the unique Kenyan terroir.
             </p>
           </div>
   
           <div
           class="img-div"
           data-aos="fade-left"
+          data-aos-easing="ease-in-back"
+          data-aos-offset="300"
           data-aos-duration="2000">
             <img
-              :src="require('../assets/img/jowam7.jpg')"
+              :src="require('../assets/img/hand_coffee.jpg')"
               alt="about jowam coffee"
             />
-          </div>
-        </div>
-
-        <div class="gateway">
-          <div class="text-div" data-aos="fade-left" data-aos-duration="2000">
-            <p class="section-title mb-3">Your Gateway to Kenya’s Finest Green Coffee</p>
-  
-            <p>
-              Kenya’s green coffee beans are celebrated worldwide for their bright acidity, full-bodied flavor, and delightful fruity notes. We partner with local farmers who share our dedication to quality, ensuring that each bean is a perfect representation of the unique Kenyan terroir.
-            </p>
-          </div>
-          
-          <div class="img-div" data-aos="fade-right" data-aos-duration="2000">
-            <img :src="require('@/assets/img/g_beans.webp')" alt="coffee beans">
           </div>
         </div>
       </section>

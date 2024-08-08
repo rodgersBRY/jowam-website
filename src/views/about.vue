@@ -43,8 +43,8 @@
           </p>
 
           <p data-aos="fade-left" data-aos-duration="2800">
-            The the warehouse department, the following units are working in different roles: management, coffee cleaning staff,
-            quality inspector, ma- chine operator, packaging and labeling, laborer, and security staff.
+            In the warehouse department, the following units are working in different roles: management, coffee cleaning staff,
+            quality inspector, machine operator, packaging and labeling, laborer, and security staff.
             Our logistics team works its best for timely shipment of coffee to destinations.
             In general our company, has a long time experience and knowledge in the coffee export business.
           </p>
@@ -71,7 +71,7 @@
           <v-card-text>{{ val.content }}</v-card-text>
         </v-card>
       </section>
-
+      
       <section class="market-source w-8/12 mx-auto flex flex-col gap-16">
         <div class="source flex gap-36">
           <div class="title-div">

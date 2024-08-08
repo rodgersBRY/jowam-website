@@ -36,11 +36,11 @@
 
           <div class="courses border-black p-4 flex justify-between" v-for="(crs, index) in courses" :key="index" :class="{'border-b': crs.border}">
             <div class="info">
-              <p class="text-gray-500"><span><i class="bx bx-calendar text-green-600 mr-1"></i></span> {{ crs.duration }}</p>
+              <p class="text-gray-500 text-sm"><span><i class="bx bx-calendar text-green-600 mr-1"></i></span> {{ crs.duration }}</p>
             
             <h3 class="text-2xl font-semibold my-3"  data-aos="zoom" data-aos-duration="2800">{{ crs.title }}</h3>
           
-            <p class="text-gray-500"><span><i class="bx bx-time text-green-600 mr-1"></i></span>Weekdays: 8 am - 6 pm</p>
+            <p class="text-gray-500 text-sm"><span><i class="bx bx-time text-green-600 mr-1"></i></span>Weekdays: 8 am - 6 pm</p>
             </div>
 
             <div class="img w-[100px] h-[100px] rounded-lg overflow-hidden">
@@ -65,9 +65,9 @@ export default {
   data() {
     return {
       courses: [
-        { title: "Professional Barista", duration: "6 weeeks", url: require("@/assets/img/barista.png"), border: true },
-        { title: "Professional Mixology", duration: "4 weeeks", url: require("@/assets/img/mixology.png"), border: true },
-        { title: "Professional Roasting", duration: "4 weeeks", url: require("@/assets/img/roasting.png"), border: false },
+        { title: "Professional Barista", duration: "6 weeks", url: require("@/assets/img/barista.png"), border: true },
+        { title: "Professional Mixology", duration: "4 weeks", url: require("@/assets/img/mixology.png"), border: true },
+        { title: "Professional Roasting", duration: "4 weeks", url: require("@/assets/img/roasting.png"), border: false },
       ]
     }
   },
