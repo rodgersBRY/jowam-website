@@ -54,7 +54,7 @@
         </router-link>
       </ul>
 
-      <div class="logo-div flex justify-center my-auto w-1/2 mx-auto h-[20vh]">
+      <div class="logo-div flex justify-center items-center my-auto w-1/2 mx-auto h-[20vh]">
         <img
         class="w-full h-full"
           :src="require('../assets/logo.png')"
