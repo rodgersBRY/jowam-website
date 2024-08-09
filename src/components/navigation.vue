@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar bg-white flex justify-between items-center rounded-full z-10 mx-auto p-2 mt-5 shadow-xl w-11/12 md:w-8/12">
+  <nav class="navbar bg-white flex justify-between items-center rounded-full z-10 mx-auto p-2 mt-5 shadow-xl transition-all duration-700 ease-in-out w-11/12 md:w-8/12">
     <section
       @click="$router.push('/')"
       style="cursor: pointer;"
@@ -31,11 +31,11 @@
       Contact Us
     </router-link>
 
-    <section class="mobile-nav-links flex lg:hidden w-[0] fixed top-0 right-0 flex-col gap-3 overflow-hidden bg-black/50 h-screen z-10 transition-all duration-300 ease-in-out backdrop-blur-lg">
-      <i icon class="mobile-menu-close block lg:hidden text-xl font-bold relative right-[-80%] top-[2%] text-white border-2 border-white h-[40px] w-[40px] p-2 rounded-full text-center" color="white" @click="closeNavMenu"
+    <section class="mobile-nav-links flex lg:hidden w-[0] fixed top-0 right-0 flex-col gap-3 overflow-hidden bg-black/50 h-screen z-10 transition-all duration-1000 ease-in backdrop-blur-lg pb-4">
+      <div class="mobile-menu-close lg:hidden text-xl font-bold relative right-[-80%] top-[2%] text-white border-2 border-white h-[40px] w-[40px] p-2 rounded-full flex justify-center items-center" color="white" @click="closeNavMenu"
         >
-          <span class="bx bx-x"></span>
-        </i>
+          <i class="bx bx-x text-xl"></i>
+        </div>
       <ul class="list flex flex-col gap-10 items-center text-white text-xl font-bold">
         <router-link exact-active-class="active" class="nav-link" to="/">
           Home
@@ -53,6 +53,14 @@
           Contact Us
         </router-link>
       </ul>
+
+      <div class="logo-div flex justify-center my-auto w-1/2 mx-auto h-[20vh]">
+        <img
+        class="w-full h-full"
+          :src="require('../assets/logo.png')"
+          alt="jowam coffee, coffee experts"
+        />
+      </div>
     </section>
 
     <section class="mobile-menu-open block lg:hidden">
