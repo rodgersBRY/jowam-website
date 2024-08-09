@@ -31,10 +31,11 @@
       Contact Us
     </router-link>
 
-    <section class="mobile-nav-links flex lg:hidden fixed top-0 right-0 flex-col gap-3 overflow-hidden bg-black/50 h-screen z-10 transition-all duration-300 ease-in-out backdrop-blur-lg">
+    <section class="mobile-nav-links flex lg:hidden w-[0] fixed top-0 right-0 flex-col gap-3 overflow-hidden bg-black/50 h-screen z-10 transition-all duration-300 ease-in-out backdrop-blur-lg">
       <i icon class="mobile-menu-close block lg:hidden text-xl font-bold relative right-[-80%] top-[2%] text-white border-2 border-white h-[40px] w-[40px] p-2 rounded-full text-center" color="white" @click="closeNavMenu"
-        ><span class="bx bx-x"></span></
-      i>
+        >
+          <span class="bx bx-x"></span>
+        </i>
       <ul class="list flex flex-col gap-10 items-center text-white text-xl font-bold">
         <router-link exact-active-class="active" class="nav-link" to="/">
           Home
@@ -85,12 +86,12 @@ export default {
 
   methods: {
     openNavMenu() {
-      let navDiv = document.getElementsByClassName("mobile-nav-links")[0];
-      navDiv.style.width = "100%";
+      let nav = document.getElementsByClassName("mobile-nav-links")[0];
+      nav.style.width = "100%";
     },
     closeNavMenu() {
-      let navDiv = document.getElementsByClassName("mobile-nav-links")[0];
-      navDiv.style.width = "0";
+      let nav = document.getElementsByClassName("mobile-nav-links")[0];
+      nav.style.width = "0";
     },
   },
 };

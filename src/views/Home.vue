@@ -21,16 +21,16 @@
         v-for="(item, index) in items" :key="index"
         :class="{ 'lg:flex-row-reverse': item.reverse }">
           <div class="text-div lg:flex-1">
-            <p class="section-title mb-3" data-aos="fade-right" data-aos-duration="1600">{{ item.title }}</p>
+            <p class="section-title mb-3" data-aos="fade-up" data-aos-duration="1600">{{ item.title }}</p>
             <p
             v-html="item.text"
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-duration="2000" />
           </div>
           
           <div
           class="img-div bg-red-400 lg:flex-1 h-96 lg:w-[600px] rounded-lg overflow-hidden" 
-          data-aos="fade-right" 
+          data-aos="flip-left" 
           data-aos-duration="2000">
             <img
             :src="item.url" alt="coffee beans" 

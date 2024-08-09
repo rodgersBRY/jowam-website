@@ -34,7 +34,7 @@
         </div>
 
         <div class="personnel flex flex-col md:flex-row gap-3 my-10">
-          <p data-aos="fade-right" data-aos-duration="2800" class="flex-1">
+          <p data-aos="fade-up" data-aos-duration="2800" class="flex-1">
             Our employees are working in a very good spirit to service customers
             24 hours a day and 7 days a week.
             Our company consists of different units for smooth operation. 
@@ -42,7 +42,7 @@
             marketing, and Sales & Purchase. 
           </p>
 
-          <p data-aos="fade-left" data-aos-duration="2800" class="flex-1">
+          <p data-aos="fade-up" data-aos-duration="2800" class="flex-1">
             In the warehouse department, the following units are working in different roles: management, coffee cleaning staff,
             quality inspector, machine operator, packaging and labeling, laborer, and security staff.
             Our logistics team works its best for timely shipment of coffee to destinations.
@@ -61,11 +61,11 @@
           class="pa-5 card mx-4 bg-black rounded-lg flex-1 lg:flex-initial lg:w-[350px]"
           v-for="(val, index) in values"
           :key="index"
-          data-aos="fade-left"
-          :data-aos-duration="1700+(index + 1) * 300"
+          data-aos="fade-up"
+          data-aos-duration="2800"
         >
           <v-card-title>
-            <i class="bx bx-bullseye text-5xl" :class="val.icon"></i>
+            <i class="bx text-5xl" :class="val.icon"></i>
             <h2 class="section-title">{{ val.tab }}</h2>
           </v-card-title>
           <v-card-text>{{ val.content }}</v-card-text>
