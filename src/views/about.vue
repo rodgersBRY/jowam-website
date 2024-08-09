@@ -1,23 +1,23 @@
 <template>
   <div id="about">
-    <header>
+    <header class="bg-cover bg-att bg-no-repeat flex flex-col h-[70vh]">
        <div class="wrapper bg-black/45 h-full w-full flex flex-col">
         <nav-bar />
 
         <div class="bg-black/25 text-white py-5 px-10 border-y-4 border-green-500 backdrop-blur-md mt-auto">
-          <h1 data-aos="fade-right" data-aos-duration="2400">ABOUT US</h1>
+          <h1 data-aos="fade-right" data-aos-duration="2400" class="page-title font-bold text-3xl">ABOUT US</h1>
           <p data-aos="fade-right" data-aos-duration="2800">Strong Coffee, Strong Roots</p>
         </div>
       </div>
     </header>
 
-    <main>
-      <section class="history">
-        <div class="intro">
-          <p class="section-title" data-aos="fade-up" data-aos-duration="2900">STRIVING FOR EXCELLENCE SINCE 2006</p>
-          <div class="divider" />
+    <main class="my-24">
+      <section class="history w-11/12 lg:w-9/12 my-1 mx-auto">
+        <div class="intro flex flex-col items-center text-sm gap-7">
+          <p class="section-title text-center text-xl font-bold" data-aos="fade-up" data-aos-duration="2900">STRIVING FOR EXCELLENCE SINCE 2006</p>
+          <div class="divider h-[3px] w-3/12" />
 
-          <div data-aos="fade-up" data-aos-duration="2000">
+          <div data-aos="fade-up" data-aos-duration="2000" class="text-center">
             <strong>Jowam Coffee Traders LTD was founded in June 2006 as an 
               exporting company for coffees. We promote farmers by
               providing advanced farming technologies to ensure production of
@@ -33,8 +33,8 @@
           </div>
         </div>
 
-        <div class="personnel">
-          <p data-aos="fade-right" data-aos-duration="2800">
+        <div class="personnel flex flex-col md:flex-row gap-3 my-10">
+          <p data-aos="fade-right" data-aos-duration="2800" class="flex-1">
             Our employees are working in a very good spirit to service customers
             24 hours a day and 7 days a week.
             Our company consists of different units for smooth operation. 
@@ -42,7 +42,7 @@
             marketing, and Sales & Purchase. 
           </p>
 
-          <p data-aos="fade-left" data-aos-duration="2800">
+          <p data-aos="fade-left" data-aos-duration="2800" class="flex-1">
             In the warehouse department, the following units are working in different roles: management, coffee cleaning staff,
             quality inspector, machine operator, packaging and labeling, laborer, and security staff.
             Our logistics team works its best for timely shipment of coffee to destinations.
@@ -50,33 +50,33 @@
           </p>
         </div>
 
-        <div class="image-div">
-          <img width="100%" :src="require('@/assets/img/jowam7.jpg')" alt="coffee factory">
+        <div class="image-div h-full md:h-[90vh] rounded-xl overflow-hidden">
+          <img class="w-full h-full object-cover" :src="require('@/assets/img/jowam7.jpg')" alt="coffee factory">
         </div>
       </section>
 
-      <section class="values">
+      <section class="values bg-cover flex flex-col justify-center gap-2 lg:flex-row text-white my-24 py-10">
         <v-card
           dark
-          class="pa-5 card mx-4"
+          class="pa-5 card mx-4 bg-black rounded-lg flex-1 lg:flex-initial lg:w-[350px]"
           v-for="(val, index) in values"
           :key="index"
           data-aos="fade-left"
           :data-aos-duration="1700+(index + 1) * 300"
         >
           <v-card-title>
-            <span class="mdi" :class="val.icon"></span>
-            <h2>{{ val.tab }}</h2>
+            <i class="bx bx-bullseye text-5xl" :class="val.icon"></i>
+            <h2 class="section-title">{{ val.tab }}</h2>
           </v-card-title>
           <v-card-text>{{ val.content }}</v-card-text>
         </v-card>
       </section>
       
-      <section class="market-source w-8/12 mx-auto flex flex-col gap-16">
-        <div class="source flex gap-36">
+      <section class="market-source w-11/12 lg:w-8/12 mx-auto flex flex-col gap-16">
+        <div class="source flex flex-col md:flex-row gap-10 md:gap-36">
           <div class="title-div">
             <div class="w-1/4 h-[3px] bg-orange-300 mb-2" />
-            <p class="text-2xl font-semibold"  data-aos="fade-up" data-aos-duration="2000">Coffee Source</p>
+            <p class="section-title text-2xl font-semibold"  data-aos="fade-up" data-aos-duration="2000">Coffee Source</p>
           </div>
 
           <div class="info-div flex-1 tracking-wider font-light">
@@ -87,10 +87,10 @@
           </div>
         </div>
 
-        <div class="market flex gap-44">
+        <div class="market flex flex-col md:flex-row gap-10 md:gap-36">
           <div class="title-div">
             <div class="w-1/4 h-[3px] bg-orange-300 mb-2" />
-            <p class="text-2xl font-semibold"  data-aos="fade-up" data-aos-duration="2000">Our Market</p>
+            <p class="section-title text-2xl font-semibold"  data-aos="fade-up" data-aos-duration="2000">Our Market</p>
           </div>
 
           <div class="info-div flex-1 tracking-wider font-light">
@@ -104,18 +104,19 @@
         </div>
       </section>
 
-      <section class="img w-6/12 h-[70vh] overflow-hidden rounded-2xl mx-auto my-16">
-        <div class="about-img">
+      <section class="img w-9/12 lg:w-6/12 h-full md:h-[70vh] overflow-hidden rounded-2xl mx-auto my-10 md:my-16">
+        <div class="about-img bg-purple-500">
           <img
+          class="object-cover"
             :src="require('../assets/img/plantation.jpg')"
             alt="jowam values"
           />
         </div>
       </section>
 
-      <section class="about w-10/12 mx-auto my-20">
+      <section class="about w-11/12 md:w-10/12 mx-auto my-20">
         <div class="about-text">
-          <p class="font-semibold text-3xl text-center mb-5"  data-aos="fade-up" data-aos-duration="2800">Why is Kenyan Coffee Unique?</p>
+          <p class="section-title font-semibold text-3xl text-center mb-5"  data-aos="fade-up" data-aos-duration="2800">Why is Kenyan Coffee Unique?</p>
           <div class="w-1/12 h-[3px] mx-auto bg-orange-300 mb-4" />
 
           <p class="tracking-wider text-center"  data-aos="fade-up" data-aos-duration="2000">
@@ -152,19 +153,19 @@ export default {
       tab: null,
       values: [
         {
-          icon: "mdi-car-brake-retarder",
+          icon: "bx-planet",
           tab: "GOALS & OBJECTIVE",
           content:
             "We are determined to be the best coffee dealers and merchants in the region and beyond, to promote unique coffees to the whole consumer world, to always provide our clients with the best quality, affordable coffee and to guarantee quality to our clients under the guidance of our directors who have decades-long experience in the industry. One of our main goals is to promote majority small-scale farmers by marketing their coffee and thereby creating a steady source of income for them",
         },
         {
-          icon: "mdi-barley",
+          icon: "bx-directions",
           tab: "MISSION",
           content:
             "Jowam Coffee Trading Limited is committed to transforming the lives and livelihoods of coffee farmers, socially and economically by availing to them modern inclusive technologies for coffee farming, milling and beans evaluation and ensure production of the best quality coffee that will, in turn, generate more income for them.",
         },
         {
-          icon: "mdi-camera-document",
+          icon: "bx-shape-square",
           tab: "VISION",
           content:
             "To export large volumes of coffee from the region and beyond to international markets, sustain quality and help in reviving coffee farming in Kenya and the region as a viable business entity.",
@@ -178,117 +179,25 @@ export default {
 <style scoped lang="scss">
 header {
   background-image: url("../assets/img/cherries.jpg");
-  background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
+}
+
+.page-title,
+.section-title {
+  font-family: "DM Serif Display", serif;
 }
 
 .section-title {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
   color: var(--secondary-color);
 }
 
 .divider {
   background-color: var(--primary-color);
-  height: 3px;
-  width: 10%;
-}
-
-.history {
-  width: 75%;
-  margin: 1rem auto;
-  .intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-inline: 1rem;
-    font-size: 14px;
-    gap: 2rem;
-  }
-  .personnel {
-    display: flex;
-    gap: 3rem;
-    margin-block: 2rem;
-    p {
-      flex: 1;
-    }
-  }
-  .image-div {
-    height: 90vh;
-    border-radius: 1rem;
-    overflow: hidden;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
 }
 
 .values {
   background-image: url('@/assets/img/berries1.jpg');
-  background-size: cover;
   background-attachment: fixed;
-  display: flex;
-  color: white;
-  margin-block: 9rem;
-  .card {
-    background-color: rgba(0, 0, 0, .9);
-    color: white;
-    span {
-      font-size: 70px;
-    }
-  }
 }
 
-// desktop
-@media screen and (min-width: 1000px) {
-  h1 {
-    font-size: 50px;
-  }
-
-  header {
-    height: 90vh;
-    margin-bottom: 5rem;
-  }
-  .values {
-    padding: 1rem 5rem;
-    justify-content: space-around;
-    .card {
-      width: 400px;
-    }
-  }
-}
-
-// tablet and mobile
-@media screen and (max-width: 1000px) {
-  h1 {
-    font-size: 40px;
-  }
-  header {
-    height: 50vh;
-    align-items: center;
-    .wrapper {
-      background-color: rgba($color: black, $alpha: 0.7);
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      div {
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-    }
-  }
-  .values {
-    flex-direction: column;
-  }
-}
 </style>

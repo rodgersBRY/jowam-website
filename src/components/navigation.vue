@@ -1,44 +1,41 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar bg-white flex justify-between items-center rounded-full z-10 mx-auto p-2 mt-5 shadow-xl w-11/12">
     <section
       @click="$router.push('/')"
       style="cursor: pointer;"
     >
       <img
+      class="w-[40px] h-[40px]"
         :src="require('../assets/logo.png')"
         alt="jowam coffee, coffee experts"
       />
     </section>
 
-    <section class="nav-links">
-      <v-btn icon class="mobile-menu-close" color="white" @click="closeNavMenu"
-        ><span class="mdi mdi-close"></span></v-btn
-      >
-
-      <ul>
-        <router-link exact-active-class="active" class="nav-link duration-500 ease-in-out" to="/">
+    <section class="nav-links hidden lg:block">
+      <ul class="flex gap-6">
+        <router-link exact-active-class="text-orange-400" class="nav-link font-semibold text-gray-400 hover:text-orange-400 duration-500 ease-in-out" to="/">
           Home
         </router-link>
 
-        <router-link active-class="active" class="nav-link duration-500 ease-in-out" to="/about">
+        <router-link active-class="text-greorangee4-500" class="nav-link font-semibold text-gray-400 hover:text-orange-400 duration-500 ease-in-out" to="/about">
           About Us
         </router-link>
         
-        <router-link active-class="active" class="nav-link duration-500 ease-in-out" to="/training">
+        <router-link active-class="text-orange-400"  class="nav-link font-semibold text-gray-400 hover:text-orange-400 duration-500 ease-in-out" to="/training">
           Training Centre
         </router-link>
       </ul>
     </section>
 
-    <router-link active-class="active" class="contact nav-link bg-green-600 text-white font-bold" to="/contact">
+    <router-link active-class="active" class="hidden lg:block p-2 rounded-full contact nav-link bg-green-600 text-white font-bold" to="/contact">
       Contact Us
     </router-link>
 
-    <section class="mobile-nav-links">
-      <i icon class="mobile-menu-close" color="white" @click="closeNavMenu"
-        ><span class="mdi mdi-close"></span></
+    <section class="mobile-nav-links flex lg:hidden fixed top-0 right-0 flex-col gap-3 overflow-hidden bg-black/50 h-screen z-10 transition-all duration-300 ease-in-out backdrop-blur-lg">
+      <i icon class="mobile-menu-close block lg:hidden text-xl font-bold relative right-[-80%] top-[2%] text-white border-2 border-white h-[40px] w-[40px] p-2 rounded-full text-center" color="white" @click="closeNavMenu"
+        ><span class="bx bx-x"></span></
       i>
-      <ul class="list">
+      <ul class="list flex flex-col gap-10 items-center text-white text-xl font-bold">
         <router-link exact-active-class="active" class="nav-link" to="/">
           Home
         </router-link>
@@ -51,13 +48,13 @@
           Training Centre
         </router-link>
 
-        <router-link class="contact nav-link font-semibold" to="/contact">
+        <router-link class="contact nav-link p-2 rounded-full shadow-lg w-2/3 bg-orange-400 font-semibold text-center" to="/contact">
           Contact Us
         </router-link>
       </ul>
     </section>
 
-    <section class="mobile-menu-open">
+    <section class="mobile-menu-open block lg:hidden">
       <v-btn icon small flat><span class="mdi mdi-menu text-xl" @click="openNavMenu"></span></v-btn>
     </section>
   </nav>
@@ -100,134 +97,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.navbar {
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 50px;
-  margin-top: 1.5rem;
-  z-index: 1;
-  margin-inline: auto;
-  box-shadow: 0 4px 8px rgba($color: black, $alpha: 0.1);
-  padding: 7px 1rem;
-  img {
-    width: 40px;
-    height: 40px;
-  }
-  .nav-link {
-    text-decoration: none;
-    color: gray;
-    font-weight: 700;
-    &:hover {
-      color: var(--primary-color);
-    }
-    &.active {
-      color: var(--primary-color);
-    }
-  }
-}
 
-.nav-links, .contact {
-  display: none;
-}
-
-.mobile-nav-links {
-  position: fixed;
-  top: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  background-color: rgba(0, 0, 0, .5);
-  height: 100vh;
-  width: 0;
-  overflow: hidden;
-  z-index: 1;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(10px);
-  .mobile-menu-close {
-    font-size: 20px;
-    font-weight: bold;
-    position: relative;
-    right: -80%;
-    top: 2%;
-    color: white;
-    border: 2px solid white;
-    height: 40px;
-    width: 40px;
-    padding: 5px;
-    border-radius: 50%;
-    text-align: center;
-  }
-  .list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .nav-link {
-      display: block;
-      margin-bottom: 2rem;
-      color: white;
-      font-size: 22px;
-    }
-  }
-  
-  .contact {
-    text-align: center;
-    width: 40%;
-    margin: 8rem auto 0 auto;
-    padding: 10px;
-    border-radius: 25px;
-    font-weight: 500;
-  }
-}
-
-// mobile device
-@media screen and (max-width: 700px) {
-  .navbar {
-    width: 90%;
-  }
-}
-
-// tablet and desktop
-@media screen and (min-width: 700px) {
-  .navbar {
-    width: 70%;
-    .nav-link {
-      margin-right: 2rem;
-    }
-    .contact {
-      margin-right: 0;
-      padding: 12px 12px;
-      color: white;
-      border-radius: 50px;
-      transition: all 0.3s ease-in-out;
-      font-weight: 500;
-      &:hover {
-        transform: translateY(-2px);
-        background-color: var(--primary-color);
-        color: white;
-      }
-    }
-    
-  }
-}
-
-// large screens
-@media screen and (min-width: 1024px) {
-  .navbar {
-    width: 65%;
-  }
-  .mobile-nav-links {
-    display: none;
-  }
-  .nav-links, .contact {
-    display: block;
-  }
-
-  .mobile-menu-open,
-    .mobile-menu-close {
-      display: none;
-    }
-}
 </style>

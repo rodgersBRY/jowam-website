@@ -1,20 +1,20 @@
 <template>
   <div id="contact">
-    <header>
+    <header class="bg-cover h-[80vh] md:h-[70vh]">
       <div class="wrapper bg-black/45 h-full w-full flex flex-col">
         <nav-bar />
 
         <div class="bg-black/25 text-white py-5 px-10 border-y-4 border-green-500 backdrop-blur-md mt-auto">
-          <h1 class="text-4xl font-bold mb-2"  data-aos="fade-right" data-aos-duration="2400">Contact Us</h1>
+          <h1 class="page-title text-4xl font-bold mb-2"  data-aos="fade-right" data-aos-duration="2400">Contact Us</h1>
           <p class="" data-aos="fade-right" data-aos-duration="2900">We answer within 24 hours on working days.</p>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="contact-details flex justify-between w-10/12 mx-auto my-28">
-        <div class="socials flex-initial w-[40%]">
-          <h2 class="text-3xl font-bold mb-3">Contact Details</h2>
+      <section class="contact-details flex justify-between flex-col gap-10 lg:flex-row w-10/12 mx-auto my-28">
+        <div class="socials flex-1 lg:flex-initial lg:w-[40%]">
+          <h2 class="section-title text-3xl font-bold mb-3">Social Media</h2>
           <p class="text-xl text-gray-500">You can send us your inquiries by e-mail, contact form, or visit our office for face-to-face discussion</p>  
           <a
           class="rounded-full w-[40px] h-[40px] bg-green-600/30 flex items-center justify-center mt-2 cursor-pointer"
@@ -26,8 +26,8 @@
           </a>
         </div>
 
-        <div class="info flex-initial w-[40%]">
-          <h2 class="text-3xl font-bold mb-3">Contact Details</h2>
+        <div class="info flex-1 lg:flex-initial lg:w-[40%]">
+          <h2 class="section-title text-3xl font-bold mb-3">Contact Details</h2>
 
           <div class="flex flex-col gap-7 tracking-wider text-xl">
             <div class="flex gap-5"
@@ -64,9 +64,9 @@
         </div>
       </section>
       
-      <section class="message flex bg-orange-100 justify-between">
-        <div class="form-div w-[50%] p-12">
-          <h2 class="text-3xl font-bold mb-3">Feedback Form</h2>
+      <section class="message flex flex-col lg:flex-row bg-orange-100 justify-between">
+        <div class="form-div lg:w-[50%] p-12">
+          <h2 class="section-title text-3xl font-bold mb-3">Feedback Form</h2>
 
           <form action="https://formspree.io/f/mdovnojj" method="POST">
             <div class="flex flex-col gap-4">
@@ -110,7 +110,7 @@
           </form>
         </div>
 
-        <div class="map w-[50%]">
+        <div class="map lg:w-[50%]">
           <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.4087562679113!2d36.81591826403446!3d-1.2833511115817997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f111a45494c6b%3A0x580089d59691bf84!2sJowam%20Coffee%20Traders%20Ltd!5e0!3m2!1sen!2ske!4v1721927032397!5m2!1sen!2ske"
           width="100%"
@@ -148,9 +148,16 @@ textarea {
 
 header {
   background-image: url("../assets/about2.webp");
-  background-size: cover;
   background-attachment: fixed;
-  height: 70vh;
+}
+
+.page-title,
+.section-title {
+  font-family: "DM Serif Display", serif;
+}
+
+.section-title {
+  color: var(--primary-color);
 }
 
 </style>

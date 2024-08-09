@@ -59,7 +59,7 @@
         </span>
       </p>
 
-      <div class="links flex">
+      <div class="links hidden md:flex">
         <ul>
           <router-link exact-active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black mr-6" to="/">
             Home

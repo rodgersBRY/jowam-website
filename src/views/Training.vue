@@ -1,20 +1,20 @@
 <template>
   <div id="training-page">
-    <header>
+    <header class="bg-cover h-[70vh] lg:h-[90vh]">
       <div class="wrapper bg-black/45 h-full w-full flex flex-col">
         <nav-bar />
 
         <div class="bg-black/25 text-white py-5 px-10 border-y-4 border-green-500 backdrop-blur-md mt-auto">
-          <h1 class="text-4xl font-bold mb-2" data-aos="fade-right" data-aos-duration="2400">Training center</h1>
+          <h1 class="page-title text-4xl font-bold mb-2" data-aos="fade-right" data-aos-duration="2400">Training center</h1>
           <p data-aos="fade-right" data-aos-duration="2800">A school that values success.</p>
         </div>
       </div>
     </header>
 
-    <main class="my-28">
-      <section class="about-us w-11/12 mx-auto flex justify-between">
-        <div class="about-text flex-initial w-[40%]">
-          <h4 class="text-2xl text-green-600 font-bold mb-2">About Us</h4>
+    <main class="my-20 md:my-28">
+      <section class="about-us w-11/12 mx-auto flex flex-col lg:flex-row justify-between">
+        <div class="about-text flex-1 lg:flex-initial lg:w-[40%]">
+          <h4 class="section-title text-2xl font-bold mb-2">About Us</h4>
 
           <div class="text flex flex-col gap-6 tracking-wider text-justify">
             <p  data-aos="fade-up" data-aos-duration="1800">
@@ -31,8 +31,8 @@
           </div>  
         </div>
 
-        <div class="courses flex-initial w-[40%] rounded-lg shadow-lg mx-8 p-10">
-          <h2 class="font-bold text-green-600 text-3xl mb-5">Our Courses</h2>
+        <div class="courses flex-1 lg:flex-initial lg:w-[40%] rounded-lg shadow-lg lg:mx-8 lg:p-10 p-4">
+          <h2 class="section-title font-bold text-3xl mb-5">Our Courses</h2>
 
           <div class="courses border-black p-4 flex justify-between" v-for="(crs, index) in courses" :key="index" :class="{'border-b': crs.border}">
             <div class="info">
@@ -43,13 +43,13 @@
             <p class="text-gray-500 text-sm"><span><i class="bx bx-time text-green-600 mr-1"></i></span>Weekdays: 8 am - 6 pm</p>
             </div>
 
-            <div class="img w-[100px] h-[100px] rounded-lg overflow-hidden">
-              <img class="object-cover" :src="crs.url" :alt="crs.title"  data-aos="fade-right" data-aos-duration="2400">
+            <div class="img w-[130px] h-[90px] rounded-lg overflow-hidden">
+              <img class="object-cover h-full w-full" :src="crs.url" :alt="crs.title"  data-aos="fade-right" data-aos-duration="2400">
             </div>
           </div>
 
-          <button 
-          class="rounded bg-orange-400 p-3 text-white font-semibold mt-8 hover:bg-slate-500 ease-in-out duration-500">
+          <button
+          class="hidden section-title rounded bg-orange-400 p-3 text-white font-semibold mt-8 hover:bg-slate-500 ease-in-out duration-500">
             <span><i class="bx bx-link-external mr-1"></i></span>Visit Our School Website
           </button>
         </div>
@@ -77,14 +77,16 @@ export default {
 <style scoped>
 header {
   background-image: url("@/assets/img/school.jpg");
-  background-size: cover;
   background-attachment: fixed;
-  height: 90vh;
 }
 
-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.page-title,
+.section-title {
+  font-family: "DM Serif Display", serif;
 }
+
+.section-title {
+  color: var(--secondary-color);
+}
+
 </style>
