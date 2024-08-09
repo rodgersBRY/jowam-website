@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar bg-white flex justify-between items-center rounded-full z-10 mx-auto p-2 mt-5 shadow-xl w-11/12">
+  <nav class="navbar bg-white flex justify-between items-center rounded-full z-10 mx-auto p-2 mt-5 shadow-xl w-11/12 md:w-8/12">
     <section
       @click="$router.push('/')"
       style="cursor: pointer;"
