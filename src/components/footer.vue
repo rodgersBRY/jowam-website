@@ -1,14 +1,17 @@
 <template>
-  <div id="footer">
-    <section class="top">
-      <div class="about">
-        <div class="logo">
-          <img :src="require('@/assets/logo.png')" alt="company logo" />
+  <div id="footer" class="m-2 rounded-lg overflow-hidden">
+    <section class="top text-sm p-6 md:p-16 flex justify-between flex-col lg:flex-row gap-16 text-white">
+      <div class="about lg:w-72">
+        <div class="logo flex gap-4 font-bold mb-3">
+          <img 
+          :src="require('@/assets/logo.png')" 
+          alt="company logo"
+          class="h-12" />
           <p>Jowam Coffee Traders LTD</p>
         </div>
 
         <div class="content">
-          <p>At Jowam Coffee Traders, we specialize in exporting premium green coffee beans 
+          <p class="text-justify">At Jowam Coffee Traders, we specialize in exporting premium green coffee beans 
             straight from Kenya's renowned coffee-growing regions. Based in Nairobi,
               our headquarters is strategically positioned to connect the rich 
               coffee heritage of Kenya with markets across the globe.
@@ -19,27 +22,27 @@
       <div class="insta">
         <p class="section-title tracking-wider">FOLLOW US ON INSTAGRAM</p>
 
-        <div class="insta-div">
+        <div class="insta-div bg-cover bg-no-repeat rounded-xl w-11/12 lg:w-72 h-36 text-white p-4 flex flex-col justify-between">
           <p>Jowam Coffee Traders</p>
           <a
-          class="platform cursor-pointer rounded-lg"
+          class="platform bg-white/50 cursor-pointer p-1.5 lg:w-1/2 text-black font-bold text-lg rounded-xl flex justify-center items-center gap-1.5"
           href="https://www.instagram.com/jowamcoffee/" target="_blank">
             <i class="mdi mdi-instagram"></i>
-            <p>INSTAGRAM</p>
+            <p class="text-xs">INSTAGRAM</p>
           </a>
         </div>
       </div>
   
-      <div class="contact-info">
+      <div class="contact-info lg:w-72">
         <p class="section-title tracking-wider">CONTACT INFO</p>
         <div class="info">
-          <p><span>Address:</span> 4th Flr, Pension Towers. Loita Str. Nairobi</p>
-          <p><span>Phone:</span> +254728919092/+254722762945</p>
-          <p><span>Email:</span> trading@jowamcoffee.com</p>
+          <p><span class="font-medium">Address:</span> 4th Flr, Pension Towers. Loita Str. Nairobi</p>
+          <p><span class="font-medium">Phone:</span> +254728919092/+254722762945</p>
+          <p><span class="font-medium">Email:</span> trading@jowamcoffee.com</p>
         </div>
       </div>
 
-      <div class="hours">
+      <div class="hours lg:w-72">
         <p class="section-title tracking-wider">BUSINESS HOURS</p>
 
         <div class="">
@@ -49,27 +52,28 @@
       </div>
     </section>
 
-    <section class="bottom">
-      <p>Copyright &copy; {{ date }} Jowam Coffee Traders LTD - Developed by
+    <section class="bottom flex justify-between items-center gap-10 bg-black/30 p-6 border-t text-xs text-gray-400 flex-col lg:flex-row">
+      <p class="text-center">Copyright &copy; {{ date }} Jowam Coffee Traders LTD - Developed by
         <span>
-          <a href="https://mawira.netlify.app/" target="_blank" class="duration-500 ease-in-out">Mawira Corp.</a>
+          <a href="https://mawira.netlify.app/" target="_blank" class="duration-500 ease-in-out font-semibold hover:text-black text-green-500 mr-6">Mawira Corp.</a>
         </span>
       </p>
-      <div class="links">
+
+      <div class="links flex">
         <ul>
-          <router-link exact-active-class="active" class="nav-link duration-500 ease-in-out" to="/">
+          <router-link exact-active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black mr-6" to="/">
             Home
           </router-link>
   
-          <router-link active-class="active" class="nav-link duration-500 ease-in-out" to="/about">
+          <router-link active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black mr-6" to="/about">
             About Us
           </router-link>
 
-          <router-link active-class="active" class="nav-link duration-500 ease-in-out" to="/training">
+          <router-link active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black mr-6" to="/training">
             Training Centre
           </router-link>
   
-          <router-link active-class="active" class="nav-link duration-500 ease-in-out" to="/contact">
+          <router-link active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black" to="/contact">
             Contact Us
           </router-link>
         </ul>
@@ -91,101 +95,16 @@ export default {
 <style scoped lang="scss">
 #footer {
   background-color: var(--faded-secondary-color);
-  margin: 10px;
-  border-radius: 10px;
-  overflow: hidden;
-  color: white;
-  .section-title {
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid green;
-  }
-  .top {
-    font-size: 14px;
-    padding: 4rem 6rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
-    .about {
-      width: 300px;
-      .logo {
-        display: flex;
-        gap: 1rem;
-        font-weight: bold;
-        margin-bottom: 12px;
-        img {
-          height: 50px;
-        }
-      }
-      .content p {
-        text-align: justify;
-      }
-    }
-    .insta-div {
-      background-image: url('@/assets/img/beans.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      border-radius: 15px;
-      width: 300px;
-      height: 150px;
-      color: white;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      .platform {
-        background-color: rgba(255, 255, 255, 0.8);
-        cursor: pointer;
-        padding: 5px;
-        width: 50%;
-        color: black;
-        font-weight: bold;
-        font-size: 17px;
-        border-radius: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        p {
-          font-size: 12px;
-        }
-      }
-      img {
-        width: 100%;
-      }
-    }
-    .contact-info {
-      width: 300px;
-      span {
-        font-weight: 500;
-      }
-    }
-    .hours{
-      width: 300px;
-      div {
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-  }
-  .bottom {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1.5rem 2rem;
-    border-top: 1px solid black;
-    font-size: 13px;
-    a {
-      text-decoration: none;
-      color: black;
-      font-weight: 600;
-      &:hover {
-        color: white;
-      }
-    }
-    .links a:not(:last-child) {
-      margin-right: 1.5rem;
-    }
-  }
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid green;
+  padding: 5px 0;
+}
+
+.insta-div {
+  background-image: url('@/assets/img/beans.png');
 }
 </style>

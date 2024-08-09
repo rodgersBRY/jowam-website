@@ -1,64 +1,54 @@
 <template>
   <div class="home">
     <header>
-      <section class="banner-div">
-        <div class="wrapper">
+      <section class="banner-div bg-cover bg-no-repeat">
+        <div class="wrapper bg-black/70 w-full h-[60vh] lg:h-screen flex flex-col items-center pb-10">
           <nav-bar />
           
-          <div class="header-intro">
-            <h1 data-aos="fade-down" data-aos-duration="2400">Jowam Coffee Traders</h1>
-            <p data-aos="fade-down" data-aos-duration="2000">Promote majority small-scale farmers by marketing their coffee</p>
-            <i class="mt-10 bx bx-chevrons-down bx-fade-down"></i>
+          <div class="header-intro text-white flex flex-col items-center text-center mt-auto">
+            <h1 data-aos="fade-down" data-aos-duration="2400" class="font-bold">Jowam Coffee Traders</h1>
+            <p data-aos="fade-down" data-aos-duration="2000" class="text-md md:text-xl px-2 md:px-4 lg:px-0">Promote majority small-scale farmers by marketing their coffee</p>
+            <i class="mt-10 bx bx-chevrons-down bx-fade-down text-xl"></i>
           </div>
         </div>
       </section>
     </header>
 
-    <main>
-      <section class="about-us">
-        <div class="gateway text-xl tracking-wide">
-          <div class="text-div" data-aos="fade-left" data-aos-duration="2000">
-            <p>
-              At <span class="title">Jowam Coffee Trading Company LTD</span>
-              We are dedicated to delivering green coffee beans that meet the highest industry standards. Our rigorous quality control processes and close relationships with growers ensure that our clients receive beans that are perfect for roasting, cupping, and savoring
-            </p>
+    <main class="my-28">
+      <section class="about-us mb-14 lg:mt-28 w-11/12 lg:w-4/5 mx-auto flex flex-col gap-16">
+        <div 
+        class="gateway text-xl tracking-wide flex flex-col lg:flex-row items-center gap-4 md:gap-12"
+        v-for="(item, index) in items" :key="index"
+        :class="{ 'lg:flex-row-reverse': item.reverse }">
+          <div class="text-div lg:flex-1">
+            <p class="section-title mb-3" data-aos="fade-right" data-aos-duration="1600">{{ item.title }}</p>
+            <p
+            v-html="item.text"
+            data-aos="fade-left"
+            data-aos-duration="2000" />
           </div>
           
-          <div class="img-div" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-back">
-            <img :src="require('@/assets/img/g_beans.webp')" alt="coffee beans">
-          </div>
-        </div>
-
-        <div class="intro">
-          <div class="text-div pa-5">
-            <p class="section-title mb-3" data-aos="fade-right" data-aos-duration="1600">Your Gateway to Kenya’s Finest Green Coffee</p>
-
-            <p class="text-xl tracking-wide" data-aos="fade-right" data-aos-duration="2000">
-              Kenya’s green coffee beans are celebrated worldwide for their bright acidity, full-bodied flavor, and delightful fruity notes. We partner with local farmers who share our dedication to quality, ensuring that each bean is a perfect representation of the unique Kenyan terroir.
-            </p>
-          </div>
-  
           <div
-          class="img-div"
-          data-aos="fade-left"
-          data-aos-easing="ease-in-back"
-          data-aos-offset="300"
+          class="img-div bg-red-400 lg:flex-1 h-96 lg:w-[600px] rounded-lg overflow-hidden" 
+          data-aos="fade-right" 
           data-aos-duration="2000">
             <img
-              :src="require('../assets/img/hand_coffee.jpg')"
-              alt="about jowam coffee"
-            />
+            :src="item.url" alt="coffee beans" 
+            class="h-full w-full object-cover transition-all duration-700 ease-in-out transform hover:scale-110" />
           </div>
         </div>
       </section>
 
-      <section class="business-concept">
+      <section class="business-concept bg-cover bg-no-repeat w-full bg-fixed flex justify-center items-center">
         <div
+        class="bg-black/60 text-white w-screen h-full p-5 md:p-14"
         >
           <h1 data-aos="fade-up"
-          data-aos-duration="1600">BUSINESS CONCEPTS</h1>
+          data-aos-duration="1600" class="section-title font-bold text-3xl mb-1">BUSINESS CONCEPT</h1>
         
-          <p data-aos="fade-up"
+          <p
+          class="text-xl tracking-wider"
+          data-aos="fade-up"
           data-aos-duration="2000">
             Through a business model that is geared towards easy access and
             convenience for our customers, Jowam Coffee Trading Company has
@@ -73,74 +63,65 @@
         </div>
       </section>
 
-      <h2 class="text-center mb-10">OUR PARTNERS</h2>
+      <section class="partners mt-24">
+        <h2 class="section-title font-bold text-center text-2xl mb-10">OUR PARTNERS</h2>
 
-      <section class="partners">
-        <br />
-
-        <div class="partner-logos">
-          <div class="marquee item-1">
-            <img :src="require('../assets/KCCE.png')" alt="KCCE logo" />
+        <div class="partner-logos w-10/12 mx-auto max-w-screen-2xl relative h-52 overflow-hidden">
+          <div class="marquee item-1 h-36 w-36 rounded-lg absolute left-full animate-scrollLeft p-6">
+            <img :src="require('../assets/KCCE.png')" alt="KCCE logo" class="w-full h-full object-contain" />
           </div>
 
-          <div class="marquee item-2">
-            <img :src="require('../assets/KCTA.png')" alt="KCTA logo" />
+          <div class="marquee item-2 h-36 w-36 rounded-lg absolute left-full animate-scrollLeft p-6">
+            <img :src="require('../assets/KCTA.png')" alt="KCTA logo" class="w-full h-full object-contain" />
           </div>
 
-          <div class="marquee item-3">
-            <img :src="require('../assets/goldrock.png')" alt="Goldrock logo" />
+          <div class="marquee item-3 h-36 w-36 rounded-lg absolute left-full animate-scrollLeft p-6">
+            <img :src="require('../assets/goldrock.png')" alt="Goldrock logo" class="w-full h-full object-contain" />
           </div>
 
-          <div class="marquee item-4">
-            <img :src="require('../assets/dhl.png')" alt="dhl express logo" />
+          <div class="marquee item-4 h-36 w-36 rounded-lg absolute left-full animate-scrollLeft p-6">
+            <img :src="require('../assets/dhl.png')" alt="dhl express logo" class="w-full h-full object-contain" />
           </div>
 
-          <div class="marquee item-5">
-            <img :src="require('../assets/coffee_board.png')" alt="coffee board logo" />
+          <div class="marquee item-5 h-36 w-36 rounded-lg absolute left-full animate-scrollLeft p-6">
+            <img :src="require('../assets/coffee_board.png')" alt="coffee board logo" class="w-full h-full object-contain" />
           </div>          
         </div>
       </section>
 
-      <section class="choose-us">
+      <section class="choose-us w-11/12 lg:w-4/5 mx-auto flex flex-col gap-20 lg:mt-28">
         <p
-        class="section-title"
+        class="section-title text-center text-2xl"
         data-aos="fade-up"
         data-aos-duration="1600">Why Choose Our Green Coffee?</p>
 
-        <div class="div-1">
-          <div class="img-div" data-aos="fade-up"
+        <div class="div-1 lg:flex gap-4 shadow-md rounded-lg overflow-hidden p-0 lg:pr-3"
+        v-for="q in qualities" :key="q.id">
+          <div class="img-div w-full h-[350px] overflow-hidden" data-aos="fade-up"
           data-aos-duration="2000">
-            <img :src="require('@/assets/img/global.webp')" alt="global initiative">
+            <img
+            :src="q.url"
+            alt="global initiative"
+            class="h-full w-full object-cover" />
           </div>
 
-          <div class="details" data-aos="fade-up"
+          <div class="details flex gap-12 justify-around p-2 lg:p-0" data-aos="fade-up"
           data-aos-duration="2400">
-            <div class="icon">
-              <i class="mdi mdi-earth"></i>
+            <div class="icon bg-green-700 h-[40px] w-[90px] lg:h-[70px] lg:w-[150px] rounded-[25%] p-2 flex items-center justify-center text-white text-xl md:text-4xl">
+              <i :class="q.icon"></i>
             </div>
-            
-            <div class="text">
-              <p><span>Traceability: </span>We provide complete transparency from the farm to your roastery, allowing you to trace the origin of every batch of beans.</p>
-              <p><span>Global Expertise: </span>With a robust logistics network, we ensure timely and efficient delivery to roasters and coffee traders worldwide.</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="div-2">
-          <div class="img-div" data-aos="fade-up"
-          data-aos-duration="1600">
-            <img :src="require('@/assets/img/quality.png')" alt="quality control">
-          </div>
-
-          <div class="details" data-aos="fade-up"
-          data-aos-duration="2000">
-            <div class="icon">
-              <i class="mdi mdi-gold"></i>
-            </div>
-            
             <div class="text">
-              <p><span>Exceptional Quality: </span>We meticulously source and export only the highest quality Arabica beans, known for their distinct flavor profile and consistency.</p>
-              <p><span>Sustainability: </span>Our partnerships are built on sustainable practices that support environmental stewardship and uplift the farming communities.</p>
+              <div 
+              v-for="(l_item, index) in qualityList" 
+              :key="index">
+                <p
+                class="text-sm lg:text-lg mb-2" 
+                v-if="l_item.q_id == q.id"
+                >
+                  <span class="font-semibold">{{ l_item.title }}: </span>{{ l_item.desc }}
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -157,297 +138,91 @@
 export default {
   data() {
     return {
+      items: [
+        {
+          title: "Introduction",
+          text: 'At <span class="title font-semibold text-orange-400">Jowam Coffee Trading Company LTD</span> We are dedicated to delivering green coffee beans that meet the highest industry standards. Our rigorous quality control processes and close relationships with growers ensure that our clients receive beans that are perfect for roasting, cupping, and savoring',
+          url: require('@/assets/img/g_beans.webp'),
+          reverse: false
+        },
+        {
+          title: "Your Gateway to Kenya’s Finest Green Coffee",
+          text: "Kenya’s green coffee beans are celebrated worldwide for their bright acidity, full-bodied flavor, and delightful fruity notes. We partner with local farmers who share our dedication to quality, ensuring that each bean is a perfect representation of the unique Kenyan terroir.",
+          url: require('../assets/img/hand_coffee.jpg'),
+          reverse: true
+        }
+      ],
+      qualities: [
+        { url: require('@/assets/img/global.webp'), icon: 'mdi mdi-earth', id: 1 },
+        { url: require('@/assets/img/quality.png'), icon: 'mdi mdi-gold', id: 2 },
+      ],
+      qualityList: [
+        { q_id: 1, title: "Traceability", desc: "We provide complete transparency from the farm to your roastery, allowing you to trace the origin of every batch of beans." },
+        { q_id: 1, title: "Global Expertise", desc: "With a robust logistics network, we ensure timely and efficient delivery to roasters and coffee traders worldwide." },
+        { q_id: 2, title: "Exceptional Quality", desc: "We meticulously source and export only the highest quality Arabica beans, known for their distinct flavor profile and consistency." },
+        { q_id: 2, title: "Sustainability", desc: "Our partnerships are built on sustainable practices that support environmental stewardship and uplift the farming communities." },
+      ]
     };
   },
 };
 </script>
 
 <style scoped lang="scss">
-main {
-  .banner-div {
-    background-image: url("../assets/img/home_bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    .wrapper {
-      background-color: rgba($color: black, $alpha: 0.7);
+header {
+  h1,
+  p {
+   font-family: "DM Serif Display", serif;
+  }
+}
+
+.banner-div {
+  background-image: url("../assets/img/home_bg.jpg");
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-family: "DM Serif Display", serif;
+}
+
+.business-concept {
+  background-image: url("../assets/img/cargo-ship.jpg");
+}
+
+.partner-logos {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0),
+    rgba(0,0,0,1), 20%,
+    rgba(0,0,0,1), 80%,
+    rgba(0,0,0,0),
+  );
+  .marquee {
+    img {
       width: 100%;
       height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      .header-intro {
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        i {
-          font-size: 30px;
-        }
-      }
+      object-fit: contain;
     }
   }
 
-  .section-title {
-    color: var(--primary-color);
-    font-weight: bold;
+  .item-1 {
+    animation-delay: calc(30s / 5 * (5 - 1) * -1);
   }
 
-  .about-us {
-    margin-top: 6rem;
-    width: 80%;
-    margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    .intro,
-    .gateway {
-      display: flex;
-      gap: 2rem;
-      .text-div {
-        flex: 1;
-        span {
-          color: var(--primary-color);
-          font-weight: 500;
-        }
-      }
-      .img-div {
-        flex: 1;
-        width: 200px;
-        height: 400px;
-        border-radius: 10px;
-        overflow: hidden;
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          transition: all .7s ease-in-out;
-          &:hover {
-            transform: scale(1.1);
-          }
-        }
-      }
-    }
-    .gateway {
-      flex-direction: row-reverse;
-    }
+  .item-2 {
+    animation-delay: calc(30s / 5 * (5 - 2) * -1);
   }
 
-  .business-concept {
-    background-image: url("../assets/img/cargo-ship.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    div {
-      background-color: rgba($color: black, $alpha: 0.6);
-      color: white;
-      width: 100%;
-      height: 100%;
-    }
+  .item-3 {
+    animation-delay: calc(30s / 5 * (5 - 3) * -1);
   }
-
-  .partner-logos {
-    width: 90%;
-    margin-inline: auto;
-    max-width: 1536px;
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-    mask-image: linear-gradient(
-      to right,
-      rgba(0,0,0,0),
-      rgba(0,0,0,1), 20%,
-      rgba(0,0,0,1), 80%,
-      rgba(0,0,0,0),
-    );
-    .marquee {
-      height: 150px;
-      width: 150px;
-      border-radius: 10px;
-      position: absolute;
-      left: 100%;
-      animation-name: scrollLeft;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-duration: 10s;
-      padding: 1.5rem 0;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-
-    .item-1 {
-      animation-delay: calc(30s / 5 * (5 - 1) * -1);
-    }
-
-    .item-2 {
-      animation-delay: calc(30s / 5 * (5 - 2) * -1);
-    }
-
-    .item-3 {
-      animation-delay: calc(30s / 5 * (5 - 3) * -1);
-    }
-    
-    .item-4 {
-      animation-delay: calc(30s / 5 * (5 - 4) * -1);
-    }
-    
-    .item-5 {
-      animation-delay: calc(30s / 5 * (5 - 5) * -1);
-    }
+  
+  .item-4 {
+    animation-delay: calc(30s / 5 * (5 - 4) * -1);
   }
-
-  .choose-us {
-    width: 80%;
-    margin-inline: auto;
-    margin-block: 4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    .section-title {
-      text-align: center;
-      font-size: 25px;
-    }
-    .div-1,
-    .div-2 {
-      display: flex;
-      gap: 1rem;
-      box-shadow: 0 4px 8px rgba($color: black, $alpha: 0.1);
-      border-radius: 10px;
-      overflow: hidden;
-      padding: 0 12px 0 0;
-      .img-div {
-        width: 100%;
-        height: 350px;
-        overflow: hidden;
-        
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-        }
-      }
-      .details {
-        display: flex;
-        gap: 3rem;
-        justify-content: space-around;
-        .icon {
-          background-color: var(--secondary-color);
-          height: 70px;
-          width: 150px;
-          border-radius: 25%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
-          font-size: 35px;
-        }
-        .text p {
-          font-size: 17px;
-          margin-bottom: 10px;
-          span {
-            font-weight: 600;
-          }
-        }
-      }
-    }
+  
+  .item-5 {
+    animation-delay: calc(30s / 5 * (5 - 5) * -1);
   }
 }
 
-
-
-@keyframes scrollLeft {
-  to {
-    left: -200px;
-  }
-}
-
-// mobile device
-@media screen and (max-width: 1000px) {
-  h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 20px;
-  }
-  .banner-div {
-    height: 50vh;
-    div {
-      height: 60%;
-      p {
-        font-size: 16px;
-      }
-    }
-  }
-  .intro {
-    flex-direction: column;
-    width: 90%;
-    margin: 1rem auto 0 auto;
-    .about-text {
-      width: 100%;
-    }
-  }
-
-  .business-concept {
-    margin: 3rem 0 5rem 0;
-    height: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    div {
-      width: 90%;
-      padding: 2rem 10px;
-      p {
-        font-size: 16px;
-      }
-    }
-  }
-}
-
-// desktop device
-@media screen and (min-width: 1000px) {
-  h1 {
-    font-size: 50px;
-  }
-  h2 {
-    font-size: 40px;
-  }
-  .banner-div {
-    background-attachment: fixed;
-    height: 90vh;
-    div {
-      width: 50%;
-      height: 60%;
-      p {
-        font-size: 30px;
-      }
-    }
-  }
-
-  .business-concept {
-    margin: 10rem 0;
-    height: 60vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      padding: 3rem 10rem;
-      p {
-        font-size: 20px;
-      }
-    }
-  }
-}
 </style>
