@@ -6,9 +6,9 @@
           <nav-bar />
           
           <div class="header-intro text-white flex flex-col items-center text-center mt-auto">
-            <h1 data-aos="fade-down" data-aos-duration="2400" class="font-bold">Jowam Coffee Traders</h1>
-            <p data-aos="fade-down" data-aos-duration="2000" class="text-md md:text-xl px-2 md:px-4 lg:px-0">Promote majority small-scale farmers by marketing their coffee</p>
-            <i class="mt-10 bx bx-chevrons-down bx-fade-down text-xl"></i>
+            <h1 data-aos="fade-down" data-aos-duration="2400" class="font-bold text-3xl md:text-6xl mb-4">Jowam Coffee Traders</h1>
+            <p data-aos="fade-down" data-aos-duration="2000" class="text-xl md:text-3xl px-2 md:px-4 lg:px-0">Promote majority small-scale farmers by marketing their coffee</p>
+            <i class="mt-10 bx bx-chevrons-down bx-fade-down text-3xl"></i>
           </div>
         </div>
       </section>
@@ -119,7 +119,7 @@
                 class="text-sm lg:text-lg mb-2" 
                 v-if="l_item.q_id == q.id"
                 >
-                  <span class="font-semibold">{{ l_item.title }}: </span>{{ l_item.desc }}
+                  <span class="font-bold">{{ l_item.title }}: </span>{{ l_item.desc }}
                 </p>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default {
       items: [
         {
           title: "Introduction",
-          text: 'At <span class="title font-semibold text-orange-400">Jowam Coffee Trading Company LTD</span> We are dedicated to delivering green coffee beans that meet the highest industry standards. Our rigorous quality control processes and close relationships with growers ensure that our clients receive beans that are perfect for roasting, cupping, and savoring',
+          text: 'At <span class="title font-bold text-orange-400">Jowam Coffee Trading Company LTD</span> We are dedicated to delivering green coffee beans that meet the highest industry standards. Our rigorous quality control processes and close relationships with growers ensure that our clients receive beans that are perfect for roasting, cupping, and savoring',
           url: require('@/assets/img/g_beans.webp'),
           reverse: false
         },

@@ -1,6 +1,6 @@
 <template>
   <div id="about">
-    <header class="bg-cover bg-att bg-no-repeat flex flex-col h-[70vh]">
+    <header class="bg-cover bg-att bg-no-repeat flex flex-col h-[50vh] md:h-[70vh]">
        <div class="wrapper bg-black/45 h-full w-full flex flex-col">
         <nav-bar />
 
@@ -18,7 +18,7 @@
           <div class="divider h-[3px] w-3/12" />
 
           <div data-aos="fade-up" data-aos-duration="2000" class="text-center">
-            <strong>Jowam Coffee Traders LTD was founded in June 2006 as an 
+            <p class="font-extrabold text-green-900">Jowam Coffee Traders LTD was founded in June 2006 as an 
               exporting company for coffees. We promote farmers by
               providing advanced farming technologies to ensure production of
               high-quality coffee that is of great value.
@@ -29,7 +29,7 @@
               over thirty years of experience in the Coffee industry coupled with
               quality control, passion and commitment to service, Jowam Coffee
               Trading Company founders empower clients by providing coffees that
-              ensure their product sales remain high.</strong>
+              ensure their product sales remain high.</p>
           </div>
         </div>
 
@@ -96,10 +96,10 @@
           <div class="info-div flex-1 tracking-wider font-light">
             Our primary focus is on exporting specialty, premium quality, and commercial
              Kenyan coffee to markets around the globe. Since 2006, we have successfully
-             exported over 19,000 tons of coffee to various countries, including South Korea,
-             Japan, Australia, the USA, Italy and many others.
+             exported over 19,000 tons of coffee to various countries, including The 
+             United Kingdom (UK), United Arab Emirates (UAE), Switzerland among others.
              Our products reach almost every continent, with a significant
-             portion of our exports going to the Asian market.
+             portion of our exports going to the German market.
           </div>
         </div>
       </section>
@@ -116,7 +116,7 @@
 
       <section class="about w-11/12 md:w-10/12 mx-auto my-20">
         <div class="about-text">
-          <p class="section-title font-semibold text-3xl text-center mb-5"  data-aos="fade-up" data-aos-duration="2800">Why is Kenyan Coffee Unique?</p>
+          <h2 class="section-title font-semibold text-3xl text-center mb-5"  data-aos="fade-up" data-aos-duration="2800">Why is Kenyan Coffee Unique?</h2>
           <div class="w-1/12 h-[3px] mx-auto bg-orange-300 mb-4" />
 
           <p class="tracking-wider text-center"  data-aos="fade-up" data-aos-duration="2000">

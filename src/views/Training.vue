@@ -1,6 +1,6 @@
 <template>
   <div id="training-page">
-    <header class="bg-cover h-[70vh] lg:h-[90vh]">
+    <header class="bg-cover  h-[50vh] md:h-[70vh]">
       <div class="wrapper bg-black/45 h-full w-full flex flex-col">
         <nav-bar />
 
@@ -52,6 +52,22 @@
           class="hidden section-title rounded bg-orange-400 p-3 text-white font-semibold mt-8 hover:bg-slate-500 ease-in-out duration-500">
             <span><i class="bx bx-link-external mr-1"></i></span>Visit Our School Website
           </button>
+        </div>
+      </section>
+
+      <section class="mt-28 certification w-8/12 mx-auto flex text-white">
+        <div class="certify bg-green-600 p-10">
+          <h2 class="text-3xl font-bold">Certification</h2>
+          <br>
+          <p>Once you're done with your course, a certificate is offered where you'll be a recognized professional in the coffee industry.
+            You are not limited to local jobs but jobs outside the country as well
+          </p>
+        </div>
+
+        <div class="instructors bg-orange-400 p-10">
+          <h2 class="text-3xl font-bold">Instructors</h2>
+          <br>
+          <p>With years of hands on experience, our instructors are seasoned experts with the knowledge and skills to help you excel in the coffee industry. Every class is a wealth of skill and knowledge</p>
         </div>
       </section>
     </main>
