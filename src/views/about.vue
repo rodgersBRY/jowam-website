@@ -50,7 +50,7 @@
           </p>
         </div>
 
-        <div class="image-div h-full md:h-[90vh] rounded-xl overflow-hidden">
+        <div class="image-div h-full md:h-[60vh] rounded-xl overflow-hidden">
           <img class="w-full h-full object-cover" :src="require('@/assets/img/jowam7.jpg')" alt="coffee factory">
         </div>
       </section>
@@ -104,10 +104,10 @@
         </div>
       </section>
 
-      <section class="img w-9/12 lg:w-6/12 h-full md:h-[70vh] overflow-hidden rounded-2xl mx-auto my-10 md:my-16">
-        <div class="about-img bg-purple-500">
+      <section class="img w-9/12 lg:w-6/12 h-full md:h-[35vh] overflow-hidden rounded-lg mx-auto my-10 md:my-16">
+        <div class="about-img">
           <img
-          class="object-cover"
+          class="object-cover h-full w-full"
             :src="require('../assets/img/plantation.jpg')"
             alt="jowam values"
           />

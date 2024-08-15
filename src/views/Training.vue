@@ -1,6 +1,6 @@
 <template>
   <div id="training-page">
-    <header class="bg-cover  h-[50vh] md:h-[70vh]">
+    <header class="bg-cover h-[50vh] md:h-[70vh]">
       <div class="wrapper bg-black/45 h-full w-full flex flex-col">
         <nav-bar />
 
@@ -74,6 +74,25 @@
           <p>With years of hands-on experience, our instructors are seasoned experts with the knowledge and skills to help you excel in the coffee industry.</p>
         </div>
       </section>
+
+      <section class="why-us mt-28 flex items-center flex-col md:flex-row gap-7 w-11/12 lg:w-9/12 mx-auto">
+        <div class="image-div flex-1 h-full rounded-lg overflow-hidden">
+          <img class="w-full h-full object-contain" :src="require('@/assets/img/class.png')" alt="class">
+        </div>
+
+        <div class="info-div flex-1">
+          <h2 class="section-title text-4xl font-bold text-green-600 mb-2">Why Choose Us</h2>
+
+          <ul class="flex flex-col">
+            <li>Extensive Training</li>
+            <li>Global recognition in the Coffee Industry</li>
+            <li>Job Opportunities locally and abroad</li>
+            <li>Skilled Instructors</li>
+          </ul>
+
+          <button class="reach-us mt-10 rounded-md bg-green-600 p-3 text-white font-semibold" @click="$router.push('/contact')"><i class="bx bx-phone mr-2"></i>Reach Us Now</button>
+        </div>
+      </section>
     </main>
 
     <bottom-footer />
@@ -91,12 +110,18 @@ export default {
       ]
     }
   },
+
+  methods: {
+    openWhatsapp() {
+      window.open("https://wa.me/254728919092", "_blank")
+    }
+  }
 }
 </script>
 
 <style scoped>
 header {
-  background-image: url("@/assets/img/school.jpg");
+  background-image: url("@/assets/img/students.jpeg");
   background-attachment: fixed;
 }
 
@@ -107,6 +132,15 @@ header {
 
 .section-title {
   color: var(--secondary-color);
+}
+
+.info-div li {
+  padding: 1.5rem 10px;
+  font-weight: 700;
+}
+
+.info-div ul li:not(:last-child) {
+  border-bottom: 1px solid grey;
 }
 
 </style>

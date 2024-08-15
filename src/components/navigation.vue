@@ -12,7 +12,7 @@
     </section>
 
     <section class="nav-links hidden lg:block">
-      <ul class="flex gap-6">
+      <ul class="flex gap-12">
         <router-link exact-active-class="text-orange-400" class="nav-link font-semibold text-gray-400 hover:text-orange-400 duration-500 ease-in-out" to="/">
           Home
         </router-link>
