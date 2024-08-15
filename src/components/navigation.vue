@@ -17,7 +17,7 @@
           Home
         </router-link>
 
-        <router-link active-class="text-greorangee4-500" class="nav-link font-semibold text-gray-400 hover:text-orange-400 duration-500 ease-in-out" to="/about">
+        <router-link active-class="text-orange-500" class="nav-link font-semibold text-gray-400 hover:text-orange-400 duration-500 ease-in-out" to="/about">
           About Us
         </router-link>
         

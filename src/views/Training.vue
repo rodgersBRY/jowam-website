@@ -31,7 +31,7 @@
           </div>  
         </div>
 
-        <div class="courses flex-1 lg:flex-initial lg:w-[40%] rounded-lg shadow-lg lg:mx-8 lg:p-10 p-4">
+        <div class="courses flex-1 lg:flex-initial lg:w-[40%] rounded-lg shadow-lg lg:mx-8 lg:p-10 px-4 py-8 mt-10 lg:mt-0">
           <h2 class="section-title font-bold text-3xl mb-5">Our Courses</h2>
 
           <div class="courses border-black p-4 flex justify-between" v-for="(crs, index) in courses" :key="index" :class="{'border-b': crs.border}">
@@ -48,26 +48,30 @@
             </div>
           </div>
 
-          <button
-          class="hidden section-title rounded bg-orange-400 p-3 text-white font-semibold mt-8 hover:bg-slate-500 ease-in-out duration-500">
+          <br />
+
+          <a
+          href="https://training.jowamcoffee.co.ke/"
+          target="_blank"
+          class="section-title rounded bg-orange-400 p-3 text-white font-semibold hover:bg-slate-500 ease-in-out duration-500">
             <span><i class="bx bx-link-external mr-1"></i></span>Visit Our School Website
-          </button>
+          </a>
         </div>
       </section>
 
-      <section class="mt-28 certification w-8/12 mx-auto flex text-white">
-        <div class="certify bg-green-600 p-10">
-          <h2 class="text-3xl font-bold">Certification</h2>
+      <section class="mt-28 certification w-11/12 lg:w-8/12 mx-auto flex flex-col md:flex-row text-white">
+        <div class="certify bg-green-600 p-10 flex-1">
+          <h2 class="text-3xl font-bold"><i class="bx bxs-graduation text-4xl mr-1"></i> Certification</h2>
           <br>
           <p>Once you're done with your course, a certificate is offered where you'll be a recognized professional in the coffee industry.
             You are not limited to local jobs but jobs outside the country as well
           </p>
         </div>
 
-        <div class="instructors bg-orange-400 p-10">
-          <h2 class="text-3xl font-bold">Instructors</h2>
+        <div class="instructors bg-orange-400 p-10 flex-1">
+          <h2 class="text-3xl font-bold"><i class="bx bx-unite text-4xl mr-1"></i> Instructors</h2>
           <br>
-          <p>With years of hands on experience, our instructors are seasoned experts with the knowledge and skills to help you excel in the coffee industry. Every class is a wealth of skill and knowledge</p>
+          <p>With years of hands-on experience, our instructors are seasoned experts with the knowledge and skills to help you excel in the coffee industry.</p>
         </div>
       </section>
     </main>
