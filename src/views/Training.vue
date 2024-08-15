@@ -84,10 +84,10 @@
           <h2 class="section-title text-4xl font-bold text-green-600 mb-2">Why Choose Us</h2>
 
           <ul class="flex flex-col">
-            <li>Extensive Training</li>
-            <li>Global recognition in the Coffee Industry</li>
-            <li>Job Opportunities locally and abroad</li>
-            <li>Skilled Instructors</li>
+            <li data-aos="fade-up" data-aos-duration="1600">Extensive Training</li>
+            <li data-aos="fade-up" data-aos-duration="2200">Global recognition in the Coffee Industry</li>
+            <li data-aos="fade-up" data-aos-duration="2800">Job Opportunities locally and abroad</li>
+            <li data-aos="fade-up" data-aos-duration="3000">Skilled Instructors</li>
           </ul>
 
           <button class="reach-us mt-10 rounded-md bg-green-600 p-3 text-white font-semibold" @click="openWhatsapp"><i class="bx bx-phone mr-2"></i>Reach Us Now</button>
