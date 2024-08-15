@@ -135,6 +135,8 @@
 </template>
 
 <script>
+import { useHead } from '@vueuse/head';
+
 export default {
   data() {
     return {
@@ -164,6 +166,23 @@ export default {
       ]
     };
   },
+
+  mounted() {
+    useHead({
+      title: "Home | Jowam Coffee Traders",
+      meta: [
+        {
+          name: "description",
+          content:
+            "We promote farmers by providing advanced farming technologies to ensure production of high-quality coffee that is of great value.",
+        },
+        {
+          property: "og:title",
+          content: "Home | Jowam Coffee Traders",
+        },
+      ],
+    });
+  }
 };
 </script>
 

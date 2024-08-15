@@ -90,7 +90,7 @@
             <li>Skilled Instructors</li>
           </ul>
 
-          <button class="reach-us mt-10 rounded-md bg-green-600 p-3 text-white font-semibold" @click="$router.push('/contact')"><i class="bx bx-phone mr-2"></i>Reach Us Now</button>
+          <button class="reach-us mt-10 rounded-md bg-green-600 p-3 text-white font-semibold" @click="openWhatsapp"><i class="bx bx-phone mr-2"></i>Reach Us Now</button>
         </div>
       </section>
     </main>
@@ -100,6 +100,8 @@
 </template>
 
 <script>
+import { useHead } from '@vueuse/head';
+
 export default {
   data() {
     return {
@@ -109,6 +111,23 @@ export default {
         { title: "Professional Roasting", duration: "4 weeks", url: require("@/assets/img/roasting.png"), border: false },
       ]
     }
+  },
+
+  mounted() {
+    useHead({
+      title: "Training Center | Jowam Coffee Traders",
+      meta: [
+        {
+          name: "description",
+          content:
+            "Unleash your barista potential with our in-depth courses, guiding you from the fundamentals of espresso to the intricate art of latte creation.",
+        },
+        {
+          property: "og:title",
+          content: "Training Center | Jowam Coffee Traders",
+        },
+      ],
+    });
   },
 
   methods: {

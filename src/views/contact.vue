@@ -128,6 +128,8 @@
 </template>
 
 <script>
+import { useHead } from '@vueuse/head';
+
 export default {
   data() {
     return {
@@ -138,6 +140,22 @@ export default {
     };
   },
 
+  mounted() {
+    useHead({
+      title: "Contact Us | Jowam Coffee Traders",
+      meta: [
+        {
+          name: "description",
+          content:
+            "You can send us your inquiries by e-mail, contact form, or visit our office for face-to-face discussion.",
+        },
+        {
+          property: "og:title",
+          content: "Contact Us | Jowam Coffee Traders",
+        },
+      ],
+    });
+  }
 };
 </script>
 

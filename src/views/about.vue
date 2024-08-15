@@ -147,6 +147,8 @@
 </template>
 
 <script>
+import { useHead } from '@vueuse/head';
+
 export default {
   data() {
     return {
@@ -173,6 +175,23 @@ export default {
       ],
     };
   },
+
+  mounted() {
+    useHead({
+      title: "About Us | Jowam Coffee Traders",
+      meta: [
+        {
+          name: "description",
+          content:
+            "Jowam Coffee Traders LTD was founded in June 2006 as an exporting company for coffees. We promote farmers by providing advanced farming technologies to ensure production of high-quality coffee that is of great value.",
+        },
+        {
+          property: "og:title",
+          content: "About Us | Jowam Coffee Traders",
+        },
+      ],
+    });
+  }
 };
 </script>
 
