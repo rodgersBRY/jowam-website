@@ -39,8 +39,13 @@
               <p class="text-gray-500 text-sm"><span><i class="bx bx-calendar text-green-600 mr-1"></i></span> {{ crs.duration }}</p>
             
             <h3 class="text-2xl font-semibold my-3"  data-aos="zoom" data-aos-duration="2800">{{ crs.title }}</h3>
+            <ul class="my-3 flex flex-col gap-2 ml-3">
+              <li 
+              class="text-gray-400 text-sm"
+              v-for="(item, index) in crs.modules" :key="index">- {{ item }}</li>
+            </ul>
           
-            <p class="text-gray-500 text-sm"><span><i class="bx bx-time text-green-600 mr-1"></i></span>Weekdays: 8 am - 6 pm</p>
+            <p class="text-gray-500 text-sm"><span><i class="bx bx-time text-green-600 mr-1"></i></span>Weekdays: 9 am - 8 pm</p>
             </div>
 
             <div class="img w-[130px] h-[90px] rounded-lg overflow-hidden">
@@ -106,9 +111,25 @@ export default {
   data() {
     return {
       courses: [
-        { title: "Professional Barista", duration: "6 weeks", url: require("@/assets/img/barista.png"), border: true },
-        { title: "Professional Mixology", duration: "4 weeks", url: require("@/assets/img/mixology.png"), border: true },
-        { title: "Professional Roasting", duration: "4 weeks", url: require("@/assets/img/roasting.png"), border: false },
+        {
+          title: "Professional Barista", duration: "6 weeks", modules: [
+            'Introduction to Coffee',
+            'Coffee Processing',
+            "Roasting and Cupping",
+            'Latte Art',
+            'Grinder and Espresso Machine Operations',
+            'Milkshakes, Smoothies, Cocktails & Mocktails',
+            'Customer Service'
+        ], url: require("@/assets/img/barista.png"), border: true },
+        {
+          title: "Professional Roasting", duration: "4 weeks", modules: [
+            'Introduction to Coffee',
+            'Green Coffee Assessment',
+            'Sensory Analysis',
+            'Coffee Roasting',
+            'Costing & Management',
+            'Marketing & Branding'
+        ], url: require("@/assets/img/roasting.png"), border: false },
       ]
     }
   },
