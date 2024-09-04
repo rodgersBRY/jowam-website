@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <header>
-      <section class="banner-div bg-cover bg-no-repeat">
+      <section class="banner-div bg-cover bg-no-repeat bg-center">
         <div class="wrapper bg-black/70 w-full h-[60vh] lg:h-screen flex flex-col items-center pb-10">
           <nav-bar />
           
@@ -39,7 +39,7 @@
         </div>
       </section>
 
-      <section class="business-concept bg-cover bg-no-repeat w-full bg-fixed flex justify-center items-center">
+      <section class="business-concept bg-cover bg-no-repeat bg-center w-full bg-fixed flex justify-center items-center">
         <div
         class="bg-black/60 text-white w-screen h-full p-5 md:p-14"
         >

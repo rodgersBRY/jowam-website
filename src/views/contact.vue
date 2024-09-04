@@ -1,6 +1,6 @@
 <template>
   <div id="contact">
-    <header class="bg-cover h-[80vh] md:h-[70vh]">
+    <header class="bg-cover bg-fixed bg-center h-[80vh] md:h-[70vh]">
       <div class="wrapper bg-black/45 h-full w-full flex flex-col">
         <nav-bar />
 
@@ -166,7 +166,6 @@ textarea {
 
 header {
   background-image: url("../assets/about2.webp");
-  background-attachment: fixed;
 }
 
 .page-title,

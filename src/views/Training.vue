@@ -1,6 +1,6 @@
 <template>
   <div id="training-page">
-    <header class="bg-cover h-[50vh] md:h-[70vh]">
+    <header class="bg-cover bg-center bg-fixed h-[50vh] md:h-[70vh]">
       <div class="wrapper bg-black/45 h-full w-full flex flex-col">
         <nav-bar />
 
@@ -162,7 +162,6 @@ export default {
 <style scoped>
 header {
   background-image: url("@/assets/img/students.jpeg");
-  background-attachment: fixed;
 }
 
 .page-title,

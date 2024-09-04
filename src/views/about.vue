@@ -1,6 +1,6 @@
 <template>
   <div id="about">
-    <header class="bg-cover bg-att bg-no-repeat flex flex-col h-[50vh] md:h-[70vh]">
+    <header class="bg-cover bg-center bg-no-repeat flex flex-col h-[50vh] md:h-[70vh]">
        <div class="wrapper bg-black/45 h-full w-full flex flex-col">
         <nav-bar />
 
@@ -55,7 +55,7 @@
         </div>
       </section>
 
-      <section class="values bg-cover flex flex-col justify-center gap-2 lg:flex-row text-white my-24 py-10">
+      <section class="values bg-cover bg-center bg-fixed flex flex-col justify-center gap-2 lg:flex-row text-white my-24 py-10">
         <v-card
           dark
           class="pa-5 card mx-4 bg-black rounded-lg flex-1 lg:flex-initial lg:w-[350px]"
@@ -198,7 +198,6 @@ export default {
 <style scoped lang="scss">
 header {
   background-image: url("../assets/img/cherries.jpg");
-  background-attachment: fixed;
 }
 
 .page-title,
@@ -216,7 +215,6 @@ header {
 
 .values {
   background-image: url('@/assets/img/berries1.jpg');
-  background-attachment: fixed;
 }
 
 </style>
