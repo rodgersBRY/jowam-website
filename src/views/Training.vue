@@ -95,7 +95,10 @@
             <li data-aos="fade-up" data-aos-duration="3000">Skilled Instructors</li>
           </ul>
 
-          <button class="reach-us mt-10 rounded-md bg-green-600 p-3 text-white font-semibold" @click="openWhatsapp"><i class="bx bx-phone mr-2"></i>Reach Us Now</button>
+          <button class="reach-us mt-10 rounded-md bg-green-600 p-3 text-white font-semibold flex items-center" @click="openWhatsapp">
+            <i class="bx bxl-whatsapp text-2xl mr-2"></i>
+            Reach Us Now
+          </button>
         </div>
       </section>
     </main>
