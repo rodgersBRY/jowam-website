@@ -55,7 +55,7 @@
     <section class="bottom flex justify-between items-center gap-10 bg-black/30 p-6 border-t text-xs text-gray-400 flex-col lg:flex-row">
       <p class="text-center">Copyright &copy; {{ date }} Jowam Coffee Traders LTD - Developed by
         <span>
-          <a href="https://mawira.netlify.app/" target="_blank" class="duration-500 ease-in-out font-semibold hover:text-black text-green-500 mr-6">Mawira Corp.</a>
+          <a href="https://mawira.netlify.app/" target="_blank" class="duration-500 ease-in-out font-semibold hover:text-black text-green-500 mr-6">Mawira</a>
         </span>
       </p>
 

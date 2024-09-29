@@ -68,31 +68,43 @@
         <div class="form-div lg:w-[50%] p-12">
           <h2 class="section-title text-3xl font-bold mb-3">Feedback Form</h2>
 
-          <form action="https://formspree.io/f/mdovnojj" method="POST">
+          <form @submit.prevent="submitForm">
             <div class="flex flex-col gap-4">
               <input
                 type="text"
-                name="Name"
+                name="name"
+                required
                 v-model="name"
                 class="input p-2 block w-full border border-gray-600 rounded-md"
                 placeholder="Your Name"
               />
               <input
-                type="text"
-                name="Email"
+                type="email"
+                name="email"
+                required
                 v-model="email"
                 class="input p-2 block w-full border border-rose-500 rounded-md"
                 placeholder="Email Address"
               />
               <input
+                type="phone"
+                name="phone"
+                required
+                v-model="phone"
+                class="input p-2 block w-full border border-rose-500 rounded-md"
+                placeholder="Phone Number"
+              />
+              <input
                 type="text"
                 name="Subject"
+                required
                 v-model="subject"
                 class="input p-2 block w-full border border-gray-900 rounded-md"
                 placeholder="Subject"
               />
               <textarea
                 name="Message"
+                required
                 v-model="message"
                 cols="60"
                 rows="7"
@@ -101,13 +113,17 @@
               >
               </textarea>
             </div>
-              
+
             <button
+            :disabled="isLoading"
             data-aos="fade-right"
             data-aos-duration="2000"
             type="submit"
-            class="send-btn bg-orange-400 text-white font-bold p-3 rounded-md mt-3 w-[150px] hover:bg-orange-300 hover:text-orange-400 hover:border border-orange-400 duration-500 ease-in-out">Submit</button>
+            class="send-btn bg-orange-400 text-white font-bold p-3 rounded-md mt-3 w-[150px] hover:bg-orange-300 hover:text-orange-400 hover:border border-orange-400 duration-500 ease-in-out disabled:bg-gray-500 disabled:cursor-not-allowed">Submit</button>
           </form>
+
+          <p v-if="showSuccess" class="px-7 py-3 mt-6 bg-green-200 text-green-800 rounded-lg font-bold uppercase text-sm">Your Feedback has been submitted. Thank you</p>
+          <p v-if="showError" class="px-7 py-3 mt-6 bg-red-200 text-red-800 rounded-lg font-bold uppercase text-sm">{{ error }}</p>
         </div>
 
         <div class="map lg:w-[50%]">
@@ -129,6 +145,7 @@
 
 <script>
 import { useHead } from '@vueuse/head';
+import axios from 'axios';
 
 export default {
   data() {
@@ -136,8 +153,20 @@ export default {
       name: '',
       email:'',
       subject: '',
+      phone: '',
       message: '',
+
+      error: '',
+      loading: false,
+      showError: false,
+      showSuccess: false,
     };
+  },
+
+  computed: {
+    isLoading() {
+      return this.loading;
+    }
   },
 
   mounted() {
@@ -155,6 +184,48 @@ export default {
         },
       ],
     });
+  },
+
+  methods: {
+    async submitForm() {      
+      this.loading = true;
+      const data = {
+        service_id: process.env.VUE_APP_EMAIL_SERVICE_ID,
+        template_id: process.env.VUE_APP_EMAIL_TEMPLATE_ID,
+        user_id: process.env.VUE_APP_EMAIL_PUBLIC_KEY,
+        template_params: {
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          subject: this.subject,
+          message: this.message,
+        }
+      }
+
+      try {
+        const resp = await axios.post('https://api.emailjs.com/api/v1.0/email/send', data);
+
+        if (resp.status == 200) {
+          this.showSuccess = true;
+
+          setTimeout(() => {
+            this.showSuccess = false;
+
+            this.name = "";
+            this.email = "";
+            this.phone = "";
+            this.subject = "";
+            this.message = "";
+          }, 3000)
+        }
+      } catch (err) {
+        this.showError = true,
+        this.error = err;
+      } finally {
+        this.loading = false;
+      }
+      
+    }
   }
 };
 </script>
