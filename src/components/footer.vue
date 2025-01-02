@@ -61,19 +61,19 @@
 
       <div class="links hidden md:flex">
         <ul>
-          <router-link exact-active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black mr-6" to="/">
+          <router-link exact-active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black mr-6" to="/" data-aos="zoom-up" data-aos-duration="1400">
             Home
           </router-link>
   
-          <router-link active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black mr-6" to="/about">
+          <router-link active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black mr-6" to="/about" data-aos="fade-up" data-aos-duration="2000">
             About Us
           </router-link>
 
-          <router-link active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black mr-6" to="/training">
+          <router-link active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black mr-6" to="/training" data-aos="zoom-up" data-aos-duration="2600">
             Training Centre
           </router-link>
   
-          <router-link active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black" to="/contact">
+          <router-link active-class="active" class="nav-link duration-500 ease-in-out font-semibold hover:text-black" to="/contact" data-aos="zoom-up" data-aos-duration="3000">
             Contact Us
           </router-link>
         </ul>
