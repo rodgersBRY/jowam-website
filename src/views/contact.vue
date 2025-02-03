@@ -46,7 +46,7 @@
               <i class="bx bxs-phone text-green-600 text-xl"></i>
               <div>
                 <h4 class="text-xl font-semibold">Phone</h4>
-                <p>+254722762945, +25472899092</p>
+                <p>+254722762945, +254728919092</p>
               </div>
             </div>
   
