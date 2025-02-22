@@ -56,7 +56,7 @@
           <br />
 
           <a
-          href="https://training.jowamcoffee.co.ke/"
+          href="https://jowamtrainingcentre.co.ke/"
           target="_blank"
           class="section-title rounded bg-orange-400 p-3 text-white font-semibold hover:bg-slate-500 ease-in-out duration-500">
             <span><i class="bx bx-link-external mr-1"></i></span>Visit Our School Website
